@@ -1,15 +1,16 @@
 $white: #fff;
 $black: #000;
-$corpBlack: #3e372c;
 $darkestGray: #333;
 $darkGray: #787871;
 $midGray: #999;
 $lightGray: #ebebeb;
 $lightestGray: #f4f7f8;
-$blue: #053f7a;
-$blueGray: #bbc9c9;
+$indigo: #000972;
+$golden: #c9784d;
+$vibrantGolden: #cc6d26;
+$corpGray: #3c3f46;
 
-$mainColor: $blue;
+$mainColor: $indigo;
 $link: $mainColor;
 $linkHover: $mainColor + #333;
 $text: $white;
@@ -35,4 +36,5 @@ $duration: 0.3s;
 $easing: cubic-bezier(.785, .135, .15, .86);
 $easingLight: ease;
 
-$mainFont: 'Open Sans', sans-serif;
+$mainFont: 'Poppins', sans-serif;
+$titleFont: 'Playfair Display', serif;
