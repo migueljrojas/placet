@@ -1,2 +1,21 @@
 header.header
-    
+    .header__wrapper
+        .header__logo
+            .header__image
+                img(src='/images/logo.png')
+    .header__layer
+    .header__menu
+        .header__menu__secondary
+            a.header__menu__link Servicio al Cliente
+            a.header__menu__link Contacto
+            a.header__menu__link Buscar
+            button.header__menu__login-button ingresar
+        .header__menu__primary
+            each item in site.data.header
+                .header__menu__tab=item.name
+                    a(href='#')
+    .header__hamburguer
+        span
+        span
+        span
+        

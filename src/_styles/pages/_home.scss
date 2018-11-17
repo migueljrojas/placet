@@ -1,3 +1,454 @@
 .home {
-    
+    overflow: hidden;
+
+    &__hero {
+        position: relative;
+
+        @include mq(sm) {
+
+        }
+
+        &__layer {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                background: transparentize($indigo - #555, .5);
+                width: 25vw;
+                border-left: .3vw solid $vibrantGolden;
+                transform: skew(-20deg);
+                left: 85%;
+            }
+        }
+
+        &__slider {
+            margin-bottom: -6px !important;
+
+            .slick-dots {
+                position: absolute;
+                bottom: 2vw;
+            }
+        }
+
+        &__slide {
+
+            &__image {
+                @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
+
+                img {
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @include mq(sm) {
+                        left: 0;
+                        transform: translateX(0);
+                    }
+                }
+
+                @include mq(sm) {
+                    @include img($ratio: 40%);
+                }
+            }
+        }
+
+        &__data {
+            background: transparentize($indigo - #555, .5);
+            padding: 35px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    @include mq(sm) {
+                        padding-bottom: 1.5vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            @include mq(sm) {
+                display: block;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                width: 30vw;
+                top: 12vw;
+                text-align: center;
+                left: 10vw;
+                background: none;
+            }
+
+            .content-block {
+                &__title {
+                    @include mq(sm) {
+                        font-size: 4vw;
+                    }
+                }
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+
+        @include mq(sm) {
+            flex-direction: row;
+            position: relative;
+            height: 33.34vw;
+            z-index: 3;
+        }
+
+        &__container {
+
+            &--instagram {
+                order: 2;
+
+                @include mq(sm) {
+                    order: 1;
+                    width: 33.34%;
+                }
+            }
+
+            &--login {
+                background: url('/images/home/upper-right.jpg');
+                background-size: cover;
+                order: 1;
+
+                @include mq(sm) {
+                    order: 2;
+                    width: 66.66%;
+                }
+            }
+        }
+
+        &__follow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 80px;
+
+            @include mq(sm) {
+                padding: 0 8vw;
+                height: 50%;
+
+            }
+        }
+
+        .content-block {
+            &__subtitle {
+                color: $midGray;
+
+                @include mq(sm) {
+                    font-size: 1.3vw;
+                }
+            }
+
+            &__text {
+                font-family: $titleFont;
+                font-style: italic;
+                font-size: 22px;
+
+                @include mq(sm) {
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        &__images {
+            display: flex;
+            height: 50%;
+        }
+
+        &__image {
+            @include img($ratio: 50%, $imgwidth: 100%, $imgheight: 100%);
+        }
+
+        &__login-container {
+            margin-left: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 30px 0;
+            width: 50%;
+
+            @include mq(sm) {
+                width: 35vw;
+            }
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+
+                    @include mq(sm) {
+                        margin-bottom: auto;
+                    }
+                    &:after {
+                        display: none;
+
+                        @include mq(sm) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            @include mq(sm) {
+                width: 30vw;
+                padding: 0 6vw;
+                margin-left: 2vw;
+
+            }
+        }
+    }
+
+    &__how-it-works {
+        border: 20px solid $white;
+        background: url('/images/texture-pattern.jpg') repeat;
+
+        @include mq(sm) {
+            max-height: 33.34vw;
+            overflow: hidden;
+            display: flex;
+            position: relative;
+            border: 3vw solid $white;
+        }
+
+        &__data {
+            text-align: center;
+            padding: 20px 0;
+
+            @include mq(sm) {
+                width: 50%;
+                padding-left: 150px;
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+
+            .content-block {
+                &__link {
+                    color: $golden;
+                    border-color: $golden;
+                    background: transparent;
+                }
+
+                &__text {
+                    padding-bottom: 1vw;
+                }
+            }
+        }
+
+        &__image-container {
+            width: 50%;
+            height: 100%;
+        }
+
+        &__image {
+            display: none;
+
+            @include mq(sm) {
+                @include img($imgwidth: auto);
+
+                display: block;
+                position: absolute;
+                left: 60%;
+            }
+        }
+    }
+
+    &__corporate {
+        @include mq(sm) {
+            display: flex;
+        }
+
+        &__container {
+            @include mq(sm) {
+                width: 50%;
+            }
+        }
+
+        &__appoinment {
+            background: url('/images/home/bottom-left-up.jpg') no-repeat right bottom / 140%;
+            display: flex;
+            justify-content: flex-end;
+
+            @include mq(sm) {
+                height: 33vw;
+            }
+
+            &__data {
+                background: $vibrantGolden;
+                width: 50%;
+                float: right;
+                padding: 20px 10px;
+
+                @include mq(sm) {
+                    width: 50%;
+                    padding: 0;
+                }
+
+                .content-block {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    &__title {
+                        width: 70%;
+                    }
+
+                    &__text {
+                        @include mq(sm) {
+                            width: 70%;
+                        }
+                    }
+
+                    &__link {
+                        background: transparent;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &__brands {
+            background: url('/images/home/bottom-left-down.jpg') no-repeat right bottom;
+
+            @include mq(sm) {
+                width: 100%;
+                height: 22vw;
+                display: flex;
+            }
+
+            &__data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $lightGray;
+                width: 50%;
+                padding: 20px 10px;
+
+                @include mq(sm) {
+                    padding: 0 2vw;
+                }
+
+                .content-block {
+                    &__link {
+                        color: $golden;
+                        letter-spacing: 1.2px;
+                    }
+                }
+            }
+        }
+
+        &__referals {
+            background: url('/images/home/bottom-right-up1.jpg') no-repeat left top;
+            display: flex;
+            justify-content: flex-end;
+
+            @include mq(sm) {
+                width: 100%;
+                height: 22vw;
+            }
+
+            &__data {
+                width: 50%;
+                background: $lightGray;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 10px;
+
+                @include mq(sm) {
+                    padding: 0 2vw;
+                }
+
+                .content-block {
+                    &__link {
+                        color: $golden;
+                    }
+                }
+            }
+        }
+
+        &__giftcard {
+            background: url('/images/home/bottom-right-down.jpg') no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 30px 10px;
+            height: 90vw;
+
+            @include mq(sm) {
+                height: 33vw;
+                padding: 3vw 0;
+            }
+
+            &__wrapper {
+                position: relative;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 50%;
+                width: 65%;
+
+                @include mq(sm) {
+                    width: 25vw;
+                    height: 15vw;
+                }
+            }
+
+            &__image {
+                @include img($imgwidth:auto, $imgheight: 100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding-bottom: 0;
+                height: auto;
+            }
+
+            .content-block {
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+
+                @include mq(sm) {
+                    width: 33vw;
+                }
+
+                &__title {
+                    @include mq(sm) {
+                        margin-bottom: 1vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &__link {
+                    color: $golden;
+                    margin-top: 20px;
+
+                    @include mq(sm) {
+                        margin-top: 1.5vw;
+                    }
+                }
+            }
+        }
+    }
 }

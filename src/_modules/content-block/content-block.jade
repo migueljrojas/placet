@@ -1,0 +1,14 @@
+mixin content-block(subtitle, title, text, link, mode, titleMode)
+    .content-block(class="#{mode === 'white' ? 'content-block--white' : ''} #{titleMode === 'big' ? 'content-block--big' : ''}")
+        if subtitle
+            span.content-block__subtitle=subtitle
+
+        if title
+            h2.content-block__title=title
+
+        if text
+            p.content-block__text=text
+
+        if link
+            a.content-block__link(href=link.url)=link.text
+                

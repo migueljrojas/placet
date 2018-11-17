@@ -2,50 +2,120 @@
     transition: $prop $d $e;
 }
 
-@mixin title($size: $lg, $color: $white, $align: 'left') {
+@mixin title($separator: true, $lineSeparation: 15px, $translate: -50%, $size: $lg, $color: $black, $background: $black, $lineHeight: 1px) {
     text-transform: uppercase;
+    font-family: $titleFont;
     font-size: $size;
     color: $color;
-    text-align: #{$align};
+    position: relative;
+    padding-bottom: $lineSeparation;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+
+    @if $separator {
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: $lineHeight;
+            width: 30px;
+            background: $background;
+            left: 50%;
+            transform: translateX($translate);
+            bottom: 0;
+        }
+    }
 }
 
-@mixin padd($mode: both) {
-    @if $mode == both {
+@mixin padd($mode: both, $size: full) {
+    @if $size == full {
 
-        padding: 16% 0;
+        @if $mode == both {
 
-        @include mq(sm){
-            padding: 12% 0;
+            padding-top: 16%;
+            padding-bottom: 16%;
+
+            @include mq(sm){
+                padding-top: 12%;
+                padding-bottom: 12%;
+            }
+
+            @include mq(md){
+                padding-top: 8%;
+                padding-bottom: 8%;
+            }
         }
 
-        @include mq(md){
-            padding: 8% 0;
+        @if $mode == top {
+
+            padding-top: 16%;
+
+            @include mq(sm){
+                padding-top: 12%;
+            }
+
+            @include mq(md){
+                padding-top: 8%;
+            }
+        }
+
+        @if $mode == bottom {
+
+            padding-bottom: 16%;
+
+            @include mq(sm){
+                padding-bottom: 12%;
+            }
+
+            @include mq(md){
+                padding-bottom: 8%;
+            }
         }
     }
 
-    @if $mode == top {
+    @if $size == half {
+        @if $mode == both {
 
-        padding: 16% 0 0;
+            padding-top: 8%;
+            padding-bottom: 8%;
 
-        @include mq(sm){
-            padding: 12% 0 0;
+            @include mq(sm){
+                padding-top: 6%;
+                padding-bottom: 6%;
+            }
+
+            @include mq(md){
+                padding-top: 4%;
+                padding-bottom: 4%;
+            }
         }
 
-        @include mq(md){
-            padding: 8% 0 0;
+        @if $mode == top {
+
+            padding-top: 8%;
+
+            @include mq(sm){
+                padding-top: 6%;
+            }
+
+            @include mq(md){
+                padding-top: 4%;
+            }
         }
-    }
 
-    @if $mode == bottom {
+        @if $mode == bottom {
 
-        padding: 0 0 16%;
+            padding-bottom: 8%;
 
-        @include mq(sm){
-            padding: 0 0 12%;
-        }
+            @include mq(sm){
+                padding-bottom: 6%;
+            }
 
-        @include mq(md){
-            padding: 0 0 8%;
+            @include mq(md){
+                padding-bottom: 4%;
+            }
         }
     }
 }
@@ -107,4 +177,40 @@
             transform: rotate(-45deg);
         }
     }
+}
+
+@mixin button ($fontSize: 1vw, $btnBackground: transparent, $paddTopBottom: .7vw, $paddLeftRight: 1.5vw, $borderColor: $golden, $btnColor: $golden) {
+    display: inline-block;
+    background: $btnBackground;
+    border: 1px solid $borderColor;
+    text-transform: uppercase;
+    padding-top: $paddTopBottom;
+    padding-bottom: $paddTopBottom;
+    padding-left: $paddLeftRight;
+    padding-right: $paddLeftRight;
+    color: $btnColor;
+    font-size: $fontSize;
+}
+
+@mixin img($ratio: 56.5%, $width: 100%, $imgheight: auto, $imgwidth: 100%) {
+    position: relative;
+    width: $width;
+    overflow: hidden;
+    padding-bottom: $ratio;
+    height: 0;
+
+    img {
+        position: absolute;
+        width: $imgwidth;
+        height: $imgheight;
+        left: 0;
+        top: 0;
+    }
+}
+
+@mixin text($size: 14px, $color: $indigo, $fontWeight: 300, $fontStyle: normal) {
+    font-size: $size;
+    color: $color;
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
 }

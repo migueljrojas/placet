@@ -1,4 +1,57 @@
 extends _layouts/base
 
+include ./_modules/slider/slider
+include ./_modules/content-block/content-block
+
 block content
     main.home
+        section.home__hero
+            .home__hero__layer
+            +slider('home__hero__slider')
+                each item in site.data.slider
+                    .home__hero__slide
+                        .home__hero__slide__image
+                            img(src=item.image)
+            
+            .home__hero__data
+                +content-block('sus prendas', 'a la medida y a domicilio', '', {'text':'tienda online', 'url':'#'}, 'white')
+        
+        section.home__main
+            .home__main__container.home__main__container--instagram
+                .home__main__follow
+                    +content-block('instagram', '', 'Obtenga inspiracion diaria en @Placet', {'text':'síganos', 'url':'#'})
+                .home__main__images
+                    .home__main__image
+                        img(src='/images/home/square1.jpg')
+                    .home__main__image
+                        img(src='/images/home/square2.jpg')
+
+            .home__main__container.home__main__container--login
+                .home__main__login-container
+                    +content-block('', 'conozca los beneficios de placèt', '', {'text':'ingresar', 'url':'#'})
+        
+        section.home__how-it-works
+            .home__how-it-works__data
+                +content-block('', 'como funciona placèt', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore', {'text':'ver mas', 'url':'#'}, 'white' )
+            .home__how-it-works__image-contaniner
+                .home__how-it-works__image
+                    img(src='/images/home/cta.png')
+                    
+        section.home__corporate
+            .home__corporate__container
+                .home__corporate__appoinment
+                    .home__corporate__appoinment__data
+                        +content-block('', 'agende su cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', {'text':'agendar', 'url':'#'}, 'white')
+                .home__corporate__brands
+                    .home__corporate__brands__data
+                        +content-block('', 'marcas placèt', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', {'text':'ver marcas', 'url':'#'})
+            .home__corporate__container
+                .home__corporate__referals
+                    .home__corporate__referals__data
+                        +content-block('', 'plan de referidos', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.', {'text':'ver plan', 'url':'#'})
+                .home__corporate__giftcard
+                    +content-block('', 'regalale una giftcard de placèt', '', '', 'white')
+                    .home__corporate__giftcard__wrapper
+                        .home__corporate__giftcard__image
+                            img(src='/images/home/card.png')
+                    +content-block('', '', '', {'text':'ver mas', 'url':'#'})
