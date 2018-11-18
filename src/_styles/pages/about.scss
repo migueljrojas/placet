@@ -1,0 +1,467 @@
+.about {
+    overflow: hidden;
+
+    &__hero {
+        position: relative;
+
+        @include mq(sm) {
+
+        }
+
+        &__layer {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                background: transparentize($indigo - #555, .5);
+                width: 25vw;
+                border-left: .3vw solid $vibrantGolden;
+                transform: skew(-20deg);
+                left: 85%;
+            }
+        }
+
+        &__slider {
+            margin-bottom: -6px !important;
+
+            .slick-dots {
+                position: absolute;
+                bottom: 2vw;
+            }
+        }
+
+        &__slide {
+
+            &__image {
+                @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
+
+                img {
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @include mq(sm) {
+                        left: 0;
+                        transform: translateX(0);
+                    }
+                }
+
+                @include mq(sm) {
+                    @include img($ratio: 40%);
+                }
+            }
+        }
+
+        &__data {
+            background: transparentize($indigo - #555, .5);
+            padding: 35px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    @include mq(sm) {
+                        padding-bottom: 1.5vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+
+            @include mq(sm) {
+                display: block;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                width: 30vw;
+                top: 12vw;
+                text-align: center;
+                left: 10vw;
+                background: none;
+            }
+
+            .content-block {
+                &__title {
+                    @include mq(sm) {
+                        font-size: 4vw;
+                    }
+                }
+
+                &__text {
+                    @include mq(sm) {
+                        font-size: 1.8vw;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+
+    &__main {
+        background: url('../images/home/bottom-right-down.jpg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+
+        @include mq(sm) {
+            flex-direction: row;
+            padding: 6vw 12vw;
+        }
+
+        &__column {
+            width: 80%;
+
+            @include mq(sm) {
+                padding: 0 3vw 0 0;
+            }
+
+            &:last-of-type {
+                @include mq(sm) {
+                    padding: 0 0 0 3vw;
+                }
+            }
+
+            .content-block {
+                &__title {
+                    line-height: 1.5;
+                    font-weight: lighter;
+                    text-transform: none;
+                    letter-spacing: 2px;
+                    font-size: 28px;
+                    border-bottom: 1px solid $lightGray;
+
+                    @include mq(sm) {
+                        font-size: 3vw;
+                        text-align: left;
+                        border: none;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__text {
+            line-height: 2.5;
+            letter-spacing: 2px;
+            color: $white;
+            margin: 0;
+            font-size: 12px;
+
+            @include mq(sm) {
+                font-size: 1.2vw;
+                text-align: left;
+
+            }
+
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    &__referals {
+
+        @include mq(sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__container {
+            overflow: hidden;
+
+            @include mq(sm) {
+                width: 50%;
+            }
+
+            &:first-of-type {
+                padding: 20px;
+
+                @include mq(sm) {
+                    padding: 0 12vw;
+                }
+            }
+        }
+
+        &__image {
+            @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%)
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: scale3d(1.5, 1.5, 1.5);
+        }
+    }
+
+    &__corporate {
+        overflow: hidden;
+
+        @include mq(sm) {
+            display: flex;
+            background: $lightGray;
+        }
+
+        &__container {
+            @include mq(sm) {
+                width: 50%;
+            }
+
+            &:first-of-type {
+                background: url('../images/home/bottom-right-down.jpg') no-repeat;
+                background-size: cover;
+                padding: 20px;
+
+                @include mq(sm) {
+                    padding: 4vw 8vw;
+                }
+
+                .content-block {
+                    &__link {
+                        color: $vibrantGolden;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                display: flex;
+            }
+        }
+
+        &__giftcard {
+            display: flex;
+
+            @include mq(sm) {
+                padding: 1vw 0 0 0;
+            }
+
+            &__image {
+                @include img($ratio: 40%, $imgwidth: auto, $imgheight: 100%);
+                margin-left: 15%;
+
+                @include mq(sm) {
+                    margin-left: 5vw;
+                }
+            }
+        }
+
+        &__wrapper {
+            width: 50%;
+            position: relative;
+
+            &:first-of-type {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                width: 70%;
+
+                @include mq(sm) {
+                    padding: 0 4vw;
+                    width: 50%;
+                }
+
+                &:last-of-type {
+                    width: 30%;
+
+                    @include mq(sm) {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        &__image {
+            @include img($ratio: 200%, $imgwidth: auto, $imgheight: 100%);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            @include mq(sm) {
+                @include img($ratio: 150%, $imgwidth: auto, $imgheight: 100%);
+            }
+        }
+    }
+
+    &__cta {
+        border: 20px solid $white;
+        background: url('/images/texture-pattern.jpg') repeat;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+
+        @include mq(sm) {
+            padding: 3vw 0;
+            border: 3vw solid $white;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__image {
+            @include img($ratio: 15%, $imgwidth: auto, $imgheight: 100%);
+            display: block;
+            border-radius: 50px;
+            left: 43%;
+
+            @include mq(sm) {
+                left: 48%;
+                @include img($ratio: 5%, $imgwidth: auto, $imgheight: 100%);
+            }
+        }
+
+        &__slider {
+            width: 80%;
+
+            @include mq(sm) {
+                width: 52%;
+            }
+
+            .slick-dots {
+                position: absolute;
+                bottom: -20px;
+
+                @include mq(sm) {
+                    bottom: -2vw;
+                }
+            }
+        }
+
+
+        &__slide {
+            text-align: center;
+            padding: 20px 0;
+
+            @include mq(sm) {
+                width: 20%;
+                padding-top: 3%;
+                padding-bottom: 0;
+            }
+        }
+
+        &__title {
+            font-style: italic;
+            color: $white;
+            font-family: $titleFont;
+            margin: 0;
+            padding-bottom: 20px;
+            @include mq(sm) {
+                font-size: 1.5vw;
+                padding-bottom: 1vw;
+            }
+        }
+
+        &__text {
+            color: $vibrantGolden;
+            margin: 0;
+            font-size: 12px;
+
+            @include mq(sm) {
+                font-size: 1.2vw;
+            }
+        }
+    }
+
+    &__app {
+        display: flex;
+        background: $lightGray;
+
+        &__container {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:first-of-type {
+                width: 30%;
+                position: relative;
+
+                @include mq(sm) {
+                    width: 50%;
+                }
+            }
+
+            &:last-of-type {
+                padding-left: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-right: 20px;
+                width: 70%;
+
+                @include mq(sm) {
+                    width: 50%;
+                    padding-right: 15vw;
+                    padding-left: 3vw;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+
+            .content-block {
+                &__title {
+                    font-weight: 100;
+                }
+
+                &__wrapper {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include mq(sm) {
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                    }
+                }
+
+                &__link {
+                    font-size: 14px;
+
+                    @include mq(sm) {
+                        width: 45%;
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+
+        &__image {
+            @include img($ratio: 200%, $imgwidth: auto, $imgheight: 100%);
+
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            padding-bottom: 0;
+            height: auto;
+
+            @include mq(sm) {
+                @include img($ratio: 50%, $imgwidth: auto, $imgheight: 100%);
+            }
+
+            img {
+                margin-left: -160%;
+
+                @include mq(sm) {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

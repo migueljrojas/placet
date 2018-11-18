@@ -1,0 +1,68 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+include ../_modules/content-block/content-block
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.about
+        section.about__hero
+            .about__hero__layer
+            +slider('about__hero__slider')
+                each item in site.data.slider
+                    .about__hero__slide
+                        .about__hero__slide__image
+                            img(src=item.image)
+            .about__hero__data
+                +content-block('', '30 años de experiencia', 'en moda masculina', '', 'white')
+        
+        section.about__main
+            .about__main__column
+                +content-block('', 'Somos el modelo mas innovador de moda masculina de latinoamerica.','', '', 'white')
+            .about__main__column
+                p.about__main__text 
+                    |Tenemos un surtido de mas de 
+                    span 1,600 prendas
+                    |, le garantizamos siempre una alta calidad y su talla precisa. Tendrá la visita de un Personal Shopper y un sastre experto, en el lugar que usted elija, el horario que mas le convenga, y sin ningún costo adicional
+        
+        section.about__referals
+            .about__referals__container
+                +content-block('programa de referidos', 'club placèt', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', {'text':'conozca más', 'url':'#'})
+            .about__referals__container
+                .about__referals__image
+                    img(src='../images/home/bottom-right-up.jpg')
+
+        section.about__corporate
+            .about__corporate__container
+                    +content-block('', 'regalale una giftcard de placèt', '', '', 'white')
+                    .about__corporate__giftcard
+                        .about__corporate__giftcard__image
+                            img(src='../images/home/card.png')
+                    +content-block('', '', '', {'text':'ver mas', 'url':'#'})
+
+            .about__corporate__container
+                .about__corporate__wrapper
+                    +content-block('', 'agende su cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', {'text':'agendar', 'url':'#'})
+                .about__corporate__wrapper
+                    .about__corporate__image
+                        img(src='../images/home/cta.png')
+        section.about__cta
+            .about__cta__container
+                .about__cta__image
+                    img(src='/images/home/cta.png')
+            .about__cta__container
+                +slider('about__cta__slider')
+                    each item in site.data.aboutCtaSlider
+                        .about__cta__slide
+                            p.about__cta__title&quot;#{item.quote}&quot;
+                            p.about__cta__text=item.quoter
+                            p.about__cta__text Personal Shopper: #{item.shopper}
+        section.about__app
+            .about__app__container
+                .about__app__image
+                    img(src='../images/home/cta.png')
+            .about__app__container
+                    +content-block('', 'descargue nuestra app', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.', {'text':'app store', 'url':'#'}, '', '', {'text':'google play', 'url':'#'})

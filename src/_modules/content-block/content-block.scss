@@ -7,10 +7,11 @@
     &__subtitle {
         font-size: 16px;
         text-transform: uppercase;
+        color: $midGray;
+        padding-bottom: 15px;
 
         @include mq(sm) {
-            color: $indigo;
-            font-size: 1.4vw;
+            font-size: 1.2vw;
             margin: 0;
             padding-bottom: 5px;
         }
@@ -66,7 +67,7 @@
 
         #{$cb}__title {
             @include title($lineSeparation: 15px, $translate: -50%, $color: $white, $background: $white, $lineHeight: 1px, $size: 24px);
-            font-weight: normal;
+            font-weight: 400;
 
             @include mq(sm) {
                 @include title($lineSeparation: 1vw, $translate: -50%, $color: $white, $background: $white, $lineHeight: 1px, $size: 2.5vw);
