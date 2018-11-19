@@ -1,6 +1,109 @@
 .header {
-
     $h: &;
+    height: 10vw;
+    display: flex;
+
+    @include mq(sm) {
+        height: auto;
+    }
+
+    &__wrapper {
+        background: url('/images/texture-pattern.jpg');
+        padding: 1.5vw 0 1.5vw 6vw;
+        width: 40%;
+        height: 100%;
+
+        @include mq(sm) {
+            width: 24vw;
+            height: auto;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        height: 100%;
+
+        @include mq(sm) {
+        }
+    }
+
+    &__image {
+        @include img($ratio: 50%, $imgwidth: auto, $imgheight: 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    &__layer {
+        display: block;
+        border: 15px solid $white;
+        top: 0;
+        margin-left: -7px;
+        transform: skew(-20deg);
+
+        @include mq(sm) {
+            border: 1.5vw solid $white;
+            background: $white;
+            height: auto;
+            width: 2vw;
+            margin-left: -1.5vw;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @include mq(sm) {
+            padding-top: 1vw;
+            padding-bottom: 1vw;
+            padding-right: 8vw;
+            width: 76vw;
+            display: block;
+        }
+
+        &__secondary {
+            display: flex;
+
+            @include mq(sm) {
+                height: 50%;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+
+        &__link {
+            padding: 0 1vw;
+            color: $midGray;
+            font-size: .7vw;
+            margin: 0;
+        }
+
+        &__login-button {
+            @include button($paddTopBottom: 5px, $paddLeftRight: 15px, $btnColor: $midGray, $borderColor: $midGray);
+            margin-left: 1vw;
+            font-size: .7vw;
+        }
+
+        &__primary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &__tab {
+            display: flex;
+            text-transform: uppercase;
+            font-size: 1vw;
+            letter-spacing: 1.4px;
+            font-weight: 500;
+            margin: 0;
+            padding-top: 1vw
+        }
+    }
 
     &__hamburguer {
         cursor: pointer;
@@ -8,16 +111,24 @@
         height: 25px;
         margin: auto;
         position: absolute;
-        right: 32px;
-        top: 30px;
+        right: 15px;
+        top: 7.5px;
+
+        @include mq(sm) {
+            display: none;
+        }
 
         span {
-            background-color: $mainColor;
-            border-radius: 2px;
             content: '';
+            background: $vibrantGolden;
+            border-radius: 2px;
             display: block;
             width: 100%;
             height: 2px;
+
+            @include mq(sm) {
+                background: $indigo;
+            }
 
             &:nth-child(1) {
                 animation:outT 0.6s $easing backwards;

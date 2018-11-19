@@ -1,0 +1,99 @@
+.content-block {
+
+    $cb:&;
+
+    text-align: center;
+
+    &__subtitle {
+        font-size: 16px;
+        text-transform: uppercase;
+
+        @include mq(sm) {
+            color: $indigo;
+            font-size: 1.4vw;
+            margin: 0;
+            padding-bottom: 5px;
+        }
+    }
+
+    &__title {
+        @include title($lineSeparation:15px, $translate: -50%, $color: $indigo, $background: $golden, $lineHeight: 1px, $size: 24px);
+
+        font-weight: normal;
+
+        @include mq(sm) {
+            @include title($lineSeparation:1.5vw, $translate: -50%, $color: $indigo, $background: $golden, $lineHeight: 1px, $size: 2.5vw);
+        }
+    }
+
+    &__text {
+        color: $indigo;
+        font-size: 14px;
+        padding-top: 7px;
+        margin: 0;
+
+        @include mq(sm) {
+            font-size: 1.1vw;
+            padding-top: .7vw
+        }
+    }
+
+    &__link {
+        @include button($fontSize: 16px, $btnColor: $indigo, $paddLeftRight: 25px, $btnBackground: transparent, $borderColor: $golden);
+        margin: 0;
+        margin-top: 15px;
+        letter-spacing: 1.4px;
+
+        @include mq(sm) {
+            @include button($btnColor: $indigo, $paddLeftRight: 25px, $btnBackground: transparent, $borderColor: $golden);
+
+            margin-top: 1.5vw;
+        }
+    }
+
+    &--white {
+        #{$cb}__subtitle {
+            @include text($size: 16px, $fontWeight: 100);
+            color: $white;
+            text-transform: uppercase;
+            margin: 0;
+
+            @include mq(sm) {
+                font-size: 1.4vw;
+                padding-bottom: 5px;
+            }
+        }
+
+        #{$cb}__title {
+            @include title($lineSeparation: 15px, $translate: -50%, $color: $white, $background: $white, $lineHeight: 1px, $size: 24px);
+            font-weight: normal;
+
+            @include mq(sm) {
+                @include title($lineSeparation: 1vw, $translate: -50%, $color: $white, $background: $white, $lineHeight: 1px, $size: 2.5vw);
+            }
+        }
+
+        #{$cb}__text {
+            color: $white;
+            margin: 0;
+            font-size: 14px;
+
+            @include mq(sm) {
+                font-size: 1.1vw;
+
+            }
+        }
+
+        #{$cb}__link {
+            @include button($fontSize: 16px, $btnColor: $midGray, $paddLeftRight: 15px, $btnBackground: $white, $borderColor: $white);
+
+            display: inline-block;
+            letter-spacing: 1.4px;
+
+            @include mq(sm) {
+                @include button($btnColor: $midGray, $paddLeftRight: 1.5vw, $btnBackground: $white, $borderColor: $white);
+                margin-top: 1vw;
+            }
+        }
+    }
+}
