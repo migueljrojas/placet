@@ -1,0 +1,61 @@
+extends ../_layouts/base
+
+include ../_modules/content-block/content-block
+include ../_modules/play-button/play-button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.benefits
+        section.benefits__hero
+            .benefits__hero__container
+                .benefits__hero__image
+                    img(src='../images/home/slide1.jpg')
+                    .benefits__hero__layer
+            .benefits__hero__wrapper
+                +play-button
+                .benefits__hero__data
+                    +content-block('', 'conozca los beneficios de placèt', '', '', 'white')
+
+        section.benefits__main
+            .benefits__main__col
+                .benefits__main__image
+                    +play-button
+                .benefits__main__data
+                    +content-block('', 'comodidad', 'El cliente puede comprar cuadno quiera y donde quiera.')
+            .benefits__main__col
+                +content-block('', 'one-stop shopping', 'El cliente puede comprar todo el surtido de prendas formales, informales, y accesorios en un solo punto.', '', 'white')
+                +play-button
+            .benefits__main__col
+                .benefits__main__image
+                    +play-button
+                .benefits__main__data
+                    +content-block('', 'amplio surtido', 'Mas de 1,600 items individuales, y mas de 150 combinaciones listas para comprar.')
+            .benefits__main__col
+                +content-block('', 'tallas perfectas para usted', 'No son solo tallas 32 a 48. Son tallas Custom Fit, con una precision del 90% al 95% de ajuste al cuerpo del cliente.', '', 'white')
+                +play-button
+            .benefits__main__col
+                .benefits__main__image
+                    +play-button
+                .benefits__main__data
+                    +content-block('', 'plataforma personalizada', 'Tanto en gusto como en tallas.')
+            .benefits__main__col
+                .benefits__main__image
+                    +play-button
+                .benefits__main__data
+                    +content-block('', 'asesoría personalizada', 'Personal shoppers.')
+            .benefits__main__col
+                .benefits__main__image
+                    +play-button
+                .benefits__main__data
+                    +content-block('', 'relacion precio calidad')
+            .benefits__main__col
+                .benefits__main__image
+                    +play-button
+                .benefits__main__data
+                    +content-block('', 'haga su propio mix & match', 'Para probar combinaciones de ropa.')
+            .benefits__main__col
+                +content-block('', 'garantia total de satisfacción', 'Si usted no se encuentra totalmente satisfecho con su prenda, le reintegramos el 100% de su dinero.', '', 'white')
+                +play-button

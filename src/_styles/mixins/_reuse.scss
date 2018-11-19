@@ -20,11 +20,16 @@
             display: block;
             position: absolute;
             height: $lineHeight;
-            width: 3vw;
             background: $background;
             left: 50%;
             transform: translateX($translate);
             bottom: 0;
+            width: 30px;
+
+            @include mq(sm) {
+                width: 3vw;
+
+            }
         }
     }
 }
