@@ -33,21 +33,15 @@
 
         &__input {
             width: 85%;
-
+            padding: 10px;
+            border: 1px solid $midGray;
+            font-size: 12px;
+            color: $midGray;
+            
             @include mq(sm) {
                 padding: .7vw;
                 width: 25vw;
-                border: 1px solid $midGray;
-            }
-
-            &::placeholder {
-                font-size: 12px;
-                margin: 0;
-
-                @include mq(sm) {
-                    font-size: .9vw;
-                    color: $midGray;
-                }
+                font-size: .9vw;
             }
         }
 

@@ -15581,43 +15581,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .footer__suscribe__input {
   width: 85%;
+  padding: 10px;
+  border: 1px solid #999;
+  font-size: 12px;
+  color: #999;
 }
 
 @media (min-width: 768px) {
   .footer__suscribe__input {
     padding: .7vw;
     width: 25vw;
-    border: 1px solid #999;
-  }
-}
-
-.footer__suscribe__input::-webkit-input-placeholder {
-  font-size: 12px;
-  margin: 0;
-}
-
-.footer__suscribe__input:-ms-input-placeholder {
-  font-size: 12px;
-  margin: 0;
-}
-
-.footer__suscribe__input::placeholder {
-  font-size: 12px;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  .footer__suscribe__input::-webkit-input-placeholder {
     font-size: .9vw;
-    color: #999;
-  }
-  .footer__suscribe__input:-ms-input-placeholder {
-    font-size: .9vw;
-    color: #999;
-  }
-  .footer__suscribe__input::placeholder {
-    font-size: .9vw;
-    color: #999;
   }
 }
 
@@ -15877,7 +15851,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .footer__link:hover, .footer__link:active, .footer__link:focus {
-  color: #ebebeb;
+  color: #d2d2d2;
 }
 
 .footer__secondary {
@@ -16383,7 +16357,7 @@ button._button {
 ._form input,
 ._form textarea {
   outline: none;
-  background: #ebebeb;
+  background: #d2d2d2;
   border-radius: 5px;
   width: 100%;
   font-size: 14px;
@@ -16898,7 +16872,7 @@ button._button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #ebebeb;
+  background: #d2d2d2;
   width: 50%;
   padding: 20px 10px;
 }
@@ -16933,7 +16907,7 @@ button._button {
 
 .home__corporate__referals__data {
   width: 50%;
-  background: #ebebeb;
+  background: #d2d2d2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17233,7 +17207,7 @@ button._button {
   text-transform: none;
   letter-spacing: 2px;
   font-size: 28px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #d2d2d2;
 }
 
 @media (min-width: 768px) {
@@ -17332,7 +17306,7 @@ button._button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: #ebebeb;
+    background: #d2d2d2;
   }
 }
 
@@ -17613,7 +17587,7 @@ button._button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #ebebeb;
+  background: #d2d2d2;
 }
 
 .about__app__container {
@@ -17960,7 +17934,7 @@ button._button {
 }
 
 .benefits__main__col:nth-child(1) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .benefits__main__col:nth-child(1) .benefits__main__image {
@@ -18009,7 +17983,7 @@ button._button {
 }
 
 .benefits__main__col:nth-child(3) {
-  background-color: #f4f7f8;
+  background-color: #f6f6f6;
 }
 
 .benefits__main__col:nth-child(3) .benefits__main__image {
@@ -18062,7 +18036,7 @@ button._button {
 }
 
 .benefits__main__col:nth-child(5) {
-  background-color: #f4f7f8;
+  background-color: #f6f6f6;
 }
 
 .benefits__main__col:nth-child(5) .benefits__main__image {
@@ -18080,7 +18054,7 @@ button._button {
 }
 
 .benefits__main__col:nth-child(6) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .benefits__main__col:nth-child(6) .benefits__main__image {
@@ -18098,7 +18072,7 @@ button._button {
 }
 
 .benefits__main__col:nth-child(7) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .benefits__main__col:nth-child(7) .benefits__main__image {
@@ -18120,7 +18094,7 @@ button._button {
 }
 
 .benefits__main__col:nth-child(8) {
-  background-color: #f4f7f8;
+  background-color: #f6f6f6;
 }
 
 .benefits__main__col:nth-child(8) .benefits__main__image {
@@ -18375,7 +18349,7 @@ button._button {
 }
 
 .how-it-works__appoinment__container:nth-child(1) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .how-it-works__appoinment__container:nth-child(1) .how-it-works__appoinment__image {
@@ -18384,7 +18358,7 @@ button._button {
 }
 
 .how-it-works__appoinment__container:nth-child(2) {
-  background-color: #f4f7f8;
+  background-color: #f6f6f6;
 }
 
 .how-it-works__appoinment__container:nth-child(2) .how-it-works__appoinment__image {
@@ -18418,7 +18392,7 @@ button._button {
 }
 
 .how-it-works__appoinment__container:nth-child(3) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .how-it-works__appoinment__container:nth-child(3) .how-it-works__appoinment__image {
@@ -18731,7 +18705,7 @@ button._button {
 }
 
 .brands__main__container:nth-child(1) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .brands__main__container:nth-child(1) .brands__main__image {
@@ -18740,7 +18714,7 @@ button._button {
 }
 
 .brands__main__container:nth-child(2) {
-  background-color: #f4f7f8;
+  background-color: #f6f6f6;
 }
 
 .brands__main__container:nth-child(2) .content-block__title {
@@ -18785,7 +18759,7 @@ button._button {
 }
 
 .brands__main__container:nth-child(3) {
-  background-color: #ebebeb;
+  background-color: #d2d2d2;
 }
 
 .brands__main__container:nth-child(3) .content-block__title {
