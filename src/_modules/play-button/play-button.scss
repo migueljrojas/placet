@@ -1,0 +1,42 @@
+.play-button {
+    height: 9vw;
+    width: 9vw;
+    border: .15vw solid $vibrantGolden;
+    background: transparent;
+    border-radius: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: transparentize($indigo, .7);
+    }
+
+    span {
+        height: 3.2vw;
+        width: 3.2vw;
+        border: .15vw solid $vibrantGolden;
+        display: block;
+        position: absolute;
+        transform: rotate(45deg);
+        border-radius: 2px;
+        left: 42%;
+
+        &:first-of-type {
+            transform: rotate(0deg);
+            height: 4.4vw;
+            border-top: transparent;
+            border-right: transparent;
+            border-bottom: transparent;
+        }
+
+        &:last-of-type {
+            left: 26%;
+            border-left: transparent;
+            border-bottom: transparent;
+        }
+    }
+}

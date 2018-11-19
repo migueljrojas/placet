@@ -62,6 +62,7 @@
             justify-content: center;
             align-items: center;
 
+
             .content-block {
                 &__title {
                     margin-bottom: 0;
@@ -230,6 +231,12 @@
                 }
 
                 .content-block {
+                    &__title {
+                        &:after {
+                            display: none;
+                        }
+                    }
+
                     &__link {
                         color: $vibrantGolden;
                     }
