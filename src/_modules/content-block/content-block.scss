@@ -23,7 +23,7 @@
         font-weight: normal;
 
         @include mq(sm) {
-            @include title($lineSeparation:1.5vw, $translate: -50%, $color: $indigo, $background: $golden, $lineHeight: 1px, $size: 2.5vw);
+            @include title($lineSeparation:1vw, $translate: -50%, $color: $indigo, $background: $golden, $lineHeight: 1px, $size: 2.5vw);
         }
     }
 
