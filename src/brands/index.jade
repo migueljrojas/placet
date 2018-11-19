@@ -1,0 +1,35 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+include ../_modules/content-block/content-block
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.brands
+        section.brands__hero
+            .brands__hero__layer
+            +slider('brands__hero__slider')
+                each item in site.data.slider
+                    .brands__hero__slide
+                        .brands__hero__slide__image
+                            img(src=item.image)
+            
+            .brands__hero__data
+                +content-block('', 'marcas placèt', 'Lorem ipsum dolor sit amet, consectetur adipiscing', '', 'white')
+        
+        section.brands__main
+            .brands__main__container
+                .brands__main__data
+                    +content-block('', 'austin reed', 'La marca Austin Reed Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', {'text':'ver prendas', 'url':'#'})
+                .brands__main__image
+            .brands__main__container
+                .brands__main__image
+                .brands__main__data
+                    +content-block('', 'cerruti', 'La marca Cerruti Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', {'text':'ver prendas', 'url':'#'})
+            .brands__main__container
+                .brands__main__data
+                    +content-block('', 'Guy Laroche', 'La marca Guy Laroche Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', {'text':'ver prendas', 'url':'#'})
+                .brands__main__image
