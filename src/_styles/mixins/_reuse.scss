@@ -9,7 +9,7 @@
     color: $color;
     position: relative;
     padding-bottom: $lineSeparation;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin-top: 0;
 
@@ -20,7 +20,7 @@
             display: block;
             position: absolute;
             height: $lineHeight;
-            width: 30px;
+            width: 3vw;
             background: $background;
             left: 50%;
             transform: translateX($translate);
