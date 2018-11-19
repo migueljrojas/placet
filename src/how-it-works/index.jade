@@ -1,0 +1,38 @@
+extends ../_layouts/base
+
+include ../_modules/content-block/content-block
+include ../_modules/play-button/play-button
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.how-it-works
+        section.how-it-works__hero
+            .how-it-works__hero__container
+                .how-it-works__hero__image
+                    img(src='../images/home/slide1.jpg')
+                    .how-it-works__hero__layer
+            .how-it-works__hero__wrapper
+                +play-button
+                .how-it-works__hero__data
+                    +content-block('', 'cómo funciona placèt', '', '', 'white')
+        section.how-it-works__appoinment
+            .how-it-works__appoinment__container
+                .how-it-works__appoinment__data
+                    +content-block('', 'primera cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.', {'text':'agende su cita', 'url':'#'})
+                .how-it-works__appoinment__image
+            .how-it-works__appoinment__container
+                .how-it-works__appoinment__image
+                .how-it-works__appoinment__data
+                    +content-block('', 'segunda cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.', {'text':'agende su cita', 'url':'#'})
+            .how-it-works__appoinment__container
+                .how-it-works__appoinment__data
+                    +content-block('', 'tercera cita', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.', {'text':'agende su cita', 'url':'#'})
+                .how-it-works__appoinment__image
+            .how-it-works__appoinment__container
+                .how-it-works__appoinment__image
+                .how-it-works__appoinment__data
+                    +content-block('', 'garantia de satisfacción', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.', {'text':'agende su cita', 'url':'#'},  'white')
+            

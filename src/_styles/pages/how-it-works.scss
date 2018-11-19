@@ -1,0 +1,281 @@
+.how-it-works {
+    overflow: hidden;
+
+    &__hero {
+        @include mq(sm) {
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__container {
+            position: relative;
+        }
+
+        &__image {
+            @include img($ratio:100%, $imgwidth: auto, $imgheight: 100%);
+
+            @include mq(sm) {
+                @include img(40%);
+            }
+        }
+
+        &__layer {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                background: transparentize($indigo - #555, .5);
+                width: 25vw;
+                border-left: .3vw solid $vibrantGolden;
+                transform: skew(-20deg);
+                left: 85%;
+            }
+        }
+
+        &__wrapper {
+
+            @include mq(sm) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 18vw;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .play-button {
+                position: absolute;
+                top: 60vw;
+                left: 50%;
+                transform: translate(-50%) scale3d(3,3,3);
+
+                @include mq(sm) {
+                    position: relative;
+                    transform: translate(0) scale3d(1.1,1.1,1.1);
+                    top: auto;
+                    left: auto;
+                }
+            }
+        }
+
+        &__data {
+            background: transparentize($indigo - #555, .5);
+            padding: 35px 20px;
+
+            @include mq(sm) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                width: 30vw;
+                background: none;
+            }
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    padding: 0;
+                    font-size: 24px;
+
+                    @include mq(sm) {
+                        padding-top: 2.5vw;
+                        font-size: 3vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__appoinment {
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            height: 130vw;
+
+            @include mq(sm) {
+                flex-direction: row;
+                height: auto;
+            }
+
+            &:nth-child(1) {
+                background-color: $lightGray;
+
+                .how-it-works__appoinment__image {
+                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background-size: cover;
+
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: $lightestGray;
+
+                .how-it-works__appoinment__image {
+                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background-size: cover;
+                    order: 2;
+
+                    @include mq(sm) {
+                        order: 1;
+                    }
+                }
+
+                .how-it-works__appoinment__data {
+                    order: 1;
+
+                    @include mq(sm) {
+                        order: 2;
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                background-color: $lightGray;
+
+                .how-it-works__appoinment__image {
+                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background-size: cover;
+
+                }
+            }
+
+            &:nth-child(4) {
+                background-color: $indigo - #444;
+
+                .content-block {
+                    &__title {
+                        &:after {
+                            background: $vibrantGolden;
+                        }
+                    }
+
+                    &__link {
+                        background: transparent;
+                        border-color: $vibrantGolden;
+                    }
+                }
+
+                .how-it-works__appoinment__image {
+                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background-size: cover;
+                    order: 2;
+
+                    @include mq(sm) {
+                        order: 1;
+                    }
+                }
+
+                .how-it-works__appoinment__data {
+                    order: 1;
+
+                    @include mq(sm) {
+                        order: 2;
+                    }
+                }
+            }
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    font-size: 18px;
+
+                    @include mq(sm) {
+                        font-size: 2.2vw;
+                        margin-bottom: auto;
+                    }
+                }
+
+                &__text {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+
+                    @include mq(sm) {
+                        font-size: 1.1vw;
+                    }
+                }
+
+                &__link {
+                    color: $vibrantGolden;
+                }
+            }
+        }
+
+        &__image {
+            flex-basis: 50%;
+
+            @include mq(sm) {
+                flex-basis: auto;
+                width: 50%;
+            }
+
+        }
+
+        &__data {
+            flex-basis: 50%;
+
+            @include mq(sm) {
+                width: 50%;
+                flex-basis: auto;
+            }
+
+            padding: 5vw 8vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &:nth-child(odd) {
+
+                .content-block {
+                    @include mq(sm) {
+                        text-align: left;
+                    }
+
+                    &__title {
+                        @include mq(sm) {
+                            text-align: left;
+                        }
+
+                        &:after {
+                            @include mq(sm) {
+                                left: 1.5vw;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+
+                .content-block,
+                .content-block--white {
+                    @include mq(sm) {
+                        text-align: right;
+                    }
+
+                    &__title {
+                        @include mq(sm) {
+                            text-align: right;
+                        }
+
+                        &:after {
+                            @include mq(sm) {
+                                left: 95%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
