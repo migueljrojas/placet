@@ -1,0 +1,56 @@
+extends ../_layouts/base
+
+include ../_modules/content-block/content-block
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.tarjeta-de-regalo
+        section.tarjeta-de-regalo__hero
+            .tarjeta-de-regalo__hero__column
+                +content-block('regale la exclusividad de una', 'tarjeta de regalo', '', '', 'white')
+            .tarjeta-de-regalo__hero__column
+                .tarjeta-de-regalo__hero__image
+                    img(src='../images/home/card.png')
+    
+        section.tarjeta-de-regalo__main
+            .tarjeta-de-regalo__main__column.tarjeta-de-regalo__main__column--data
+                +content-block('placèt', 'gift card', 'La tarjeta de regalo de Placèt está lista para usar, een un sobre claramente marcado con la cantidad ded su regalo.')
+                +content-block('','','Las tarjetas de regalo se pueden canjear en línea. Puede combinar otras formas de pago con el pafo de su tarjeta de regalo.')
+                +content-block('','','Consulte nuestra Sección de Servicio al Cliente para obtener información adicional sobre su Tarjeta de Regalo.')
+            .tarjeta-de-regalo__main__column.tarjeta-de-regalo__main__column--form
+                form.tarjeta-de-regalo__main__form
+                    .tarjeta-de-regalo__main__giftcard
+                        .tarjeta-de-regalo__main__wrapper
+                            label.tarjeta-de-regalo__main__label seleccione el diseño
+                        .tarjeta-de-regalo__main__wrapper
+                            input.tarjeta-de-regalo__main__input(type='radio', name='card', id='card1')
+                            label.tarjeta-de-regalo__main__card(for='card1')
+                                .tarjeta-de-regalo__main__image
+                                    img(src='../images/giftcard/giftcard-design.png')
+                            input.tarjeta-de-regalo__main__input(type='radio', name='card', id='card2')
+                            label.tarjeta-de-regalo__main__card(for='card2')
+                                .tarjeta-de-regalo__main__image
+                                    img(src='../images/giftcard/giftcard-design-2.png')
+                            input.tarjeta-de-regalo__main__input(type='radio', name='card', id='card3')
+                            label.tarjeta-de-regalo__main__card(for='card3')
+                                .tarjeta-de-regalo__main__image
+                                    img(src='../images/giftcard/giftcard-design-3.png')
+                    .tarjeta-de-regalo__main__amount
+                        .tarjeta-de-regalo__main__wrapper
+                            label.tarjeta-de-regalo__main__label elija el valor de su tarjeta de regalo
+                        .tarjeta-de-regalo__main__wrapper
+                            select.tarjeta-de-regalo__main__dropdown
+                                option $ 200,000
+                                option $ 300,000
+                                option $ 400,000
+                    .tarjeta-de-regalo__main__quantity
+                        .tarjeta-de-regalo__main__wrapper
+                            label.tarjeta-de-regalo__main__label  ¿cunatas tarjetas desea regalar?
+                        .tarjeta-de-regalo__main__wrapper.tarjeta-de-regalo__main__wrapper--quantity
+                            a.tarjeta-de-regalo__main__arrow.tarjeta-de-regalo__main__arrow--left
+                            span.tarjeta-de-regalo__main__value 1
+                            a.tarjeta-de-regalo__main__arrow.tarjeta-de-regalo__main__arrow--right
+                    button.tarjeta-de-regalo__main__button agregar al carro de compras
