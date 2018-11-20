@@ -1,0 +1,259 @@
+.referidos {
+
+    &__hero {
+        position: relative;
+        overflow: hidden;
+
+        &__layer {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                background: transparentize($indigo - #555, .5);
+                width: 25vw;
+                border-left: .3vw solid $vibrantGolden;
+                transform: skew(-20deg);
+                left: 85%;
+            }
+        }
+
+        &__image {
+            @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
+
+            img {
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include mq(sm) {
+                    left: 0;
+                    transform: translateX(0);
+                }
+            }
+
+            @include mq(sm) {
+                @include img($ratio: 40%);
+            }
+        }
+
+        &__data {
+            background: transparentize($indigo - #555, .5);
+            padding: 35px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mq(sm) {
+                display: block;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                width: 35vw;
+                top: 16vw;
+                text-align: center;
+                left: 10vw;
+                background: none;
+            }
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    @include mq(sm) {
+                        padding-bottom: 1.5vw;
+                        font-size: 4vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &__text {
+                    font-size: 14px;
+
+                    @include mq(sm) {
+                        font-size: 2vw;
+                        letter-spacing: 1.5px;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+
+    &__main {
+        background: $lightestGray;
+        padding: 20px;
+
+        @include mq(sm) {
+            padding: 4vw 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__column {
+            @include mq(sm) {
+                width: 47%;
+            }
+
+            &--data {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .content-block {
+                    @include mq(sm) {
+                        width: 80%;
+                    }
+
+                    &__subtitle {
+                        font-size: 20px;
+
+                        @include mq(sm) {
+                            font-size: 1.4vw;
+                        }
+                    }
+
+                    &__title {
+                        padding-top: 10px;
+                        padding-bottom: 30px;
+                        margin-bottom: 20px;
+
+                        @include mq(sm) {
+                            padding-top: 1vw;
+                            margin-bottom: 2vw;
+                            padding-bottom: 2vw;
+                        }
+                    }
+
+                    &__text {
+                        padding-bottom: 20px;
+                        @include mq(sm) {
+                            padding-bottom: 0;
+                            font-size: 1.6vw;
+                        }
+                    }
+                }
+            }
+
+            &--form {
+                display: flex;
+                flex-direction: column;
+                background: $white;
+                padding: 2vw 6vw;
+            }
+        }
+
+        &__title {
+            color: $golden;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: 18px;
+            padding-bottom: 20px;
+
+            @include mq(sm) {
+                font-size: 1.4vw;
+                padding-bottom: 2vw;
+            }
+        }
+
+        input[type="checkbox"] {
+            -webkit-appearance: none;
+            cursor:pointer;
+            position:relative;
+            background-color: $white;
+            margin: 0;
+            border: 1px solid $midGray;
+            // transform: scale3d(.5,.5,.5);
+            width: 20vw;
+            height: 25px;
+
+
+            &:checked:before {
+                position: absolute;
+                font-size: 3vw;
+                content: '\2713';
+                color: $golden;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+            }
+        }
+
+        &__input {
+            margin-bottom: 15px;
+            border: 1px solid $lightGray;
+            width: 100%;
+            padding: 10px;
+
+            @include mq(sm) {
+                margin-bottom: 1vw;
+                padding: 1vw;
+            }
+
+            &--checkbox {
+                padding-right: 20px;
+            }
+        }
+
+        &__wrapper {
+            display: flex;
+        }
+
+        &__label {
+            font-size: 11px;
+            font-weight: 100;
+            padding-left: 10px;
+
+            @include mq(sm) {
+                font-size: .9vw;
+            }
+
+            a {
+                color: $black;
+                border-bottom: .5px solid $lightGray;
+
+                &:hover {
+                    color: $darkestGray;
+                    font-weight: bolder;
+                }
+
+            }
+        }
+
+        &__button {
+            background: transparent;
+            border: 1px solid $golden;
+            width: 100%;
+            text-transform: uppercase;
+            color: $golden;
+            padding: 10px 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                padding: .8vw 0;
+                margin-top: 2vw;
+                margin-bottom: 2vw;
+            }
+        }
+
+        &__text {
+            text-align: center;
+            font-size: 12px;
+
+            @include mq(sm) {
+                font-size: 1.1vw;
+            }
+        }
+    }
+}

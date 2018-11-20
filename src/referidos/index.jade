@@ -1,0 +1,35 @@
+extends ../_layouts/base
+
+include ../_modules/content-block/content-block
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.referidos
+        section.referidos__hero
+            .referidos__hero__container
+                .referidos__hero__image
+                    img(src='../images/referidos/hero.jpg')
+                    .referidos__hero__layer
+                
+                .referidos__hero__data
+                    +content-block('', 'agende su cita', 'con un personal shopper', '', 'white')
+        section.referidos__main
+            .referidos__main__column.referidos__main__column--data
+                +content-block('club placèt', 'invite a màs personas a ser paete de este selecto club', 'Por cada amigo que refiera y haga su primera compra, recibirà un crèdito en prendas PLACÈT por $500,000.')
+            .referidos__main__column.referidos__main__column--form
+                h3.referidos__main__title ingrese la informaciòn de la persona que quisiera recomendar
+                form.referidos__main__form
+                    input.referidos__main__input(type='text' placeholder='Nombre*')
+                    input.referidos__main__input(type='text' placeholder='Apellido*')
+                    input.referidos__main__input(type='email' placeholder='Email*')
+                    input.referidos__main__input(type='phone' placeholder='Celular*')
+                    .referidos__main__wrapper
+                        input.referidos__main__input.referidos__main__input--checkbox(type='checkbox' name='checkbox' id='checkbox')
+                        label.referidos__main__label(for='#checkbox') Confirmo que conozco a la persona que estoy refiriendo y entiendo que estoy sujeto a las
+                            a  políticas de privacidad 
+                            | de PLACÈT
+                    button.referidos__main__button enviar
+                p.referidos__main__text *Campos obligatorios
