@@ -14662,6 +14662,39 @@ return jQuery;
 'use strict';
 
 // Constructor
+var EgModal = function() {
+    var modal = $('.eg-modal');
+
+    if (modal) {
+        var modalTriggers = $('[data-modal]');
+        modalTriggers.on('click', function() {
+            var actionType = $(this).data('modal');
+
+            if (actionType === 'open') {
+                openModal();
+            } else {
+                closeModal();
+            }
+        });
+
+        function openModal() {
+            modal.addClass('-open');
+            $('body').addClass('-hideOverflow');
+        }
+
+        function closeModal() {
+            modal.removeClass('-open');
+            $('body').removeClass('-hideOverflow');
+        }
+    }
+};
+
+module.exports = EgModal;
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
+// Constructor
 var Header = function() {
     var header = $('.header');
     var body = $('body');
@@ -14671,11 +14704,73 @@ var Header = function() {
         header.toggleClass('-open');
         body.toggleClass('-hideOverflow');
     });
+
+        // Select all links with hashes
+    $('a[href="#"]').click(function(e){
+        e.preventDefault();
+    });
+
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .not('[href="#registro"]')
+    .not('[href="#login"]')
+    .click(function(event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+        ) {
+          // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top + -80
+                }, 1000, function() {
+                // Callback after animation
+                // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                });
+            }
+        }
+    });
 };
 
 module.exports = Header;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
+'use strict';
+
+// Constructor
+var Register = function() {
+    var registerButton = $('[href="#registro"]');
+    var loginButton = $('[href="#login"]');
+    var registerBlock = $('#registro');
+    var loginBlock = $('#login');
+
+    registerButton.on('click', function() {
+        // e.preventDefault();
+        loginBlock.addClass('-hidden');
+        registerBlock.removeClass('-hidden');
+    });
+
+    loginButton.on('click', function() {
+        // e.preventDefault();
+        registerBlock.addClass('-hidden');
+        loginBlock.removeClass('-hidden');
+    });
+};
+
+module.exports = Register;
+
+},{}],8:[function(require,module,exports){
 'use strict';
 
 // Constructor
@@ -14695,7 +14790,7 @@ var Slider = function() {
 
 module.exports = Slider;
 
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 (function (global){
 // Main javascript entry point
 // Should handle bootstrapping/starting application
@@ -14706,6 +14801,8 @@ global.$ = global.jQuery = require('jquery');
 global._ = require('underscore');
 var Header = require('../_modules/header/header');
 var Slider = require('../_modules/slider/slider');
+var Register = require('../_modules/register/register');
+var EgModal = require('../_modules/eg-modal/eg-modal');
 
 $(function() {
     require('../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min');
@@ -14713,10 +14810,12 @@ $(function() {
 
     new Header();
     new Slider();
+    new Register();
+    new EgModal();
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min":1,"../../bower_components/slick-carousel/slick/slick":2,"../_modules/header/header":5,"../_modules/slider/slider":6,"jquery":3,"underscore":4}]},{},[7])
+},{"../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min":1,"../../bower_components/slick-carousel/slick/slick":2,"../_modules/eg-modal/eg-modal":5,"../_modules/header/header":6,"../_modules/register/register":7,"../_modules/slider/slider":8,"jquery":3,"underscore":4}]},{},[9])
 
 //# sourceMappingURL=main.js.map
