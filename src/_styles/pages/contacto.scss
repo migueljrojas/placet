@@ -1,0 +1,291 @@
+.contacto {
+    overflow: hidden;
+
+    &__hero {
+        position: relative;
+
+        &__layer {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                background: transparentize($indigo - #555, .5);
+                width: 25vw;
+                border-left: .3vw solid $vibrantGolden;
+                transform: skew(-20deg);
+                left: 85%;
+            }
+        }
+
+        &__container {
+            position: relative;
+        }
+
+        &__image {
+            @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
+
+            @include mq(sm) {
+                @include img($ratio: 40%);
+            }
+        }
+
+        &__data {
+            background: transparentize($indigo - #555, .5);
+            padding: 35px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mq(sm) {
+                display: block;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                width: 35vw;
+                top: 15vw;
+                text-align: center;
+                left: 10vw;
+                background: none;
+            }
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    @include mq(sm) {
+                        padding-bottom: 1.5vw;
+                        font-size: 5vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &__text {
+                    font-size: 14px;
+
+                    @include mq(sm) {
+                        font-size: 2vw;
+                        letter-spacing: 1.5px;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+
+    &__main {
+        @include mq(sm) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__column {
+            @include mq(sm) {
+                width: 50%;
+            }
+
+            &--data {
+                background: $lightestGray;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+
+                @include mq(sm) {
+                    padding: 4vw 8vw;
+                }
+
+                .content-block {
+                    @include mq(sm) {
+                        width: 80%;
+                    }
+
+                    &__subtitle {
+                        font-size: 20px;
+
+                        @include mq(sm) {
+                            font-size: 2vw;
+                        }
+                    }
+
+                    &__title {
+                        padding-top: 10px;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+
+                        @include mq(sm) {
+                            padding-top: 1vw;
+                            margin-bottom: 2vw;
+                            padding-bottom: 2vw;
+                            font-size: 3vw;
+                        }
+                    }
+
+                    &__text {
+                        padding-top: 0;
+                        @include mq(sm) {
+                            font-size: 1.6vw;
+                        }
+                    }
+                }
+            }
+
+            &--form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: $white;
+                padding: 20px;
+
+                @include mq(sm) {
+                    padding: 5vw 10vw;
+                }
+            }
+        }
+
+        &__qr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid $vibrantGolden;
+            margin: 20px 0 0 0;
+            width: 100%;
+
+            @include mq(sm) {
+                justify-content: space-between;
+                flex-direction: row;
+                margin: 2vw 6vw;
+                padding: 1vw 2vw;
+            }
+        }
+
+        &__image {
+            @include img($ratio: 50%, $imgwidth: auto, $imgheight: 100%);
+            left: 25%;
+
+            @include mq(sm) {
+                @include img($ratio: 20%, $imgwidth: auto, $imgheight: 100%);
+                width: 30%;
+                left:auto;
+            }
+
+        }
+
+        &__text {
+            text-transform: uppercase;
+            color: $vibrantGolden;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 20px;
+            font-size: 18px;
+
+            @include mq(sm) {
+                padding-bottom: 0;
+                font-size: 1.3vw;
+            }
+        }
+
+        &__group {
+            text-align: center;
+            padding-top: 20px;
+
+            @include mq(sm) {
+                padding-bottom: 1vw;
+            }
+        }
+
+        &__title {
+            color: $indigo;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        &__email {
+            color: $vibrantGolden;
+            font-size: 20px;
+        }
+
+        &__form-title {
+            color: $vibrantGolden;
+            text-transform: uppercase;
+            font-size: 18px;
+            padding-bottom: 20px;
+            text-align: center;
+
+            @include mq(sm) {
+                padding-bottom: 2vw;
+                font-size: 1.8vw;
+            }
+        }
+
+        &__input {
+            width: 100%;
+            background: transparent;
+            border: 1px solid $midGray;
+            outline: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+
+            @include mq(sm) {
+                padding: 1vw;
+                margin-bottom: 1.5vw;
+
+            }
+
+            &--comments {
+                resize: none;
+                overflow-x: hidden;
+                overflow-y: auto;
+                height: 40vw;
+
+                @include mq(sm) {
+                    height: 10vw;
+                }
+            }
+
+            &--button {
+                border: 1px solid $vibrantGolden;
+                color: $vibrantGolden;
+                text-transform: uppercase;
+            }
+        }
+
+        &__note {
+            color: $midGray;
+            font-size: 14px;
+
+            @include mq(sm) {
+                font-size: 1vw;
+            }
+        }
+    }
+
+    &__map {
+        height: 100vw;
+        
+        .embed-responsive-16by9 {
+            padding-bottom: 100vw;
+        }
+
+        @include mq(sm) {
+            height: 30vw;
+
+            .embed-responsive-16by9 {
+                padding-bottom: 56.25%;
+            }
+        }
+    }
+}
