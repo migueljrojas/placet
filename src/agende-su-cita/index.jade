@@ -7,22 +7,22 @@ block config
   - var baseUrl = '../'
 
 block content
-    main.testimonios
-        section.testimonios__hero
-            .testimonios__hero__container
-                .testimonios__hero__image
+    main.appoinment
+        section.appoinment__hero
+            .appoinment__hero__container
+                .appoinment__hero__image
                     img(src='../images/agende-su-cita/hero.jpg')
-                    .testimonios__hero__layer
+                    .appoinment__hero__layer
                 
-                .testimonios__hero__data
+                .appoinment__hero__data
                     +content-block('', 'agende su cita', 'con un personal shopper', '', 'white')
 
-        section.testimonios__register
-            p.testimonios__register__comment El primer paso para disfrutar de los beneficios de PLACÈT, es agendar una cita con un Personal Shopper, en el horario y lugar que más le convenga
-            .testimonios__register__container
-                .testimonios__register__wrapper
+        section.appoinment__register
+            p.appoinment__register__comment El primer paso para disfrutar de los beneficios de PLACÈT, es agendar una cita con un Personal Shopper, en el horario y lugar que más le convenga
+            .appoinment__register__container
+                .appoinment__register__wrapper
                     +content-block('', '', 'Si no es usuario registrado, puede hacerlo mediante unos simples pasos.', {'text':'aún no estoy registrado en placèt', 'url':'#registro'}, 'true')
-                .testimonios__register__wrapper
+                .appoinment__register__wrapper
                     +content-block('', '', 'Si ya es usuario registrado, solo debe ingresar sus datos de ingreso, o conectarse a través de Facebook.', {'text':'ya estoy registrado en placèt', 'url':'#login'}, 'true')
         
         
