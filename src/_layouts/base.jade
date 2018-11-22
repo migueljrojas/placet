@@ -23,6 +23,8 @@ body
     <![endif]-->
     
     include ../_modules/logo/logo.jade
+    include ../_modules/register/register
+    include ../_modules/eg-modal/eg-modal
     
     block header
         include ../_modules/header/header.jade
@@ -31,6 +33,9 @@ body
 
     block footer
         include ../_modules/footer/footer.jade
+
+    +eg-modal
+        +register
 
     block scripts
         script(src= baseUrl + 'scripts/main.js')

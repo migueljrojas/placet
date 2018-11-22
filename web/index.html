@@ -30,26 +30,89 @@
       </symbol>
   </svg>
   <header class="header">
-    <div class="header__wrapper">
-      <div class="header__logo">
-        <div class="header__image"><img src="/images/logo.png"></div>
-      </div>
+    <div class="header__hamburguer"><span></span><span></span><span></span></div>
+    <div class="header__logo__wrapper">
+      <div class="header__logo"><a href="/"><img src="/images/logo.png"></a></div>
     </div>
     <div class="header__layer"></div>
-    <div class="header__menu">
-      <div class="header__menu__secondary"><a class="header__menu__link">Servicio al Cliente</a><a class="header__menu__link">Contacto</a><a class="header__menu__link">Buscar</a>
-        <button class="header__menu__login-button">ingresar</button>
+    <nav class="header__nav">
+      <div class="header__menu">
+        <div class="header__menu__secondary"><a href="#" class="header__menu__link">Servicio al Cliente</a><a href="/contacto" class="header__menu__link">Contacto</a><a href="#" class="header__menu__link">Buscar</a><a data-modal="open" href="#login" class="header__menu__login-button">Ingresar</a></div>
+        <div class="header__menu__primary"><a href="/acerca-de-placet" class="header__menu__tab">acerca de placet</a><a href="#tienda" class="header__menu__tab">tienda online</a><a href="/beneficios" class="header__menu__tab">beneficios</a><a href="/como-funciona" class="header__menu__tab">como funciona</a><a href="/marcas" class="header__menu__tab">marcas</a><a href="/agende-su-cita" class="header__menu__tab">agende su cita</a>
+        </div>
       </div>
-      <div class="header__menu__primary">
-        <div class="header__menu__tab">acerca de placet<a href="#"></a></div>
-        <div class="header__menu__tab">tienda online<a href="#"></a></div>
-        <div class="header__menu__tab">beneficios<a href="#"></a></div>
-        <div class="header__menu__tab">como funciona<a href="#"></a></div>
-        <div class="header__menu__tab">marcas<a href="#"></a></div>
-        <div class="header__menu__tab">agende su cita<a href="#"></a></div>
+    </nav>
+    <div id="tienda" class="header__tienda">
+      <div class="header__tienda__aside">
+        <div class="header__tienda__image"><img src="/images/header-tienda-aside.jpg"></div>
+      </div>
+      <div class="header__tienda__main">
+        <div class="header__tienda__heading">
+          <h2 class="header__tienda__title">Tienda Online</h2><a class="header__tienda__main-link">Cree su propia pinta</a>
+          <button class="header__tienda__close"><i class="material-icons">close</i></button>
+        </div>
+        <div class="header__tienda__body">
+          <div class="header__tienda__col">
+            <div class="header__tienda__list">
+              <h3 class="header__tienda__category">Ceremonia</h3>
+              <ul class="header__tienda__items">
+                <li><a href="/tienda">Smoking</a></li>
+                <li><a href="/tienda">Camisas Smoking</a></li>
+                <li><a href="/tienda">Corbatines</a></li>
+              </ul>
+            </div>
+            <div class="header__tienda__list">
+              <h3 class="header__tienda__category">Sastrería</h3>
+              <ul class="header__tienda__items">
+                <li><a href="/tienda">Trajes</a></li>
+                <li><a href="/tienda">Camisas Formales</a></li>
+                <li><a href="/tienda">Pantalones Formales</a></li>
+                <li><a href="/tienda">Sacos y Blazers</a></li>
+                <li><a href="/tienda">Corbatas</a></li>
+              </ul>
+            </div>
+            <div class="header__tienda__list">
+              <h3 class="header__tienda__category">Calzado</h3>
+              <ul class="header__tienda__items">
+                <li><a href="/tienda">Zapatos formales</a></li>
+                <li><a href="/tienda">Zapatos casuales</a></li>
+              </ul>
+            </div>
+            <div class="header__tienda__list">
+              <h3 class="header__tienda__category">Cinturones</h3>
+              <ul class="header__tienda__items">
+                <li><a href="/tienda">Cinturón formal</a></li>
+                <li><a href="/tienda">Cinturón casual</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header__tienda__col">
+            <div class="header__tienda__list header__tienda__list--long">
+              <h3 class="header__tienda__category">Casual</h3>
+              <ul class="header__tienda__items">
+                <li><a href="/tienda">Pantalones casuales</a></li>
+                <li><a href="/tienda">Camisas casuales</a></li>
+                <li><a href="/tienda">Polos</a></li>
+                <li><a href="/tienda">Chaquetas</a></li>
+                <li><a href="/tienda">Chalecos</a></li>
+                <li><a href="/tienda">Sweateres</a></li>
+                <li><a href="/tienda">Bermudas</a></li>
+                <li><a href="/tienda">Vestido de Baño</a></li>
+              </ul>
+            </div>
+            <div class="header__tienda__list header__tienda__list--long">
+              <h3 class="header__tienda__category">Accesorios</h3>
+              <ul class="header__tienda__items">
+                <li><a href="/tienda">Bufandas</a></li>
+                <li><a href="/tienda">Pañuelos</a></li>
+                <li><a href="/tienda">Mancornas</a></li>
+                <li><a href="/tienda">Esferos</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="header__hamburguer"><span></span><span></span><span></span></div>
   </header>
   <main class="home">
     <section class="home__hero">
@@ -191,6 +254,66 @@
       <p>&copy 2018 - Placèt</p>
     </div>
   </footer>
+    <div class="eg-modal">
+      <div data-modal="close" class="eg-modal__backdrop"></div>
+      <div class="eg-modal__container">
+        <button data-modal="close" class="eg-modal__close"><span></span><span></span></button>
+          <section id="registro" class="registro-modal -hidden">
+            <div class="registro-modal__registro">
+              <div class="registro-modal__registro__container">
+                <div class="registro-modal__registro__title">
+                  <div class="content-block  ">
+                    <h2 class="content-block__title">regístrese en placèt</h2>
+                    <p class="content-block__text">por favor introduzca los siguientes datos</p>
+                    <div class="content-block__wrapper">   
+                    </div>
+                  </div>
+                </div>
+                <form class="registro-modal__registro__form">
+                  <input type="text" placeholder="Nombre" class="registro-modal__registro__input">
+                  <input type="text" placeholder="Apellido" class="registro-modal__registro__input">
+                  <input type="email" placeholder="Email" class="registro-modal__registro__input">
+                  <input type="phone" placeholder="Telefono" class="registro-modal__registro__input">
+                  <input type="text" placeholder="Dirección" class="registro-modal__registro__input registro-modal__registro__input--address">
+                </form>
+                <button class="registro-modal__registro__button">registrarse</button>
+              </div>
+              <div class="registro-modal__registro__container">
+                <div class="registro-modal__registro__social-media">
+                  <p class="registro-modal__registro__text">Si lo desea, también se puede registrar con sus cuentas de Gmail o de Facebook</p>
+                  <div class="registro-modal__registro__wrapper">
+                    <button class="registro-modal__registro__social registro-modal__registro__social--gmail">
+                      <div class="registro-modal__registro__image"><i class="fa fa-google-plus"></i></div>
+                      <div class="registro-modal__registro__red">ingresar con gmail</div>
+                    </button>
+                    <button class="registro-modal__registro__social registro-modal__registro__social--facebook">
+                      <div class="registro-modal__registro__image"><i class="fa fa-facebook"></i></div>
+                      <div class="registro-modal__registro__red">ingresar con facebook</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="login" class="registro-modal -hidden">
+            <div class="registro-modal__login">
+              <div class="registro-modal__login__title">
+                <div class="content-block  ">
+                  <h2 class="content-block__title">ingrese a placèt</h2>
+                  <p class="content-block__text">por favor introduzca su email y contraseña registrados</p>
+                  <div class="content-block__wrapper">   
+                  </div>
+                </div>
+              </div>
+              <form class="registro-modal__login__form">
+                <input type="email" placeholder="Email" class="registro-modal__login__input">
+                <input placeholder="Contraseña" class="registro-modal__login__input">
+              </form><a class="registro-modal__login__text">No recuerdo mi contraseña</a>
+              <button class="registro-modal__login__button">ingresar</button>
+            </div>
+          </section>
+      </div>
+    </div>
   <script src="./scripts/main.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
   <script>new WOW().init();</script>
