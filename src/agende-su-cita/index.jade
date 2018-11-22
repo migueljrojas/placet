@@ -1,8 +1,6 @@
 extends ../_layouts/base
 
 include ../_modules/content-block/content-block
-include ../_modules/register/register
-include ../_modules/eg-modal/eg-modal
 
 block config
   //- Correct base url pathing for this page
@@ -27,5 +25,4 @@ block content
                 .appoinment__register__wrapper
                     +content-block('', '', 'Si ya es usuario registrado, solo debe ingresar sus datos de ingreso, o conectarse a través de Facebook.', {'text':'ya estoy registrado en placèt', 'url':'#login'}, 'true')
         
-        +eg-modal
-            +register
+        
