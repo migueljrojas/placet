@@ -1,0 +1,216 @@
+.testimonios {
+
+    &__hero {
+        position: relative;
+        overflow: hidden;
+
+        &__layer {
+            display: none;
+
+            @include mq(sm) {
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                background: transparentize($indigo - #555, .5);
+                width: 25vw;
+                border-left: .3vw solid $vibrantGolden;
+                transform: skew(-20deg);
+                left: 85%;
+            }
+        }
+
+        &__image {
+            @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
+
+            img {
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include mq(sm) {
+                    left: 0;
+                    transform: translateX(0);
+                }
+            }
+
+            @include mq(sm) {
+                @include img($ratio: 40%);
+            }
+        }
+
+        &__data {
+            background: transparentize($indigo - #555, .5);
+            padding: 35px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include mq(sm) {
+                display: block;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                width: 45vw;
+                top: 16vw;
+                text-align: center;
+                left: 50%;
+                background: none;
+                transform: translateX(-50%);
+            }
+
+            .content-block {
+                &__title {
+                    margin-bottom: 0;
+                    padding: 0;
+
+                    @include mq(sm) {
+                        padding-bottom: 1.5vw;
+                        font-size: 4vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &__text {
+                    font-size: 14px;
+
+                    @include mq(sm) {
+                        font-size: 2vw;
+                        letter-spacing: 1.5px;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+
+    &__slider {
+        .slick-dots {
+            display: none !important;
+        }
+
+        .slick-slide {
+            &:nth-child(even) {
+                .testimonios__card {
+                    background: $fadedIndigo;
+                    color: $white;
+
+                    .content-block {
+                        &__subtitle {
+                            color: $white;
+                        }
+            
+                        &__title {
+                            color: $white;
+                        }
+                    }
+
+                    &__image {
+                        &:before {
+                            border: 5px solid $fadedIndigo;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__card{
+        padding: 20px;
+        background: $lightestGray;
+        text-align: center;
+
+        @include mq(sm) {
+            padding: 3vw;
+        }
+
+        &__quote {
+            font-family: $titleFont;
+            font-style: oblique;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+
+            @include mq(sm) {
+                font-size: 1.6vw;
+            }
+        }
+
+        &__author {
+            padding: 2vw 0;
+            color: $vibrantGolden;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        &__divider{
+            display: block;
+            width: 1px;
+            height: 2.5vw;
+            background: $vibrantGolden;
+            margin-bottom: 2vw;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 15px;
+        }
+
+        &__image {
+            width: 80px;
+            height: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 1vw;
+
+            &:after {
+                position: absolute;
+                content: '';
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                border-radius: 50%;
+                border: 1px solid $vibrantGolden;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                border-radius: 50%;
+                border: 5px solid $lightestGray;
+            }
+
+            img {
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        .content-block {
+
+            &__subtitle {
+                color: $indigo;
+            }
+
+            &__title {
+                
+                @include mq(sm) {
+                    font-size: 2vw;
+                }
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
