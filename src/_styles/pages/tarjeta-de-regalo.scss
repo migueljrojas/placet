@@ -1,0 +1,254 @@
+.tarjeta-de-regalo {
+    &__hero {
+        overflow: hidden;
+        height: 100vw;
+        background: url('../images/giftcard/hero.jpg') no-repeat;
+        background-size: cover;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @include mq(sm) {
+            justify-content: space-around;
+            flex-direction: row;
+            height: 40vw;
+            padding: 0;
+        }
+
+        &__column {
+            width: 100%;
+
+            @include mq(sm) {
+                width: 50%;
+            }
+
+            .content-block {
+                &__subtitle {
+                    @include mq(sm) {
+                        font-size: 2vw;
+                    }
+                }
+
+                &__title {
+                    font-size: 32px;
+                    @include mq(sm) {
+                        padding-top: .5vw;
+                        font-size: 4vw;
+                    }
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &__image {
+            @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%);
+
+            @include mq(sm) {
+                @include img($ratio: 50%, $imgwidth: auto, $imgheight: 100%);
+            }
+        }
+    }
+
+    &__main {
+        background: $lightestGray;
+        padding: 20px;
+
+        @include mq(sm) {
+            padding: 4vw 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__column {
+            @include mq(sm) {
+                width: 47%;
+            }
+
+            &--data {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .content-block {
+                    @include mq(sm) {
+                        width: 80%;
+                    }
+
+                    &__subtitle {
+                        font-size: 20px;
+
+                        @include mq(sm) {
+                            font-size: 2vw;
+                        }
+                    }
+
+                    &__title {
+                        padding-top: 10px;
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+
+                        @include mq(sm) {
+                            padding-top: 1vw;
+                            margin-bottom: 2vw;
+                            padding-bottom: 2vw;
+                            font-size: 3vw;
+                        }
+                    }
+
+                    &__text {
+                        padding-bottom: 20px;
+                        padding-top: 0;
+                        @include mq(sm) {
+                            padding-bottom: 2vw;
+                            font-size: 1.6vw;
+                        }
+                    }
+                }
+            }
+
+            &--form {
+                display: flex;
+                flex-direction: column;
+                background: $white;
+                padding: 5vw 6vw;
+            }
+        }
+
+        &__giftcard {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 20px;
+
+            @include mq(sm) {
+                padding-bottom: 2vw;
+            }
+
+            &--quantity {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                @include mq(sm) {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        input[type='radio'] {
+            position: absolute;
+            left: -9999px;
+
+            &:checked + .tarjeta-de-regalo__main__card {
+                border: 2px solid $vibrantGolden;
+            }
+        }
+
+        &__card {
+            position: relative;
+            width: 30%;
+        }
+
+        &__image {
+            @include img($ratio: 60%, $imgwidth: 100%, $imgheight: 100%);
+        }
+
+        &__label {
+            width: 100%;
+            font-size: 22px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $vibrantGolden;
+            font-weight: 100;
+            margin: 0;
+
+            @include mq(sm) {
+                text-align: inherit;
+                font-size: 1.4vw;
+            }
+        }
+
+        &__dropdown {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid $midGray;
+            color: $midGray;
+            font-size: 20px;
+            padding: 10px 20px;
+
+            @include mq(sm) {
+
+                padding: 1vw 2vw;
+                font-size: 1.5vw;
+            }
+        }
+
+        &__arrow {
+            display: inline-block;
+            width: 6px;
+            border: 1px solid $midGray;
+            height: 6px;
+            border-top: transparent;
+
+            &--left {
+                border-right: transparent;
+                transform: rotate(45deg);
+                margin-right: 40px;
+            }
+
+            &--right {
+                border-left: transparent;
+                transform: rotate(-45deg);
+                margin-left: 40px;
+            }
+        }
+
+        &__value {
+            color: $black;
+            font-size: 20px;
+            @include mq(sm) {
+                font-size: 2vw;
+            }
+
+        }
+
+        &__button {
+            background: transparent;
+            border: 1px solid $golden;
+            width: 100%;
+            text-transform: uppercase;
+            color: $golden;
+            padding: 10px 0;
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                padding: .8vw 0;
+                margin-bottom: 2vw;
+            }
+        }
+
+        &__text {
+            text-align: center;
+            font-size: 12px;
+
+            @include mq(sm) {
+                font-size: 1.1vw;
+            }
+        }
+    }
+}
