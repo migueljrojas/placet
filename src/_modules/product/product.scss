@@ -1,0 +1,40 @@
+.product {
+    $p:&;
+    @include trans;
+
+    &:hover {
+        box-shadow: 0 10px 20px $lightGray;
+        transform: translateY(-1%) scale3d(1.1,1.1,1.1);
+
+        @include mq(sm) {
+            box-shadow: 0 20px 50px $lightGray;
+        }
+
+        #{$p}__description {
+            transform: translateY(-15%);
+        }
+    }
+
+    &__image {
+        @include img($ratio: 150%);
+    }
+
+    &__description {
+        @include trans;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-family: $titleFont;
+        font-size: 2vw;
+    }
+
+    &__price {
+        font-size: 1.8vw;
+        color: $vibrantGolden;
+        padding-bottom: 1vw;
+    }
+}

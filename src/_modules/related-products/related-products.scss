@@ -1,0 +1,8 @@
+.related-products {
+    display: flex;
+    justify-content: space-between;
+
+    &__wrapper {
+        width: 30%;
+    }
+}
