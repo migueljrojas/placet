@@ -18845,6 +18845,237 @@ button._button {
   }
 }
 
+.appoinment__hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.appoinment__hero__layer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .appoinment__hero__layer {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(0, 0, 29, 0.5);
+    width: 25vw;
+    border-left: 0.3vw solid #cc6d26;
+    -webkit-transform: skew(-20deg);
+            transform: skew(-20deg);
+    left: 85%;
+  }
+}
+
+.appoinment__hero__image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 100%;
+  height: 0;
+}
+
+.appoinment__hero__image img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.appoinment__hero__image img {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .appoinment__hero__image img {
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .appoinment__hero__image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 40%;
+    height: 0;
+  }
+  .appoinment__hero__image img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 0;
+  }
+}
+
+.appoinment__hero__data {
+  background: rgba(0, 0, 29, 0.5);
+  padding: 35px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .appoinment__hero__data {
+    display: block;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    width: 35vw;
+    top: 16vw;
+    text-align: center;
+    left: 10vw;
+    background: none;
+  }
+}
+
+.appoinment__hero__data .content-block__title {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .appoinment__hero__data .content-block__title {
+    padding-bottom: 1.5vw;
+    font-size: 4vw;
+  }
+}
+
+.appoinment__hero__data .content-block__title:after {
+  display: none;
+}
+
+.appoinment__hero__data .content-block__text {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .appoinment__hero__data .content-block__text {
+    font-size: 2vw;
+    letter-spacing: 1.5px;
+    font-weight: 100;
+  }
+}
+
+.appoinment__register__comment {
+  text-align: center;
+  color: #000972;
+  font-weight: 500;
+  padding: 20px;
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__comment {
+    padding: 4vw 20vw;
+    font-size: 1.4vw;
+  }
+}
+
+.appoinment__register__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f6f6f6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__container {
+    padding: 4vw 20vw;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__wrapper {
+    width: 25vw;
+  }
+}
+
+.appoinment__register__wrapper:first-of-type {
+  padding-bottom: 90px;
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__wrapper:first-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.appoinment__register__wrapper:first-of-type:after {
+  content: '';
+  position: absolute;
+  width: -webkit-calc(100% - 40px);
+  width: calc(100% - 40px);
+  height: 1px;
+  border-bottom: 1px solid #cc6d26;
+  padding-top: 50px;
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__wrapper:first-of-type:after {
+    display: none;
+  }
+}
+
+.appoinment__register__wrapper .content-block__text {
+  font-weight: 300;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__wrapper .content-block__text {
+    padding-bottom: 1vw;
+    font-size: 1.35vw;
+  }
+}
+
+.appoinment__register__wrapper .content-block__link {
+  color: #cc6d26;
+}
+
+@media (min-width: 768px) {
+  .appoinment__register__wrapper .content-block__link {
+    font-size: 1.2vw;
+  }
+}
+
 *,
 *:before,
 *:after {
