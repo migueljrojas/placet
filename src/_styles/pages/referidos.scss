@@ -4,6 +4,16 @@
         position: relative;
         overflow: hidden;
 
+        &__container {
+            background: url('../images/referidos/hero.jpg') no-repeat right center / cover;
+            height: 100vw;
+
+            @include mq(sm) {
+                background: url('../images/referidos/hero.jpg') no-repeat right center / 140%;
+                height: 40vw;
+            }
+        }
+
         &__layer {
             display: none;
 
@@ -18,24 +28,6 @@
                 border-left: .3vw solid $vibrantGolden;
                 transform: skew(-20deg);
                 left: 85%;
-            }
-        }
-
-        &__image {
-            @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
-
-            img {
-                left: 50%;
-                transform: translateX(-50%);
-
-                @include mq(sm) {
-                    left: 0;
-                    transform: translateX(0);
-                }
-            }
-
-            @include mq(sm) {
-                @include img($ratio: 40%);
             }
         }
 
@@ -62,6 +54,7 @@
                 &__title {
                     margin-bottom: 0;
                     padding: 0;
+                    font-size: 32px;
 
                     @include mq(sm) {
                         padding-bottom: 1.5vw;
@@ -73,7 +66,7 @@
                     }
                 }
 
-                &__text {
+                &__subtitle {
                     font-size: 14px;
 
                     @include mq(sm) {
@@ -209,7 +202,7 @@
             a {
                 color: $black;
                 text-decoration: underline;
-                
+
                 &:hover {
                     color: $darkestGray;
                     font-weight: bolder;

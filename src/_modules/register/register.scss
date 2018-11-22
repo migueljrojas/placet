@@ -1,0 +1,215 @@
+.registro-modal {
+    display: flex;
+
+    &__registro {
+
+        .content-block {
+            &__title {
+                padding-bottom: 0;
+                margin-bottom: 0;
+                &:after {
+                    display: none;
+                }
+            }
+
+            &__text {
+                padding-bottom: 2vw;
+            }
+        }
+
+        &__container {
+            width: 300px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include mq(sm) {
+                padding: 3vw;
+            }
+
+            &:first-of-type {
+                border-bottom: 1px solid $lightGray;
+            }
+        }
+
+        &__form {
+            @include mq(sm) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+
+        &__input {
+            width: 100%;
+            border: 1px solid $midGray;
+            padding: 5px;
+            margin-bottom: 7px;
+
+            @include mq(sm) {
+                margin-bottom: 1vw;
+                padding: 1vw;
+                width: 49%;
+            }
+
+            &--address {
+                @include mq(sm) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__button {
+            background: transparent;
+            text-transform: uppercase;
+            color: $vibrantGolden;
+            border: 1px solid $vibrantGolden;
+            width: 100%;
+            padding: 5px;
+
+            @include mq(sm) {
+                width: 48%;
+                padding: 1vw;
+                margin-top: 1vw;
+            }
+        }
+
+        &__text {
+            font-size: 14px;
+            margin: 0;
+            text-align: center;
+
+            @include mq(sm) {
+                text-align: inherit;
+            }
+        }
+
+        &__wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            flex-direction: column;
+
+            @include mq(sm) {
+                flex-direction: row;
+                padding-top: 1vw;
+            }
+        }
+
+        &__social {
+            background: transparent;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 16px;
+            margin: 0;
+            width: 100%;
+
+            &:first-of-type {
+                margin-bottom: 10px;
+
+                @include mq(sm) {
+                    margin-bottom: 0;
+                }
+            }
+
+            @include mq(sm) {
+                width: 47%;
+                padding: 1vw;
+            }
+
+
+            i {
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            &--gmail {
+                border: 1px solid $vibrantGolden;
+                color: $vibrantGolden;
+            }
+
+            &--facebook {
+                border: 1px solid $indigo;
+                color: $indigo;
+            }
+        }
+    }
+
+    &__login {
+        text-align: center;
+        padding: 15px;
+        width: 300px;
+
+        @include mq(sm) {
+            padding: 5vw 0;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__title {
+            .content-block {
+                &__title {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+
+                &__text {
+                    text-transform: uppercase;
+                    color: $vibrantGolden;
+                    letter-spacing: 1.5px;
+                    padding-bottom: 20px;
+
+                    @include mq(sm) {
+                        font-size: 16px;
+                        padding-bottom: 4vw;
+                    }
+                }
+            }
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        &__input {
+            width: 100%;
+            border: 1px solid $midGray;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            @include mq(sm) {
+                margin-bottom: 1vw;
+                padding: 1vw;
+            }
+        }
+
+        &__button {
+            background: transparent;
+            text-transform: uppercase;
+            color: $vibrantGolden;
+            border: 1px solid $vibrantGolden;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+
+            @include mq(sm) {
+                padding: 1vw;
+                margin-top: 1vw;
+            }
+        }
+    }
+
+    &.-hidden {
+        display: none;
+    }
+}

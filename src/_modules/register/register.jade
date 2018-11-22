@@ -1,0 +1,34 @@
+mixin register()
+    section.registro-modal#registro.-hidden
+        .registro-modal__registro
+            .registro-modal__registro__container
+                .registro-modal__registro__title
+                    +content-block('', 'regístrese en placèt', 'por favor introduzca los siguientes datos')
+                form.registro-modal__registro__form
+                    input.registro-modal__registro__input(type='text' placeholder='Nombre')
+                    input.registro-modal__registro__input(type='text' placeholder='Apellido')
+                    input.registro-modal__registro__input(type='email' placeholder='Email')
+                    input.registro-modal__registro__input(type='phone' placeholder='Telefono')
+                    input.registro-modal__registro__input.registro-modal__registro__input--address(type='text' placeholder='Dirección')
+                button.registro-modal__registro__button registrarse
+            .registro-modal__registro__container
+                .registro-modal__registro__social-media
+                    p.registro-modal__registro__text Si lo desea, también se puede registrar con sus cuentas de Gmail o de Facebook
+                    .registro-modal__registro__wrapper
+                        button.registro-modal__registro__social.registro-modal__registro__social--gmail
+                            .registro-modal__registro__image
+                                i.fa.fa-google-plus
+                            .registro-modal__registro__red ingresar con gmail
+                        button.registro-modal__registro__social.registro-modal__registro__social--facebook
+                            .registro-modal__registro__image
+                                i.fa.fa-facebook
+                            .registro-modal__registro__red ingresar con facebook
+    section.registro-modal#login.-hidden
+        .registro-modal__login
+            .registro-modal__login__title
+                +content-block('', 'ingrese a placèt', 'por favor introduzca su email y contraseña registrados')
+            form.registro-modal__login__form
+                input.registro-modal__login__input(type='email' placeholder='Email')
+                input.registro-modal__login__input(placeholder='Contraseña')
+            a.registro-modal__login__text No recuerdo mi contraseña
+            button.registro-modal__login__button ingresar

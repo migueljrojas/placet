@@ -1,4 +1,6 @@
-mixin content-block(subtitle, title, text, link, mode, titleMode, linkAlt)
+mixin content-block(subtitle, title, text, link, mode, titleMode, linkAlt, modal)
+    - var modal = modal ? modal : {};
+    
     .content-block(class="#{mode === 'white' ? 'content-block--white' : ''} #{titleMode === 'big' ? 'content-block--big' : ''}")
         if subtitle
             span.content-block__subtitle=subtitle
@@ -11,8 +13,13 @@ mixin content-block(subtitle, title, text, link, mode, titleMode, linkAlt)
 
         .content-block__wrapper    
             if link
-                a.content-block__link(href=link.url)=link.text
-            
+                if modal
+                    a.content-block__link(data-modal="open", href=link.url)=link.text
+                else
+                    a.content-block__link(href=link.url)=link.text
+
             if linkAlt
-                a.content-block__link(href=linkAlt.url)=linkAlt.text
-                
+                if modal
+                    a.content-block__link(data-modal="open", href=linkAlt.url)=linkAlt.text
+                else
+                    a.content-block__link(href=linkAlt.url)=linkAlt.text
