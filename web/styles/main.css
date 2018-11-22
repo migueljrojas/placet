@@ -21868,19 +21868,10 @@ button._button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (min-width: 768px) {
   .vista-producto__wrapper {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
     padding-bottom: 3vw;
   }
 }
@@ -21902,6 +21893,25 @@ button._button {
 
 .vista-producto__color-selector {
   width: 50%;
+}
+
+.vista-producto__color-selector__button {
+  position: absolute;
+  left: -9999px;
+}
+
+.vista-producto__color-selector__label {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .vista-producto__color-selector__label {
+    margin-right: 1.5vw;
+  }
 }
 
 .vista-producto__label {

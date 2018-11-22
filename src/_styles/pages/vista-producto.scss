@@ -130,13 +130,9 @@
         display: flex;
         padding-bottom: 20px;
         justify-content: center;
-        align-items: center;
 
         @include mq(sm) {
-            justify-content: flex-start;
-            align-items: flex-end;
             padding-bottom: 3vw;
-
         }
 
         &--social {
@@ -151,12 +147,30 @@
 
     &__color-selector {
         width: 50%;
+
+        &__button {
+            position: absolute;
+            left: -9999px;
+        }
+
+        &__label {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            margin-right: 15px;
+
+            @include mq(sm) {
+                margin-right: 1.5vw;
+            }
+        }
     }
 
     &__label {
         padding-bottom: 10px;
         color: $midGray;
         font-weight: 100;
+
         @include mq(sm) {
             padding-bottom: .5vw;
         }
@@ -164,6 +178,7 @@
 
     &__quantity {
         width: 50%;
+
 
         .quantity-selector {
             justify-content: flex-start;

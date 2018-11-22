@@ -32,12 +32,18 @@ block content
                         .vista-producto__color-selector
                             label.vista-producto__label Color
                             .vista-producto__color-selector__container
-                                input.vista-producto__color-selector__button(type='radio', name='selector', id='selector1')
-                                label.vista-producto__color-selector__label(for='selector1')
-                                input.vista-producto__color-selector__button(type='radio', name='selector', id='selector1')
-                                label.vista-producto__color-selector__label(for='selector1')
-                                input.vista-producto__color-selector__button(type='radio', name='selector', id='selector1')
-                                label.vista-producto__color-selector__label(for='selector1')
+                                input.vista-producto__color-selector__button(type="radio" id="color1", name="color")
+                                label.vista-producto__color-selector__label(for="color1", style="background:#245687")
+                                input.vista-producto__color-selector__button(type="radio" id="color2", name="color")
+                                label.vista-producto__color-selector__label(for="color2", style="background:#130358")
+                                input.vista-producto__color-selector__button(type="radio" id="color3", name="color")
+                                label.vista-producto__color-selector__label(for="color3", style="background:#720374")
+                                input.vista-producto__color-selector__button(type="radio" id="color4", name="color")
+                                label.vista-producto__color-selector__label(for="color4", style="background:#720374")
+                                input.vista-producto__color-selector__button(type="radio" id="color5", name="color")
+                                label.vista-producto__color-selector__label(for="color5", style="background:#720374")
+                                input.vista-producto__color-selector__button(type="radio" id="color6", name="color")
+                                label.vista-producto__color-selector__label(for="color6", style="background:#720374")
                         .vista-producto__quantity
                             label.vista-producto__label Cantidad
                             +quantity-selector('1')
