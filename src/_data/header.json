@@ -1,26 +1,26 @@
 [
     {
         "name":"acerca de placet",
-        "url":"/about"
+        "url":"/acerca-de-placet"
     },
     {
         "name":"tienda online",
-        "url":""
+        "url":"#tienda"
     },
     {
         "name":"beneficios",
-        "url":"benefits"
+        "url":"/beneficios"
     },
     {
         "name":"como funciona",
-        "url":""
+        "url":"/como-funciona"
     },
     {
         "name":"marcas",
-        "url":""
+        "url":"/marcas"
     },
     {
         "name":"agende su cita",
-        "url":""
+        "url":"/agende-su-cita"
     }
 ]

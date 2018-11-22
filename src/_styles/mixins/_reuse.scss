@@ -2,7 +2,7 @@
     transition: $prop $d $e;
 }
 
-@mixin title($separator: true, $lineSeparation: 15px, $translate: -50%, $size: $lg, $color: $black, $background: $black, $lineHeight: 1px) {
+@mixin title($separator: true, $lineSeparation: 15px, $translate: -50%, $size: $lg, $color: $black, $background: $black, $lineHeight: 1px, $textAlign: center) {
     text-transform: uppercase;
     font-family: $titleFont;
     font-size: $size;
@@ -10,7 +10,7 @@
     position: relative;
     padding-bottom: $lineSeparation;
     font-weight: 400;
-    text-align: center;
+    text-align: $textAlign;
     margin-top: 0;
 
     @if $separator {
@@ -28,7 +28,6 @@
 
             @include mq(sm) {
                 width: 3vw;
-
             }
         }
     }

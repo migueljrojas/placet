@@ -1,21 +1,109 @@
 header.header
-    .header__wrapper
-        .header__logo
-            .header__image
-                img(src='/images/logo.png')
-    .header__layer
-    .header__menu
-        .header__menu__secondary
-            a.header__menu__link Servicio al Cliente
-            a.header__menu__link Contacto
-            a.header__menu__link Buscar
-            button.header__menu__login-button ingresar
-        .header__menu__primary
-            each item in site.data.header
-                .header__menu__tab=item.name
-                    a(href='#')
     .header__hamburguer
         span
         span
         span
+            
+    .header__logo__wrapper
+        .header__logo
+            a(href="/")
+                img(src='/images/logo.png')
+
+    .header__layer
+
+    nav.header__nav
+        .header__menu
+            .header__menu__secondary
+                a.header__menu__link(href="#") Servicio al Cliente
+                a.header__menu__link(href="/contacto") Contacto
+                a.header__menu__link(href="#") Buscar
+                a.header__menu__login-button(data-modal="open", href="#login") Ingresar
+            .header__menu__primary
+                each item in site.data.header
+                    a.header__menu__tab(href=item.url)=item.name
+    
+    #tienda.header__tienda
+        .header__tienda__aside
+            .header__tienda__image
+                img(src="/images/header-tienda-aside.jpg")
+        .header__tienda__main
+            .header__tienda__heading
+                h2.header__tienda__title Tienda Online
+                a.header__tienda__main-link Cree su propia pinta
+                button.header__tienda__close
+                    i.material-icons close
+            .header__tienda__body
+                .header__tienda__col
+                    .header__tienda__list
+                        h3.header__tienda__category Ceremonia
+                        ul.header__tienda__items
+                            li
+                                a(href="/tienda") Smoking
+                            li
+                                a(href="/tienda") Camisas Smoking
+                            li
+                                a(href="/tienda") Corbatines
+
+                    .header__tienda__list
+                        h3.header__tienda__category Sastrería
+                        ul.header__tienda__items
+                            li
+                                a(href="/tienda") Trajes
+                            li
+                                a(href="/tienda") Camisas Formales
+                            li
+                                a(href="/tienda") Pantalones Formales
+                            li
+                                a(href="/tienda") Sacos y Blazers
+                            li
+                                a(href="/tienda") Corbatas
+
+                    .header__tienda__list
+                        h3.header__tienda__category Calzado
+                        ul.header__tienda__items
+                            li
+                                a(href="/tienda") Zapatos formales
+                            li
+                                a(href="/tienda") Zapatos casuales
+
+                    .header__tienda__list
+                        h3.header__tienda__category Cinturones
+                        ul.header__tienda__items
+                            li
+                                a(href="/tienda") Cinturón formal
+                            li
+                                a(href="/tienda") Cinturón casual
+
+                .header__tienda__col
+                    .header__tienda__list.header__tienda__list--long
+                        h3.header__tienda__category Casual
+                        ul.header__tienda__items
+                            li
+                                a(href="/tienda") Pantalones casuales
+                            li
+                                a(href="/tienda") Camisas casuales
+                            li
+                                a(href="/tienda") Polos
+                            li
+                                a(href="/tienda") Chaquetas
+                            li
+                                a(href="/tienda") Chalecos
+                            li
+                                a(href="/tienda") Sweateres
+                            li
+                                a(href="/tienda") Bermudas
+                            li
+                                a(href="/tienda") Vestido de Baño
+
+                    .header__tienda__list.header__tienda__list--long
+                        h3.header__tienda__category Accesorios
+                        ul.header__tienda__items
+                            li
+                                a(href="/tienda") Bufandas
+                            li
+                                a(href="/tienda") Pañuelos
+                            li
+                                a(href="/tienda") Mancornas
+                            li
+                                a(href="/tienda") Esferos
         

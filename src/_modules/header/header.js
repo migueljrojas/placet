@@ -5,10 +5,26 @@ var Header = function() {
     var header = $('.header');
     var body = $('body');
     var menuOpen = $('.header__hamburguer');
+    var tiendaOpen = $('[href="#tienda"');
+    var tiendaClose = $('.header__tienda__close');
 
     menuOpen.on('click', function(){
-        header.toggleClass('-open');
-        body.toggleClass('-hideOverflow');
+        if (!header.hasClass('-open')) {
+            header.addClass('-open');
+            body.addClass('-hideOverflow');
+        } else if (header.hasClass('-open') || header.hasClass('-tienda_is-active')) {
+            header.removeClass('-open');
+            header.removeClass('-tienda_is-active');
+            body.removeClass('-hideOverflow');
+        }
+    });
+
+    tiendaOpen.on('click', function(){
+        header.addClass('-tienda_is-active');
+    });
+
+    tiendaClose.on('click', function(){
+        header.removeClass('-tienda_is-active');
     });
 
         // Select all links with hashes

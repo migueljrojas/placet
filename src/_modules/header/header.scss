@@ -1,51 +1,71 @@
 .header {
     $h: &;
-    height: 10vw;
+
     display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 1000;
 
-    @include mq(sm) {
+    @include mq(md) {
         height: auto;
+        background: $white;
     }
 
-    &__wrapper {
-        background: url('/images/texture-pattern.jpg');
-        padding: 1.5vw 0 1.5vw 6vw;
-        width: 40%;
-        height: 100%;
-
-        @include mq(sm) {
-            width: 24vw;
-            height: auto;
-        }
-    }
-
-    &__logo {
-        position: relative;
-        height: 100%;
-
-        @include mq(sm) {
-        }
-    }
-
-    &__image {
-        @include img($ratio: 50%, $imgwidth: auto, $imgheight: 100%);
+    &:before {
+        content: '';
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
-        bottom: 0;
-        padding-bottom: 0;
-        height: auto;
+        width: 60%;
+        background: $white;
+        z-index: 10;
+        height: 50px;
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+
+    
+    &__logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &__wrapper {
+            background: url('/images/texture-pattern.jpg');
+            padding: 10px 0 10px 15px;
+            width: 40%;
+            height: 50px;
+            position: relative;
+            z-index: 10;
+    
+            @include mq(md) {
+                width: 28vw;
+                height: auto;
+                padding: 1.5vw 0 1.5vw 30px;
+                flex-shrink: 0;
+            }
+        }
+
+        img {
+            width: 80%;
+            display: inline-block;
+        }
     }
 
     &__layer {
         display: block;
-        border: 15px solid $white;
+        border: 20px solid $white;
         top: 0;
-        margin-left: -7px;
+        margin-left: -10px;
         transform: skew(-20deg);
+        position: relative;
+        z-index: 10;
 
-        @include mq(sm) {
+        @include mq(md) {
             border: 1.5vw solid $white;
             background: $white;
             height: auto;
@@ -55,53 +75,289 @@
     }
 
     &__menu {
-        display: none;
 
-        @include mq(sm) {
+        @include mq(md) {
             padding-top: 1vw;
             padding-bottom: 1vw;
-            padding-right: 8vw;
-            width: 76vw;
+            padding-right: 30px;
+            width: 70vw;
             display: block;
         }
 
         &__secondary {
-            display: flex;
-
-            @include mq(sm) {
+            padding: 20px;
+            border-bottom: 1px solid $fadedIndigo + #333;
+            
+            @include mq(md) {
+                padding: 0;
+                display: flex;
                 height: 50%;
                 align-items: center;
                 justify-content: flex-end;
+                border-bottom: none;
             }
         }
 
         &__link {
             padding: 0 1vw;
             color: $midGray;
-            font-size: .7vw;
-            margin: 0;
+            font-size: 14px;
+            margin: 0 0 3vw;
+            display: block;
+
+            @include mq(md) {
+                margin: 0;
+                font-size: 12px;
+            }
         }
 
         &__login-button {
             @include button($paddTopBottom: 5px, $paddLeftRight: 15px, $btnColor: $midGray, $borderColor: $midGray);
-            margin-left: 1vw;
-            font-size: .7vw;
+            margin: 2.5vw 0 0;
+            font-size: 14px;
+
+            @include mq(md) {
+                margin: 0 0 0 1vw;
+                font-size: 12px;
+            }
         }
 
         &__primary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            padding: 20px;
+            
+            @include mq(md) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0;
+            }
         }
 
         &__tab {
-            display: flex;
+            display: block;
             text-transform: uppercase;
-            font-size: 1vw;
+            font-size: 6vw;
             letter-spacing: 1.4px;
             font-weight: 500;
-            margin: 0;
-            padding-top: 1vw
+            margin: 0 0 3vw;
+            color: $white;
+
+            &:hover {
+                color: $white;
+            }
+
+            @include mq(md) {
+                font-size: 1.1vw;
+                color: $mainColor;
+                margin: 1vw 0 0;
+
+                &:hover {
+                    color: $linkHover;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        @include trans;
+
+        opacity: 0;
+        transform: translate3d(0, -120%, 0);
+        position: fixed;
+        top: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparentize($fadedIndigo, .1);
+        border-top: 2px solid $golden;
+
+        @include mq(md) {
+            background: none;
+            opacity: 1;
+            transform: translate3d(0,0,0);
+            position: static;
+            border-top: none;
+        }
+    }
+
+    &__tienda {
+        @include trans; 
+        position: fixed;
+        width: 91%;
+        transform: translate3d(100%, 0, 0);
+        padding: 20px;
+        opacity: 0;
+        top: 50px;
+        border-top: 2px solid $indigo;
+        bottom: 0;
+        background: $lightestGray;
+
+        @include mq(md) {
+            display: flex;
+            top: 85px;
+            border-top: none;
+            width: 100%;
+            padding: 0;
+            bottom: auto;
+        }
+
+        &__image {
+            img {
+                position: absolute;
+                height: 100%;
+                top:0;
+                bottom:0;
+            }
+        }
+
+        &__aside {
+            display: none;
+
+            @include mq(md) {
+                display: block;
+                position: relative;
+                width: 35vw;
+            }
+        }
+
+        &__title {
+            @include title(false, $textAlign: left, $color: $indigo);
+            padding-bottom: 15px;
+            margin-bottom: 0;
+
+            @include mq(md) {
+                font-size: 3vw;
+                padding-bottom: 0;
+            }
+        }
+
+        &__main-link {
+            @include button(16px);
+            padding: 7px 15px;
+
+            @include mq(md) {
+                @include button(1.2vw);
+                padding: .7vw 1.5vw;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            right: 99%;
+            width: 10%;
+            height: 0;
+            padding-bottom: 10%;
+            background: $lightestGray;
+            border-radius: 3px 0 0 3px;
+            border:none;
+            top: 50%;
+            text-align: center;
+
+            i {
+                position: absolute;
+                top:50%;
+                transform: translate3d(-50%, -50%, 0);
+                left: 50%;
+            }
+
+            @include mq(md) {
+                top: 5px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+                padding-bottom: 0;
+            }
+        }
+
+        &__heading {
+            padding-bottom: 15px;
+            border-bottom: 1px solid $lightGray;
+
+            @include mq(md) {
+                padding: 15px;
+                position: relative;
+                z-index: 2;
+                display: flex;
+                justify-content: space-between;
+                padding-right: 60px;
+                align-items: center;
+                padding-top: 40px;
+            }
+        }
+
+        &__body {
+            max-height: 72vh;
+            overflow-y: auto;
+
+            @include mq(md) {
+                display: flex;
+                padding: 15px;
+                justify-content: space-between;
+            }
+
+            &:before {
+                @include mq(md) {
+                    content: '';
+                    border: 1.5vw solid $lightestGray;
+                    background: $lightestGray;
+                    height: auto;
+                    width: 20vw;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 60.8%;
+                    transform: skew(-20deg);
+                }
+            }
+        }
+
+        &__col {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @include mq(md) {
+                width: 48%;
+            }
+        }
+
+        &__list {
+            width: 45%;
+            margin-bottom: 10px;
+
+            @include mq(md) {
+                position: relative;
+                z-index: 2;
+            }
+
+            &--long {
+                width: 100%;
+
+                .header__tienda__items {
+                    columns: 2;
+                }
+            }
+        }
+
+        &__items {
+            li {
+                margin-bottom: 5px;
+            }
+
+            a {
+                color: $darkGray;
+                font-size: 14px;
+
+                @include mq(md) {
+                    font-size: 1.2vw;
+                }
+            }
+        }
+
+        &__category {
+            @include title(false, $textAlign: left);
+            margin-bottom: 0;
+            padding-top: 10px;
         }
     }
 
@@ -112,9 +368,10 @@
         margin: auto;
         position: absolute;
         right: 15px;
-        top: 7.5px;
+        top: 15px;
+        z-index: 10;
 
-        @include mq(sm) {
+        @include mq(md) {
             display: none;
         }
 
@@ -126,7 +383,7 @@
             width: 100%;
             height: 2px;
 
-            @include mq(sm) {
+            @include mq(md) {
                 background: $indigo;
             }
 
@@ -160,7 +417,36 @@
         }
 
         #{$h}__nav {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
 
+    &.-tienda_is-active {
+        #{$h}__tienda {
+            transform: translate3d(10%, 0, 0);
+            opacity: 1;
+
+            @include mq(md) {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        #{$h}__nav {
+            transform: translate3d(-90%, 0, 0);
+            opacity: 1;
+
+            @include mq(md) {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+
+    & + main {
+        padding-top: 50px;
+
+        @include mq(md) {
+            padding-top: 6vw;
         }
     }
 }
