@@ -32,6 +32,9 @@
                 position: absolute;
                 bottom: 2vw;
             }
+            .slick-arrow {
+                display: none !important;
+            }
         }
 
         &__slide {

@@ -1,8 +1,14 @@
 .product {
     $p:&;
     @include trans;
+    background: $white;
+
+    @include mq(sm) {
+        background: transparent;
+    }
 
     &:hover {
+        background: $white;
         box-shadow: 0 10px 20px $lightGray;
         transform: translateY(-1%) scale3d(1.1,1.1,1.1);
 
@@ -11,12 +17,12 @@
         }
 
         #{$p}__description {
-            transform: translateY(-15%);
+            transform: translateY(0);
         }
     }
 
     &__image {
-        @include img($ratio: 150%);
+        @include img($ratio: 130%);
     }
 
     &__description {
@@ -25,16 +31,22 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        padding: 20px;
+
+        @include mq(sm) {
+            padding: 1.5vw;
+        }
     }
 
     &__name {
         font-family: $titleFont;
-        font-size: 2vw;
+        font-size: 1.8vw;
+        margin: 0;
+        text-align: center;
     }
 
     &__price {
         font-size: 1.8vw;
         color: $vibrantGolden;
-        padding-bottom: 1vw;
     }
 }

@@ -57,6 +57,9 @@
     }
 
     &__data {
+        position: relative;
+        z-index: 25;
+
         .content-block {
             &__title {
                 &:after {

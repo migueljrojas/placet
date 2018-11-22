@@ -1,5 +1,5 @@
 mixin content-block(subtitle, title, text, link, mode, titleMode, linkAlt, modal)
-    - var modal = modal ? modal : {};
+    - var modal = modal ? modal : false;
     
     .content-block(class="#{mode === 'white' ? 'content-block--white' : ''} #{titleMode === 'big' ? 'content-block--big' : ''}")
         if subtitle

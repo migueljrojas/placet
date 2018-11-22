@@ -1,7 +1,8 @@
 mixin product(imageSrc, name, amount)
-    .product
-        .product__image
-            img(src=imageSrc)
-        .product__description
-            h3.product__name=name 
-            span.product__price=amount
+    a(href="/vista-producto")
+        .product
+            .product__image
+                img(src=imageSrc)
+            .product__description
+                h3.product__name=name 
+                span.product__price=amount

@@ -28,6 +28,22 @@
         }
     }
 
+    &:after {
+        content: '';
+        display: block;
+        border: 20px solid $white;
+        top: 0;
+        transform: skew(-20deg) translateX(50%);
+        position: absolute;
+        z-index: 10;
+        left: 32%;
+        bottom: 0;
+
+        @include mq(md) {
+            display: none;
+        }
+    }
+
     
     &__logo {
         display: flex;
@@ -43,7 +59,7 @@
             z-index: 10;
     
             @include mq(md) {
-                width: 28vw;
+                width: 28%;
                 height: auto;
                 padding: 1.5vw 0 1.5vw 30px;
                 flex-shrink: 0;
@@ -53,6 +69,10 @@
         img {
             width: 80%;
             display: inline-block;
+
+            @include mq(md) {
+                width: 100%;
+            }
         }
     }
 
@@ -66,10 +86,11 @@
         z-index: 10;
 
         @include mq(md) {
-            border: 1.5vw solid $white;
+            border: 2vw solid $white;
             background: $white;
             height: auto;
-            width: 2vw;
+            width: 2.2vw;
+            margin-right: -15px;
             margin-left: -1.5vw;
         }
     }
@@ -80,6 +101,7 @@
             padding-top: 1vw;
             padding-bottom: 1vw;
             padding-right: 30px;
+            padding-left: 30px;
             width: 70vw;
             display: block;
         }
@@ -172,11 +194,37 @@
         border-top: 2px solid $golden;
 
         @include mq(md) {
-            background: none;
+            top: 0;
+            background: $white;
             opacity: 1;
             transform: translate3d(0,0,0);
-            position: static;
+            position: relative;
             border-top: none;
+            z-index: 10;
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 2;
+            width: 72%;
+        }
+
+        &:after {
+            content: '';
+            display: none;
+            border: 20px solid $white;
+            top: 0;
+            transform: skew(-20deg) translateX(50%);
+            position: absolute;
+            z-index: 10;
+            right: 100%;
+            bottom: 0;
+    
+            @include mq(md) {
+                display: block;
+                border: none;
+                background: $white;
+                height: auto;
+                width: 5vw;
+            }
         }
     }
 
@@ -216,7 +264,29 @@
             @include mq(md) {
                 display: block;
                 position: relative;
-                width: 35vw;
+                width: 28%;
+            }
+        }
+
+        &__main {
+            position: relative;
+            
+            @include mq(md) {
+                width: 72%;
+            }
+
+            &:before {
+                @include mq(md) {
+                    content: '';
+                    background: $lightestGray;
+                    height: auto;
+                    width: 18vw;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 100%;
+                    transform: skew(-20deg) translateX(50%);
+                }
             }
         }
 
@@ -243,7 +313,7 @@
 
         &__close {
             position: absolute;
-            right: 99%;
+            right: calc(99% + 20px);
             width: 10%;
             height: 0;
             padding-bottom: 10%;
@@ -282,6 +352,7 @@
                 padding-right: 60px;
                 align-items: center;
                 padding-top: 40px;
+                border-bottom: none;
             }
         }
 
@@ -293,22 +364,7 @@
                 display: flex;
                 padding: 15px;
                 justify-content: space-between;
-            }
-
-            &:before {
-                @include mq(md) {
-                    content: '';
-                    border: 1.5vw solid $lightestGray;
-                    background: $lightestGray;
-                    height: auto;
-                    width: 20vw;
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    right: 60.8%;
-                    transform: skew(-20deg);
-                }
-            }
+            }            
         }
 
         &__col {
@@ -322,12 +378,18 @@
         }
 
         &__list {
-            width: 45%;
+            width: 47%;
             margin-bottom: 10px;
 
             @include mq(md) {
                 position: relative;
                 z-index: 2;
+            }
+
+            &:nth-child(1) {
+                @include mq(md) {
+                    padding-bottom: 30px;
+                }
             }
 
             &--long {
@@ -356,8 +418,10 @@
 
         &__category {
             @include title(false, $textAlign: left);
-            margin-bottom: 0;
-            padding-top: 10px;
+            margin-bottom: 5px;
+            padding-top: 5px;
+            border-bottom: 1px solid $lightGray;
+            padding-bottom: 5px;
         }
     }
 

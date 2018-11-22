@@ -28,6 +28,10 @@
                 position: absolute;
                 bottom: 2vw;
             }
+
+            .slick-arrow {
+                display: none !important;
+            }
         }
 
         &__slide {
@@ -114,7 +118,7 @@
                 background-color: $lightGray;
 
                 .brands__main__image {
-                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background: url('../images/brands/austin.jpg') no-repeat;
                     background-size: cover;
 
                 }
@@ -134,7 +138,7 @@
                     }
                 }
                 .brands__main__image {
-                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background: url('../images/brands/cerruti.jpg') no-repeat;
                     background-size: cover;
                     order: 2;
 
@@ -164,7 +168,7 @@
                 }
 
                 .brands__main__image {
-                    background: url('../images/home/bottom-left-up.jpg') no-repeat;
+                    background: url('../images/brands/guy-laroche.jpg') no-repeat;
                     background-size: cover;
 
                 }
