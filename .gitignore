@@ -6,3 +6,5 @@ tmp
 .grunt
 .DS_Store
 web
+web/styles/main.css
+web/styles/main.css.map
