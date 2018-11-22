@@ -1,0 +1,98 @@
+.look-block {
+    position: relative;
+
+    &__container {
+        @include mq(sm) {
+            display: flex;
+        }
+    }
+
+    &__column {
+
+
+        &--image {
+            @include mq(sm) {
+                width: 55%;
+            }
+        }
+
+        &--data {
+            background: $fadedIndigo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            padding: 20px;
+
+            @include mq(sm) {
+                width: 45%;
+                padding: 8vw;
+            }
+        }
+    }
+
+    &__background {
+        @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
+
+
+        @include mq(sm) {
+            @include img($ratio: 66%, $imgwidth: auto, $imgheight: 100%);
+        }
+    }
+
+    &__layer {
+        display: none;
+
+        @include mq(sm) {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: $fadedIndigo;
+            width: 25vw;
+            border-left: .3vw solid $vibrantGolden;
+            transform: skew(-20deg);
+            left: 45%;
+        }
+    }
+
+    &__data {
+        .content-block {
+            &__title {
+                &:after {
+                    background: $vibrantGolden;
+                }
+            }
+
+            &__text {
+                padding-bottom: 1.5vw;
+            }
+
+            &__link {
+                background: transparent;
+                color: $vibrantGolden;
+                border: 1px solid $vibrantGolden;
+                font-size: 18px;
+                padding: 10px 20px;
+
+                @include mq(sm) {
+                    font-size: 1.2vw;
+                    padding: 1vw 3vw;
+                }
+            }
+        }
+    }
+
+    &__image {
+        display: none;
+
+        @include mq(sm) {
+            @include img($ratio: 28%, $imgwidth: auto, $imgheight: 100%);
+            position: absolute;
+            left: 32%;
+            top: 14%;
+            z-index: 20;
+            display: block;
+        }
+    }
+}
