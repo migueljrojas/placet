@@ -1,0 +1,76 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+include ../_modules/product/product
+include ../_modules/related-products/related-products
+include ../_modules/quantity-selector/quantity-selector
+include ../_modules/content-block/content-block
+include ../_modules/look-block/look-block
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.vista-producto
+        section.vista-producto__single-product
+            .vista-producto__single-product__column.vista-producto__single-product__column--slider
+                a
+                    i.material-icons search
+                +slider('vista-producto__slider')
+                    each item in site.data.vistaProducto
+                        .vista-producto__slide
+                            .vista-producto__image
+                                img(src=item.image)
+                            
+            .vista-producto__single-product__column.vista-producto__single-product__column--data
+                form.vista-producto__form
+                    h2.vista-producto__title Vestido Cerruti Azul
+                    p.vista-producto__text SKU: VE03887-13
+                    span.vista-producto__price $944.000
+                    .vista-producto__wrapper
+                        .vista-producto__color-selector
+                            label.vista-producto__label Color
+                            .vista-producto__color-selector__container
+                                input.vista-producto__color-selector__button(type="radio" id="color1", name="color")
+                                label.vista-producto__color-selector__label(for="color1", style="background:#245687")
+                                input.vista-producto__color-selector__button(type="radio" id="color2", name="color")
+                                label.vista-producto__color-selector__label(for="color2", style="background:#130358")
+                                input.vista-producto__color-selector__button(type="radio" id="color3", name="color")
+                                label.vista-producto__color-selector__label(for="color3", style="background:#720374")
+                                input.vista-producto__color-selector__button(type="radio" id="color4", name="color")
+                                label.vista-producto__color-selector__label(for="color4", style="background:#720374")
+                                input.vista-producto__color-selector__button(type="radio" id="color5", name="color")
+                                label.vista-producto__color-selector__label(for="color5", style="background:#720374")
+                                input.vista-producto__color-selector__button(type="radio" id="color6", name="color")
+                                label.vista-producto__color-selector__label(for="color6", style="background:#720374")
+                        .vista-producto__quantity
+                            label.vista-producto__label Cantidad
+                            +quantity-selector('1')
+                    .vista-producto__wrapper.vista-producto__wrapper--social
+                        button.vista-producto__cta-button agregar al carrito
+                        .vista-producto__social
+                            ul.vista-producto__social__list
+                                li
+                                    a.fa.fa-facebook(href='#')
+                                li
+                                    a.fa.fa-twitter(href='#')
+                                li
+                                    a.fa.fa-google(href='#')
+                    .vista-producto__description
+                        .vista-producto__description__title Descripción
+                        .vista-producto__description__item Chaleco con tela acolchada
+                        .vista-producto__description__item Cuello alto con charretera y broche de presión
+                        .vista-producto__description__item Cremallera en el frente con vivo en contraste
+                        .vista-producto__description__item Bolsillos sesgados con ribete en contraste
+                        .vista-producto__description__item Vivo en sisa
+                        .vista-producto__description__item 100% Polyester
+                        .vista-producto__description__item Forro: 100% Polyester
+                        .vista-producto__description__item Lavar en seco
+                        .vista-producto__description__item Importado
+
+        section.vista-producto__related
+            h2.vista-producto__related__title Productos Relacionados
+            +related-products
+            
+        +look-block

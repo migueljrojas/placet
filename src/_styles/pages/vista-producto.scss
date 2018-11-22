@@ -1,0 +1,298 @@
+.vista-producto {
+    overflow: hidden;
+
+    &__single-product {
+        background: $lightestGray;
+        padding: 20px;
+
+        @include mq(sm) {
+            padding: 6vw;
+            display: flex;
+
+        }
+
+        &__column {
+            background: $white;
+            position: relative;
+
+            &--data {
+                padding: 20px;
+
+                @include mq(sm) {
+                    padding: 3vw 4vw;
+                    width: 55%;
+                    flex-wrap: wrap;
+                    display: flex;
+
+                }
+            }
+
+            &--slider {
+                @include mq(sm) {
+                    width: 45%;
+                }
+
+                i {
+                    display: none;
+
+                    @include mq(sm) {
+                        display: block;
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        font-size: 80px;
+                        z-index: 2;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__slider {
+        margin-bottom: -6px !important;
+
+        .slick-dots {
+            position: absolute;
+            bottom: 5%;
+
+            @include mq(sm) {
+                top: 2%;
+                left: 10%;
+
+            }
+
+            li {
+                margin: 0 1px;
+            }
+        }
+    }
+
+    &__image {
+        @include img($ratio: 140%, $imgwidth: auto, $imgheight: 100%);
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__title {
+        color: $indigo;
+        font-family: $titleFont;
+        margin: 0;
+        width: 100%;
+        padding-bottom: 10px;
+
+        @include mq(sm) {
+            font-size: 3.5vw;
+            padding-bottom: 1vw;
+
+        }
+    }
+
+    &__text {
+        margin: 0;
+        color: $midGray;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        @include mq(sm) {
+            font-size: 1vw;
+            padding-bottom: 2vw;
+            margin-bottom: 2vw;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 10%;
+            height: 1px;
+            background: $vibrantGolden;
+        }
+    }
+
+    &__price {
+        display: flex;
+        font-size: 36px;
+        padding-bottom: 20px;
+
+        @include mq(sm) {
+            font-size: 3.5vw;
+            padding-bottom: 2vw;
+        }
+    }
+
+    &__wrapper  {
+        display: flex;
+        padding-bottom: 20px;
+        justify-content: center;
+
+        @include mq(sm) {
+            padding-bottom: 3vw;
+        }
+
+        &--social {
+            display: block;
+
+            @include mq(sm) {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &__color-selector {
+        width: 50%;
+
+        &__button {
+            position: absolute;
+            left: -9999px;
+        }
+
+        &__label {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            margin-right: 15px;
+
+            @include mq(sm) {
+                margin-right: 1.5vw;
+            }
+        }
+    }
+
+    &__label {
+        padding-bottom: 10px;
+        color: $midGray;
+        font-weight: 100;
+
+        @include mq(sm) {
+            padding-bottom: .5vw;
+        }
+    }
+
+    &__quantity {
+        width: 50%;
+
+
+        .quantity-selector {
+            justify-content: flex-start;
+
+            i {
+                color: $midGray;
+            }
+
+            span {
+                padding: 0 30px;
+
+                @include mq(sm) {
+                    padding: 0 3vw;
+                }
+            }
+        }
+    }
+
+    &__cta-button {
+        background: transparent;
+        color: $vibrantGolden;
+        border: 1px solid $vibrantGolden;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        padding: 10px 20px;
+        width: 100%;
+        margin-bottom: 20px;
+
+        @include mq(sm) {
+            margin-bottom: 0;
+            width: 60%;
+            padding: 1.5vw 4vw;
+        }
+    }
+
+    &__social {
+        width: 100%;
+
+        @include mq(sm) {
+            width: 40%;
+        }
+
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            @include mq(sm) {
+                justify-content: flex-end;
+
+            }
+
+            li {
+                background: $lightGray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                height: 50px;
+                width: 50px;
+
+                @include mq(sm) {
+                    height: 3vw;
+                    width: 3vw;
+                    margin-left: 1vw;
+                }
+
+            }
+
+            a {
+                color: $white;
+                font-size: 20px;
+
+                @include mq(sm) {
+                    font-size: 1.5vw;
+
+                }
+            }
+        }
+    }
+
+    &__description {
+        &__title {
+            color: $midGray;
+            border-bottom: 1px solid $lightGray;
+            font-size: 16px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            @include mq(sm) {
+                font-size: 1.1vw;
+                padding-bottom: .5vw;
+                margin-bottom: .5vw;
+            }
+        }
+
+        &__item {
+            font-size: 12px;
+            @include mq(sm) {
+                font-size: 1vw;
+            }
+        }
+    }
+
+    &__related {
+        width: 100%;
+        padding: 5vw 15vw;
+
+        &__title {
+            text-align: center;
+            font-size: 3vw;
+            text-transform: uppercase;
+            font-family: $titleFont;
+            padding-bottom: 4vw;
+            margin: 0;
+        }
+    }
+}
