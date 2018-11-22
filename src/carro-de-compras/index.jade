@@ -1,0 +1,77 @@
+extends ../_layouts/base
+
+include ../_modules/related-products/related-products
+include ../_modules/product/product
+include ../_modules/quantity-selector/quantity-selector
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.carro-de-compras
+        section.carro-de-compras__list
+            h1.carro-de-compras__list__title mi carro de compras
+            .carro-de-compras__table
+                .carro-de-compras__table__heading
+                    .carro-de-compras__table__cell
+                        p item
+                    .carro-de-compras__table__cell
+                        p decripción
+                    .carro-de-compras__table__cell
+                        p precio 
+                    .carro-de-compras__table__cell
+                        p cantidad
+                    .carro-de-compras__table__cell
+                        p total
+                    .carro-de-compras__table__cell
+
+                .carro-de-compras__item
+                    .carro-de-compras__table__cell
+                        .carro-de-compras__item__image
+                            img(src='../images/tienda/checkout-item.png')
+                    .carro-de-compras__table__cell
+                        .carro-de-compras__item__description
+                            h3 Vestido Cerruti Azul
+                            p 
+                                | SKU: VE03887-13 
+                                br
+                                | Color: Azul Oscuro
+                                br
+                                | Talla: L
+                                br
+                                | Drop 4 
+                    .carro-de-compras__table__cell
+                        label Precio
+                        span.carro-de-compras__item__price $944.000
+                    .carro-de-compras__table__cell
+                        .carro-de-compras__item__quantity
+                            label Cantidad
+                            +quantity-selector('1')
+                            
+                    .carro-de-compras__table__cell
+                        label Total
+                        span.carro-de-compras__item__amount $944.000
+                    .carro-de-compras__table__cell
+                        button.carro-de-compras__item__delete-button
+                            i.material-icons close
+                            p eliminar
+                        
+            .carro-de-compras__cta
+                .carro-de-compras__cta__subtotal
+                    p Subtotal
+                    span $944.000
+                .carro-de-compras__cta__delivery
+                    p Envío
+                    p gratis
+                a.carro-de-compras__cta__code ingresar código promocional
+                .carro-de-compras__cta__total
+                    p total
+                    span $944.000
+                .carro-de-compras__cta__buttons
+                    button.carro-de-compras__cta__button finalizar compra
+                    button.carro-de-compras__cta__button seguir comprando
+        
+        section.carro-de-compras__related
+            h2.carro-de-compras__related__title Productos Relacionados
+            +related-products

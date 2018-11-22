@@ -218,3 +218,47 @@
     font-weight: $fontWeight;
     font-style: $fontStyle;
 }
+
+@mixin arrow($pointTo, $color: inherit, $size: 10px) {
+    &:after {
+        content: "";
+        border: $size solid;
+        border-color: $color;
+        height: 0;
+        width: 0;
+        position: absolute;
+        z-index: 5;
+
+        @if $pointTo == down {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            top: 100%;
+            left: calc(50% - $size);
+        }
+
+        @if $pointTo == up {
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            bottom: 100%;
+            left: calc(50% - $size);
+        }
+
+        @if $pointTo == left {
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            right: 100%;
+            top: calc(50% - $size);
+        }
+
+        @if $pointTo == right {
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            left: 100%;
+            top: calc(50% - $size);
+        }
+    }
+}
