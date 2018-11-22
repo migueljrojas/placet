@@ -1,0 +1,12 @@
+mixin look-block(spec)
+    section.look-block
+        .look-block__container
+            .look-block__column.look-block__column--image
+                .look-block__background
+                    img(src='../images/producto/arma-tu-look-cta.png')
+            .look-block__column.look-block__column--data
+                .look-block__image
+                    img(src='../images/producto/arma-tu-look-cta-2.png')
+                .look-block__data
+                    +content-block('', 'arme su propio look', 'Mediante nuestra herramienta, ud. puede combinar dos o más prendas, probar cómo se ven y ordenarlas directamente desde nuestra web. Cree looks verdaderamente personalizados!', {'text':'probar ahora', 'url':'#'}, 'white')
+            .look-block__layer
