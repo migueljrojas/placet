@@ -4,22 +4,22 @@
         position: relative;
         overflow: hidden;
 
-        &__layer {
-            display: none;
-
-            @include mq(sm) {
-                display: block;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                z-index: 2;
-                background: transparentize($indigo - #555, .5);
-                width: 25vw;
-                border-left: .3vw solid $vibrantGolden;
-                transform: skew(-20deg);
-                left: 85%;
-            }
-        }
+        // &__layer {
+        //     display: none;
+        //
+        //     @include mq(sm) {
+        //         display: block;
+        //         position: absolute;
+        //         top: 0;
+        //         bottom: 0;
+        //         z-index: 2;
+        //         background: transparentize($indigo - #555, .5);
+        //         width: 25vw;
+        //         border-left: .3vw solid $vibrantGolden;
+        //         transform: skew(-20deg);
+        //         left: 85%;
+        //     }
+        // }
 
         &__image {
             @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
@@ -102,7 +102,7 @@
                         &__subtitle {
                             color: $white;
                         }
-            
+
                         &__title {
                             color: $white;
                         }
@@ -114,6 +114,21 @@
                         }
                     }
                 }
+            }
+        }
+    }
+    &__interstitial {
+        &__text {
+            text-align: center;
+            color: $indigo;
+            font-weight: 500;
+            padding: 20px;
+            font-size: 16px;
+            margin: 0;
+
+            @include mq(sm) {
+                padding: 4vw 20vw;
+                font-size: 1.4vw;
             }
         }
     }
@@ -202,7 +217,7 @@
             }
 
             &__title {
-                
+
                 @include mq(sm) {
                     font-size: 2vw;
                 }

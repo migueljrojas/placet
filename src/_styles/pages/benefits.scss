@@ -57,7 +57,7 @@
 
                 @include mq(sm) {
                     position: relative;
-                    transform: translate(0) scale3d(1.1,1.1,1.1);
+                    transform: translate(0) scale3d(1,1,1);
                     top: auto;
                     left: auto;
                 }
@@ -103,13 +103,22 @@
             flex-grow: 2;
         }
 
+        &__layer {
+            position: absolute;
+            background: url('../images/home/bottom-left-down.jpg') no-repeat;
+            background-size: cover;
+            opacity: .2;
+            width: 100%;
+            height: 100%;
+        }
+
         &__col {
             height: 100vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
+            position: relative;
             @include mq(sm) {
                 width: 33.33%;
                 height: 34vw;
@@ -141,7 +150,8 @@
                 background-color: $lightGray;
 
                 .benefits__main__image {
-                    background: url('../images/home/bottom-right-up.jpg');
+                    background: url('../images/benefits/benefits-comodidad.jpg') no-repeat;
+                    background-size: cover;
                 }
 
                 .benefits__main__data {
@@ -155,7 +165,7 @@
             }
 
             &:nth-child(2) {
-                background: url('../images/home/bottom-left-down.jpg') no-repeat;
+                background: url('../images/benefits/benefits-shopping.jpg') no-repeat;
                 background-size: cover;
                 background-color: $indigo + #555;
                 background-blend-mode: multiply;
@@ -187,7 +197,8 @@
                 background-color: $lightestGray;
 
                 .benefits__main__image {
-                    background: url('../images/home/bottom-right-up.jpg');
+                    background: url('../images/benefits/benefits-surtido.jpg') no-repeat;
+                    background-size: cover;
                 }
 
                 .benefits__main__data {
@@ -200,9 +211,7 @@
             }
 
             &:nth-child(4) {
-                background: url('../images/home/bottom-left-down.jpg') no-repeat;
-                background-size: cover;
-                background-color: $indigo + #555;
+                background-color: $vibrantGolden;
                 background-blend-mode: multiply;
 
                 .content-block {
@@ -233,7 +242,7 @@
                 background-color: $lightestGray;
 
                 .benefits__main__image {
-                    background: url('../images/home/bottom-right-up.jpg');
+                    background: url('../images/home/bottom-left-up.jpg') center center;
                 }
 
                 .benefits__main__data {
@@ -248,7 +257,8 @@
             &:nth-child(6) {
             background-color: $lightGray;
             .benefits__main__image {
-                background: url('../images/home/bottom-right-up.jpg');
+                background: url('../images/benefits/benefits-asesoria.jpg');
+                background-size: cover;
             }
 
             .benefits__main__data {
@@ -264,7 +274,8 @@
                 background-color: $lightGray;
 
                 .benefits__main__image {
-                    background: url('../images/home/bottom-right-up.jpg');
+                    background: url('../images/benefits/benefits-relacion.jpg');
+                    background-size: cover;
                 }
 
                 .benefits__main__data {
@@ -288,7 +299,8 @@
                 background-color: $lightestGray;
 
                 .benefits__main__image {
-                    background: url('../images/home/bottom-right-up.jpg');
+                    background: url('../images/benefits/match.jpg');
+                    background-size: cover;
                 }
 
                 .benefits__main__data {
@@ -301,7 +313,7 @@
             }
 
             &:nth-child(9) {
-                background: url('../images/home/bottom-left-down.jpg') no-repeat;
+                background: url('../images/benefits/benefits-satisfaction.jpg') no-repeat;
                 background-size: cover;
                 background-color: $indigo + #555;
                 background-blend-mode: multiply;

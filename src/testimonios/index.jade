@@ -13,11 +13,12 @@ block content
             .testimonios__hero__container
                 .testimonios__hero__image
                     img(src='../images/testimonios/hero.jpg')
-                    .testimonios__hero__layer
+                    //- .testimonios__hero__layer
                 
                 .testimonios__hero__data
                     +content-block('2 años brindando un gran servicio a', 'nuestros clientes', '', '', 'white')
-
+        section.testimonios__interstitial
+            p.testimonios__interstitial__text Lo que dicen nuestros clientes acerca de Placèt
         section.testimonios__list
             +slider('testimonios__slider', 'multi')
                 .testimonios__slide

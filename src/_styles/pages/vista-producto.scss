@@ -138,9 +138,11 @@
         }
 
         &--social {
-            display: block;
+            flex-direction: column;
+            text-align: center;
 
             @include mq(sm) {
+                flex-direction: row;
                 display: flex;
                 align-items: center;
             }

@@ -1,7 +1,7 @@
 mixin quantity-selector(quantity)
     .quantity-selector
-        button.quantity-selector__icon
+        button.quantity-selector__left-arrow
             i.material-icons keyboard_arrow_left
-        span=quantity
-        button.quantity-selector__icon
+        span.quantity-selector__value=quantity
+        button.quantity-selector__right-arrow
             i.material-icons keyboard_arrow_right

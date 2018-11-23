@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: center;
 
-    &__icon {
+    &__left-arrow,
+    &__right-arrow {
         background: transparent;
         border: none;
         line-height: 0;

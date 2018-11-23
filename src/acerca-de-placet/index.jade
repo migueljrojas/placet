@@ -12,7 +12,7 @@ block content
         section.about__hero
             .about__hero__layer
             +slider('about__hero__slider')
-                each item in site.data.slider
+                each item in site.data.about
                     .about__hero__slide
                         .about__hero__slide__image
                             img(src=item.image)
@@ -33,7 +33,7 @@ block content
                 +content-block('programa de referidos', 'club placèt', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', {'text':'conozca más', 'url':'#'})
             .about__referals__container
                 .about__referals__image
-                    img(src='../images/home/bottom-right-up.jpg')
+                    img(src='../images/about/about-referrals1.png')
 
         section.about__corporate
             .about__corporate__container
@@ -63,6 +63,6 @@ block content
         section.about__app
             .about__app__container
                 .about__app__image
-                    img(src='../images/home/cta.png')
+                    img(src='../images/about/about-app.png')
             .about__app__container
                     +content-block('', 'descargue nuestra app', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.', {'text':'app store', 'url':'#'}, '', '', {'text':'google play', 'url':'#'})

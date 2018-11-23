@@ -1,0 +1,61 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.agende-su-cita-calendario
+        section.agende-su-cita-calendario__hero
+            .agende-su-cita-calendario__hero__container
+                .agende-su-cita-calendario__hero__image
+                    img(src='../images/agende-su-cita/hero.jpg')
+                    .agende-su-cita-calendario__hero__layer
+                
+                .agende-su-cita-calendario__hero__data
+                    +content-block('', 'agende su cita', 'con un personal shopper', '', 'white')
+    
+        section.agende-su-cita-calendario__interstitial
+            p.agende-su-cita-calendario__interstitial__text El primer paso para disfrutar de los beneficios de PLACÈT, es agendar una cita con un Personal Shopper, en el horario y lugar que más le convenga
+    
+        section.agende-su-cita-calendario__form
+            .agende-su-cita-calendario__form__container
+
+                .agende-su-cita-calendario__form__col
+                    .agende-su-cita-calendario__form__data
+                        +content-block('', '1', 'Por favor elija una fecha para su cita', '', '', '', '',  'false')
+                    .agende-su-cita-calendario__form__calendar
+
+                .agende-su-cita-calendario__form__col
+                    .agende-su-cita-calendario__form__data
+                        +content-block('', '2', 'Ahora elija el horario para su cita', '', '', '', '', 'false')
+                    select.agende-su-cita-calendario__form__selector 
+                        option.agende-su-cita-calendario__form__option(value='') Turno
+                        option.agende-su-cita-calendario__form__option(value='0') Mañana
+                        option.agende-su-cita-calendario__form__option(value='1') Tarde
+                        option.agende-su-cita-calendario__form__option(value='2') Noche
+                    select.agende-su-cita-calendario__form__selector 
+                        option.agende-su-cita-calendario__form__option(value='') Horario
+                        option.agende-su-cita-calendario__form__option(value='0') 8:00AM - 12:00PM
+                        option.agende-su-cita-calendario__form__option(value='1') 12:00PM - 4:00PM
+                        option.agende-su-cita-calendario__form__option(value='2') 4:00PM - 8:00PM
+
+                .agende-su-cita-calendario__form__col
+                    .agende-su-cita-calendario__form__data
+                        +content-block('', '3', 'Indíquenos el lugar de su cita', '', '', '', '', 'false')
+                    p.agende-su-cita-calendario__form__text Tenemos registrada esta dirección:
+                    span.agende-su-cita-calendario__form__registered-address Calle 100 # 13-20, Bogotá
+                    .agende-su-cita-calendario__form__wrapper
+                        input.agende-su-cita-calendario__form__input(type='radio', name='option', id='option1')
+                        label.agende-su-cita-calendario__form__label(for='option1')
+                        p.agende-su-cita-calendario__form__info Si, deseo ser visitado en esta dirección
+                    .agende-su-cita-calendario__form__wrapper
+                        input.agende-su-cita-calendario__form__input(type='radio', name='option', id='option2')
+                        label.agende-su-cita-calendario__form__label(for='option2')
+                        p.agende-su-cita-calendario__form__info No, deseo que mi visita se haga en la siguiente dirección:
+                    input.agende-su-cita-calendario__form__address(type='text', placeholder='Dirección')
+                    select.agende-su-cita-calendario__form__selector
+                        option.agende-su-cita-calendario__form__option(value='') Ciudad
+                        option.agende-su-cita-calendario__form__option(value='0') Bogotá
+                        option.agende-su-cita-calendario__form__option(value='1') Medellín
+                        option.agende-su-cita-calendario__form__option(value='2') Barranquilla
