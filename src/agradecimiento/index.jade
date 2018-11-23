@@ -1,0 +1,115 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.agradecimiento
+        .agradecimiento__hero
+            .agradecimiento__hero__image
+            .agradecimiento__hero__data
+                h1.agradecimiento__hero__title gracias por comprar en placèt
+    section.agradecimiento__interstitial
+        p.agradecimiento__interstitial__text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+
+    section.agradecimiento__main
+
+        form.agradecimiento__survey
+            .agradecimiento__contact
+                .agradecimiento__contact__question
+                    label.agradecimiento__contact__label ¿Cuando desea que lo contactemos de nuevo?
+                    select.agradecimiento__contact__options
+                        option.agradecimiento__contact__option Un mes
+                        option.agradecimiento__contact__option Dos Meses
+                        option.agradecimiento__contact__option Tres Meses
+                .agradecimiento__contact__question
+                    label.agradecimiento__contact__label ¿desea recibir en su email información relacionada con tendencias, consejos y moda?
+                    select.agradecimiento__contact__options
+                        option.agradecimiento__contact__option Si
+                        option.agradecimiento__contact__option No
+                .agradecimiento__contact__question
+                    label.agradecimiento__contact__label ¿desea recibir en su email información sobre promociones, nuevos productos u ofertas específicas para usted?
+                    select.agradecimiento__contact__options
+                        option.agradecimiento__contact__option Si
+                        option.agradecimiento__contact__option no
+
+            .agradecimiento__experience
+                h2.agradecimiento__experience__title por favor, evalúe su experiencia con placèt
+                .agradecimiento__experience__question
+                    .agradecimiento__experience__index 1.
+                    .agradecimiento__experience__text ¿Qué tan satisfecho se encuentra con el proceso de compra online de Placèt que acaba de realizar?
+                    .agradecimiento__experience__satisfaction-level
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level1', id='low1')
+                            label.agradecimiento__experience__label(for='low1') 1 
+                            span.agradecimiento__experience__tag nada satisfecho
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level1', id='low-mid1')
+                            label.agradecimiento__experience__label(for='low-mid1') 2
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level1', id='mid1')
+                            label.agradecimiento__experience__label(for='mid1') 3
+                            span.agradecimiento__experience__tag satisfecho
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level1', id='mid-high1')
+                            label.agradecimiento__experience__label(for='mid-high1') 4
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level1', id='high1')
+                            label.agradecimiento__experience__label(for='high1') 5
+                            span.agradecimiento__experience__tag completamente satisfecho
+                .agradecimiento__experience__question
+                    .agradecimiento__experience__index 2.
+                    .agradecimiento__experience__text ¿Cuál es su nivel de satisfaccion con la Personal Shopper que lo ha asesorado?
+                    .agradecimiento__experience__satisfaction-level
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level2', id='low2')
+                            label.agradecimiento__experience__label(for='low2') 1
+                            span.agradecimiento__experience__tag nada satisfecho
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level2', id='low-mid2')
+                            label.agradecimiento__experience__label(for='low-mid2') 2
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level2', id='mid2')
+                            label.agradecimiento__experience__label(for='mid2') 3
+                            span.agradecimiento__experience__tag satisfecho
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level2', id='mid-high2')
+                            label.agradecimiento__experience__label(for='mid-high2') 4
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level2', id='high2')
+                            label.agradecimiento__experience__label(for='high2') 5
+                            span.agradecimiento__experience__tag completamente satisfecho
+                .agradecimiento__experience__question
+                    .agradecimiento__experience__index 3.
+                    .agradecimiento__experience__text ¿Recomendaría Placèt a un amigo o conocido suyo?
+                    .agradecimiento__experience__satisfaction-level
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level3', id='low3')
+                            label.agradecimiento__experience__label(for='low3') 1
+                            span.agradecimiento__experience__tag no lo recomendaría
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level3', id='low-mid3')
+                            label.agradecimiento__experience__label(for='low-mid3') 2
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level3', id='mid3')
+                            label.agradecimiento__experience__label(for='mid3') 3
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level3', id='mid-high3')
+                            label.agradecimiento__experience__label(for='mid-high3') 4
+                        .agradecimiento__experience__wrapper
+                            input.agradecimiento__experience__input(type='radio', name='level3', id='high3')
+                            label.agradecimiento__experience__label(for='high3') 5
+                            span.agradecimiento__experience__tag lo recomendaría completamente
+                .agradecimiento__experience__question
+                    .agradecimiento__experience__index 4.
+                    .agradecimiento__experience__text.agradecimiento__experience__text--long 
+                        | Si contestó positivamente a la última pregunta ¿A quién recomendaría para formar parte del club Placèt? 
+                        strong Recuerde que referir un nuevo miembro le puede traer beneficios importantes
+                    .agradecimiento__experience__data
+                        input.agradecimiento__experience__info(type='text', placeholder='Nombre')
+                        input.agradecimiento__experience__info(type='email', placeholder='Email')
+                        input.agradecimiento__experience__info(type='text', placeholder='Apellido')
+                        input.agradecimiento__experience__info(type='phone', placeholder='Teléfono')
+
+        button.agradecimiento__submit-button enviar evaluación
