@@ -71,7 +71,7 @@
             display: inline-block;
 
             @include mq(md) {
-                width: 100%;
+                width: 80%;
             }
         }
     }
@@ -239,6 +239,7 @@
         border-top: 2px solid $indigo;
         bottom: 0;
         background: $lightestGray;
+        pointer-events: none;
 
         @include mq(md) {
             display: flex;
@@ -490,6 +491,7 @@
         #{$h}__tienda {
             transform: translate3d(10%, 0, 0);
             opacity: 1;
+            pointer-events: all;
 
             @include mq(md) {
                 transform: translate3d(0, 0, 0);

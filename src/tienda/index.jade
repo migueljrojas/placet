@@ -38,8 +38,9 @@ block content
             .tienda__products
                 
                 .tienda__filters
-                    button.tienda__filters__button  filtrar
-                    i.fa.fa-filter
+                    button.tienda__filters__button 
+                        | filtrar
+                        i.fa.fa-filter
                     .tienda__filters__wrapper
                         .tienda__filter
                             h3.tienda__filter__title Colección
@@ -145,14 +146,14 @@ block content
                             .tienda__filter__colors
                                 - for (var i = 0; i < 3; ++i) {
                                     .tienda__filter__color
-                                        input.tienda__filter__color__button(type="radio" id="color1", name="color")
-                                        label.tienda__filter__color__label(for="color1", style="background:#245687")
+                                        input.tienda__filter__color__button(type="radio" id="color#{(1 + i) * (i + 1)}", name="color")
+                                        label.tienda__filter__color__label(for="color#{(1 + i) * (i + 1)}", style="background:#245687")
                                     .tienda__filter__color
-                                        input.tienda__filter__color__button(type="radio" id="color2", name="color")
-                                        label.tienda__filter__color__label(for="color2", style="background:#130358")
+                                        input.tienda__filter__color__button(type="radio" id="color#{(2 + i) * (i + 1)}", name="color")
+                                        label.tienda__filter__color__label(for="color#{(2 + i) * (i + 1)}", style="background:#130358")
                                     .tienda__filter__color
-                                        input.tienda__filter__color__button(type="radio" id="color3", name="color")
-                                        label.tienda__filter__color__label(for="color3", style="background:#720374")
+                                        input.tienda__filter__color__button(type="radio" id="color#{(3 + i) * (i + 1)}", name="color")
+                                        label.tienda__filter__color__label(for="color#{(3 + i) * (i + 1)}", style="background:#720374")
                                 - }
 
                 .tienda__list

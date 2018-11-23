@@ -49,19 +49,19 @@
                 transform: translate(-50%);
             }
 
-            .play-button {
-                position: absolute;
-                top: 60vw;
-                left: 50%;
-                transform: translate(-50%) scale3d(3,3,3);
+            // .play-button {
+            //     position: absolute;
+            //     top: 60vw;
+            //     left: 50%;
+            //     transform: translate(-50%) scale3d(3,3,3);
 
-                @include mq(sm) {
-                    position: relative;
-                    transform: translate(0) scale3d(1.1,1.1,1.1);
-                    top: auto;
-                    left: auto;
-                }
-            }
+            //     @include mq(sm) {
+            //         position: relative;
+            //         transform: translate(0) scale3d(1.1,1.1,1.1);
+            //         top: auto;
+            //         left: auto;
+            //     }
+            // }
         }
 
         &__data {

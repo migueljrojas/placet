@@ -160,6 +160,12 @@
         &__button {
             position: absolute;
             left: -9999px;
+
+            &:checked {
+                & + label {
+                    border: 3px solid $golden;
+                }
+            }
         }
 
         &__label {

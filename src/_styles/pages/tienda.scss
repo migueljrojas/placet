@@ -241,10 +241,49 @@
     }
 
     &__filters {
-        flex-basis: 25%;
-        padding-top: 10px;
+        padding-top: 7px;
         position: relative;
         z-index: 5;
+        
+        @include mq(sm) {
+            flex-basis: 25%;
+        }
+
+        &__button {
+            @include button;
+
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 5px 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+
+            i {
+                margin-left: 10px;
+            }
+
+            @include mq(sm) {
+                display: none;
+            }
+        }
+
+        &__wrapper {
+            @include trans;
+
+            max-height: 0;
+            overflow: hidden;
+
+            @include mq(sm) {
+                max-height: none;
+                overflow: visible;
+            }
+
+            &.-open {
+                max-height: 150vh;
+            }
+        }
     }
 
     &__filter {
@@ -271,11 +310,13 @@
                 padding-bottom: 1.5vw;
             }
 
-            li {
-
+            & > li {
                 &:first-child {
                     padding-left: 25px;
                 }
+            }
+
+            li {
 
                 & > a {
                     display: flex;
@@ -301,7 +342,7 @@
                         font-weight: 700;
 
                         i {
-                            transform: rotate(-45deg)
+                            transform: rotate(90deg)
                         }
                     }
                 }
@@ -314,6 +355,7 @@
             overflow: hidden;
             max-height: 0;
             opacity: 0;
+            margin-left: 26px;
         }
 
         &__price {
@@ -421,6 +463,12 @@
             &__button {
                 position: absolute;
                 left: -9999px;
+
+                &:checked {
+                    & + label {
+                        border: 3px solid $golden;
+                    }
+                }
             }
     
             &__label {

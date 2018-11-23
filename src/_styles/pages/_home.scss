@@ -454,4 +454,73 @@
             }
         }
     }
+
+    &__intro {
+        position: fixed;
+        top: 0;
+        right:0;
+        bottom:0;
+        left:0;
+        z-index: 1000000;
+        overflow: hidden;
+        background: $indigo url('/images/texture-pattern.jpg');
+
+        &__video {
+            padding-bottom: 100vh;
+
+            iframe {
+
+                display: none;
+    
+                @include mq(sm) {
+                    display: block;
+                }
+            }
+        }
+
+        &__backdrop {
+            position: absolute;
+            top: 0;
+            right:0;
+            bottom:0;
+            left:0;
+            display: block;
+            background: $indigo url('/images/texture-pattern.jpg');
+    
+            @include mq(sm) {
+                display: none;
+            }
+        }
+
+        &__overlay {
+            @include overlay(0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            @include mq(sm) {
+                @include overlay(.7);
+            }
+        }
+
+        &__logo {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 600px;
+
+            img {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__button {
+            @include button;
+            font-size: 16px;
+            padding: 7px 20px;
+        }
+    }
 }

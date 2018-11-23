@@ -1,42 +1,94 @@
 .play-button {
-    height: 9vw;
-    width: 9vw;
-    border: .15vw solid $vibrantGolden;
-    background: transparent;
-    border-radius: 150px;
+    @include trans;
+    display: inline-block;
+    background: none;
+    border:none;
+    width: 60px;
+    height: 60px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 50%;
 
-    &:hover,
-    &:active,
-    &:focus {
-        background: transparentize($indigo, .7);
+    
+    svg {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        width:100%;
+        height:100%;
     }
 
-    span {
-        height: 3.2vw;
-        width: 3.2vw;
-        border: .15vw solid $vibrantGolden;
-        display: block;
-        position: absolute;
-        transform: rotate(45deg);
-        border-radius: 2px;
-        left: 42%;
+    .circle {
+        stroke: $golden;
+        stroke-dasharray: 550;
+        stroke-dashoffset: 20;
+        -webkit-transition: all 0.5s ease-in-out;
+        opacity: .7;
+    }
+    
+    .triangle {
+      -webkit-transition: all 0.7s ease-in-out;
+      stroke-dasharray: 240;
+      stroke-dashoffset: 480;
+      stroke: $golden;
+      transform: translateY(0) 
+     }
+    
+    
+    &:hover {
+        background: transparentize($fadedIndigo, .5);
+      
+      .triangle {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        stroke: $vibrantGolden;
+        animation: nudge 0.7s ease-in-out;
+        
+        @keyframes nudge{
+          0% {
+            transform: translateX(0)  
+          }
+          30% {
+            transform: translateX(-5px)
+          }
+          50% {
+            transform: translateX(5px)
+          }
+          70% {
+            transform: translateX(-2px)
+          }
+          100% {
+            transform: translateX(0)
+          }
+        }
+      }
+      
+      .circle {
+        stroke: $vibrantGolden;
+        stroke-dasharray: 650;
+        stroke-dashoffset: 0;
+        opacity: 1;
+      }
+      
+    }
 
-        &:first-of-type {
-            transform: rotate(0deg);
-            height: 4.4vw;
-            border-top: transparent;
-            border-right: transparent;
-            border-bottom: transparent;
+    &--big {
+        width: 100px;
+        height: 100px;
+    }
+
+    &--white {
+        .circle,
+        .triangle {
+            stroke: $white;
         }
 
-        &:last-of-type {
-            left: 26%;
-            border-left: transparent;
-            border-bottom: transparent;
+        &:hover {
+            .circle,
+            .triangle {
+                stroke: $white;
+            }
         }
     }
 }
