@@ -1,7 +1,7 @@
 .about {
     overflow: hidden;
-
     &__hero {
+        overflow: hidden;
         position: relative;
 
         @include mq(sm) {
@@ -26,7 +26,7 @@
         }
 
         &__slider {
-            margin-bottom: -6px !important;
+            margin-bottom: -11px !important;
 
             .slick-dots {
                 position: absolute;
@@ -38,16 +38,6 @@
 
             &__image {
                 @include img($ratio: 100%, $imgwidth: auto, $imgheight: 100%);
-
-                img {
-                    left: 50%;
-                    transform: translateX(-50%);
-
-                    @include mq(sm) {
-                        left: 0;
-                        transform: translateX(0);
-                    }
-                }
 
                 @include mq(sm) {
                     @include img($ratio: 40%);
@@ -189,6 +179,7 @@
                 width: 50%;
             }
 
+
             &:first-of-type {
                 padding: 20px;
 
@@ -200,11 +191,7 @@
 
         &__image {
             @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%)
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            transform: scale3d(1.5, 1.5, 1.5);
+            
         }
     }
 

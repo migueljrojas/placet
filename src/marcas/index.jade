@@ -12,7 +12,7 @@ block content
         section.brands__hero
             .brands__hero__layer
             +slider('brands__hero__slider')
-                each item in site.data.slider
+                each item in site.data.brands
                     .brands__hero__slide
                         .brands__hero__slide__image
                             img(src=item.image)
