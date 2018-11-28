@@ -14,8 +14,12 @@ header.header
             .header__menu__secondary
                 a.header__menu__link(href="#") Servicio al Cliente
                 a.header__menu__link(href="/contacto") Contacto
-                a.header__menu__link(href="#") Buscar
+                a.header__menu__link(href="#buscar", id='buscar', name='buscar') Buscar
                 a.header__menu__login-button(data-modal="open", href="#login") Ingresar
+                form.header__menu__form
+                    input.header__menu__input(type="text", placeholder="Buscar en Placèt")
+                    button.header__menu__button(href="#")
+                        i.fa.fa-search
             .header__menu__primary
                 each item in site.data.header
                     a.header__menu__tab(href=item.url)=item.name

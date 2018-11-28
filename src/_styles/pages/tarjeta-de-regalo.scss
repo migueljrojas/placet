@@ -121,11 +121,6 @@
             }
         }
 
-        &__giftcard {
-            display: flex;
-            flex-direction: column;
-        }
-
         &__wrapper {
             display: flex;
             flex-direction: row;
@@ -148,24 +143,6 @@
                     justify-content: flex-start;
                 }
             }
-        }
-
-        input[type='radio'] {
-            position: absolute;
-            left: -9999px;
-
-            &:checked + .tarjeta-de-regalo__main__card {
-                border: 2px solid $vibrantGolden;
-            }
-        }
-
-        &__card {
-            position: relative;
-            width: 30%;
-        }
-
-        &__image {
-            @include img($ratio: 60%, $imgwidth: 100%, $imgheight: 100%);
         }
 
         &__label {
@@ -228,6 +205,8 @@
         }
 
         &__button {
+            @include trans;
+            @include button;
             background: transparent;
             border: 1px solid $golden;
             width: 100%;

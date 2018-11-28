@@ -5,6 +5,12 @@ var QuantitySelector = function() {
     var selector = $('.quantity-selector__value');
     var leftArrow = $('.quantity-selector__left-arrow');
     var rightArrow = $('.quantity-selector__right-arrow');
+    var promotionalCode = $('.carro-de-compras__cta__input');
+
+    promotionalCode.on('click', function() {
+        console.log('hola');
+        $(this).removeAttr("disabled");
+    });
 
 
     leftArrow.on('click', function(e) {
@@ -27,7 +33,6 @@ var QuantitySelector = function() {
         var finalValue = number + 1;
         return selector.html(finalValue);
     });
-
 };
 
 module.exports = QuantitySelector;
