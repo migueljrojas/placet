@@ -7,6 +7,9 @@ var Header = function() {
     var menuOpen = $('.header__hamburguer');
     var tiendaOpen = $('[href="#tienda"');
     var tiendaClose = $('.header__tienda__close');
+    var buscarButtonForm = $('.header__menu__form');
+    var buscarButton = $('[href="#buscar"]');
+    var buscarInput = $('.header__menu__input');
 
     menuOpen.on('click', function(){
         if (!header.hasClass('-open')) {
@@ -23,6 +26,10 @@ var Header = function() {
         header.addClass('-tienda_is-active');
     });
 
+    tiendaOpen.on('mouseenter', function(){
+        header.addClass('-tienda_is-active');
+    });
+
     tiendaClose.on('click', function(){
         header.removeClass('-tienda_is-active');
     });
@@ -32,8 +39,19 @@ var Header = function() {
         e.preventDefault();
     });
 
+    buscarButton.on('click', function(e) {
+        e.preventDefault();
+        buscarButtonForm.addClass('header__menu__form-open');
+        buscarInput.focus();
+    });
+
+    buscarInput.on('focusout', function() {
+        buscarButtonForm.removeClass('header__menu__form-open');
+    });
+
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
+    .not('[href="#buscar"]')
     .not('[href="#"]')
     .not('[href="#0"]')
     .not('[href="#registro"]')
