@@ -72,6 +72,7 @@
 
             @include mq(md) {
                 width: 80%;
+                max-width: 350px;
             }
         }
     }
@@ -104,6 +105,11 @@
             padding-left: 30px;
             width: 70vw;
             display: block;
+        }
+
+        @include customMq(1400px) {
+            padding-top: .75vw;
+            padding-bottom: .75vw;
         }
 
         &__form {
@@ -211,6 +217,11 @@
                     color: $linkHover;
                 }
             }
+
+            @include customMq(1400px) {
+                font-size: 0.95vw;
+                margin: 0.7vw 0 0;
+            }
         }
     }
 
@@ -257,7 +268,7 @@
                 border: none;
                 background: $white;
                 height: auto;
-                width: 5vw;
+                width: 5%;
             }
         }
     }
@@ -276,8 +287,9 @@
         pointer-events: none;
 
         @include mq(md) {
+            position: absolute;
             display: flex;
-            top: 8vw;
+            top: calc(100% - 1px);
             border-top: none;
             width: 100%;
             padding: 0;
@@ -287,9 +299,10 @@
         &__image {
             img {
                 position: absolute;
-                height: 100%;
+                width: 100%;
                 top:0;
                 bottom:0;
+                height: auto;
             }
         }
 
@@ -300,6 +313,7 @@
                 display: block;
                 position: relative;
                 width: 28%;
+                overflow: hidden;
             }
         }
 
@@ -307,7 +321,7 @@
             position: relative;
 
             @include mq(md) {
-                width: 73.5%;
+                width: 72%;
             }
 
             &:before {
@@ -315,12 +329,12 @@
                     content: '';
                     background: $lightestGray;
                     height: auto;
-                    width: 18vw;
+                    width: 20%;
                     position: absolute;
                     top: 0;
                     bottom: 0;
                     right: 100%;
-                    transform: skew(-20deg) translateX(50%);
+                    transform: skew(-20deg) translateX(40%);
                 }
             }
         }

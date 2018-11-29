@@ -2,6 +2,7 @@ extends ../_layouts/base
 
 include ../_modules/content-block/content-block
 include ../_modules/play-button/play-button
+include ../_modules/video-overlay/video-overlay
 
 block config
   //- Correct base url pathing for this page
@@ -9,11 +10,13 @@ block config
 
 block content
     main.how-it-works
-        section.how-it-works__hero
+        section.how-it-works__hero.js-video-parent
             .how-it-works__hero__container
                 .how-it-works__hero__image
                     img(src='../images/how-it-works/hero.jpg')
                     .how-it-works__hero__layer
+            +video-overlay
+
             .how-it-works__hero__wrapper
                 +play-button('big')
                 .how-it-works__hero__data

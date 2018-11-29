@@ -5,8 +5,9 @@ var Intro = function() {
     var siteVisited = sessionStorage.getItem('placet');
     var intro = $('.home__intro');
 
-    $('body').addClass('-hideOverflow');
-
+    if (intro.length > 0) {
+        $('body').addClass('-hideOverflow');
+    }
 
     if (siteVisited === 'true') {
         $( document ).ready(function() {

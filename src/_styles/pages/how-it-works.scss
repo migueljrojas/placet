@@ -2,6 +2,7 @@
     overflow: hidden;
 
     &__hero {
+        position: relative;
         @include mq(sm) {
             justify-content: center;
             align-items: center;
@@ -47,6 +48,7 @@
                 top: 18vw;
                 left: 50%;
                 transform: translate(-50%);
+                z-index: 5;
             }
 
             // .play-button {

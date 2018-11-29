@@ -14,6 +14,7 @@ var Price = require('../_modules/multirange/price');
 var QuantitySelector = require('../_modules/quantity-selector/quantity-selector');
 var Product = require('../_modules/product/product');
 var Intro = require('./intro');
+var VideoOverlay = require('./video-overlay');
 
 $(function() {
     require('../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min');
@@ -28,4 +29,5 @@ $(function() {
     new QuantitySelector();
     new Product();
     new Intro();
+    new VideoOverlay();
 });
