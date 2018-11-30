@@ -5,7 +5,7 @@ var Header = function() {
     var header = $('.header');
     var body = $('body');
     var menuOpen = $('.header__hamburguer');
-    var tiendaOpen = $('[href="#tienda"');
+    var tiendaOpen = $('[href="#tienda"]');
     var tiendaClose = $('.header__tienda__close');
     var buscarButtonForm = $('.header__menu__form');
     var buscarButton = $('[href="#buscar"]');
