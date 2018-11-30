@@ -11,11 +11,10 @@
     }
 
     &__suscribe {
-        @include mq(sm) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
 
         &__text {
             margin: 0;
@@ -32,37 +31,30 @@
         }
 
         &__input {
-            width: 85%;
-            padding: 10px;
+            width: 100%;
+            padding: 0 50px 0 10px;
+            height: 40px;
             border: 1px solid $midGray;
             font-size: 12px;
             color: $midGray;
-
-            @include mq(sm) {
-                padding: .7vw;
-                width: 25vw;
-                font-size: .9vw;
-            }
+            border-radius: 0;
         }
 
         &__submit {
+            height: 40px;
+            width: 40px;
+            background: transparent;
             border: none;
-            transform: rotate(-45deg);
-            height: 16px;
-            width: 10px;
-            background: $white;
-            border-right: 4px solid $midGray;
-            border-bottom: 4px solid $midGray;
-            border-radius: 2px;
-            margin-left: 5px;
+            display: flex;
+            position: absolute;
+            right:0;
+            top: 0;
+            color: $midGray;
+            justify-content: center;
+            align-items: center;
 
-            @include mq(sm) {
-                height: 1.3vw;
-                width: 1.3vw;
-                border-right: .3vw solid $midGray;
-                border-bottom: .3vw solid $midGray;
-                border-radius: .2vw;
-                margin-left: 1vw;
+            i {
+                font-size: 36px;
             }
         }
     }
