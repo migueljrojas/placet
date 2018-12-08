@@ -99,6 +99,7 @@
                 justify-content: center;
                 align-items: center;
                 padding: 20px;
+                height: 100%;
 
                 @include mq(sm) {
                     padding: 4vw 8vw;
@@ -269,22 +270,6 @@
 
             @include mq(sm) {
                 font-size: 1vw;
-            }
-        }
-    }
-
-    &__map {
-        height: 100vw;
-        
-        .embed-responsive-16by9 {
-            padding-bottom: 100vw;
-        }
-
-        @include mq(sm) {
-            height: 30vw;
-
-            .embed-responsive-16by9 {
-                padding-bottom: 56.25%;
             }
         }
     }

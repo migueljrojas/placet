@@ -98,7 +98,8 @@
     }
 
     &__main {
-        background: url('../images/home/bottom-right-down.jpg');
+        background: url('../images/home/bottom-right-down.jpg') no-repeat;
+        background-size: cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -107,11 +108,11 @@
 
         @include mq(sm) {
             flex-direction: row;
-            padding: 6vw 12vw;
+            padding: 6vw 10vw;
         }
 
         &__column {
-            width: 80%;
+            width: 85%;
 
             @include mq(sm) {
                 padding: 0 3vw 0 0;
@@ -133,7 +134,7 @@
                     border-bottom: 1px solid $lightGray;
 
                     @include mq(sm) {
-                        font-size: 3vw;
+                        font-size: 3.2vw;
                         text-align: left;
                         border: none;
                     }
@@ -146,19 +147,23 @@
         }
 
         &__text {
-            line-height: 2.5;
+            line-height: 2;
             letter-spacing: 2px;
             color: $white;
-            margin: 0;
+            margin-top: 0;
             font-size: 12px;
 
             @include mq(sm) {
-                font-size: 1.2vw;
+                font-size: 1.1vw;
                 text-align: left;
-
             }
 
             span {
+                display: inline-block;
+                padding-bottom: 2%;
+            }
+
+            strong {
                 font-weight: 400;
             }
         }
@@ -191,7 +196,7 @@
 
         &__image {
             @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%)
-            
+
         }
     }
 
