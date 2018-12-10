@@ -71,11 +71,8 @@
                     padding: 0;
 
                     @include mq(sm) {
-                        padding-bottom: 1.5vw;
-                    }
-
-                    &:after {
-                        display: none;
+                        font-size: 3.5vw;
+                        padding-bottom: 1vw;
                     }
                 }
             }
@@ -86,18 +83,10 @@
                 position: absolute;
                 z-index: 2;
                 width: 30vw;
-                top: 12vw;
+                top: 15vw;
                 text-align: center;
                 left: 10vw;
                 background: none;
-            }
-
-            .content-block {
-                &__title {
-                    @include mq(sm) {
-                        font-size: 4vw;
-                    }
-                }
             }
         }
     }
@@ -471,7 +460,7 @@
             iframe {
 
                 display: none;
-    
+
                 @include mq(sm) {
                     display: block;
                 }
@@ -486,7 +475,7 @@
             left:0;
             display: block;
             background: $indigo url('/images/texture-pattern.jpg');
-    
+
             @include mq(sm) {
                 display: none;
             }

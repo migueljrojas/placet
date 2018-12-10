@@ -1,8 +1,23 @@
 [
     {
-        "image":"/images/home/slide1.jpg"
+        "image":"/images/home/slide1.jpg",
+        "title":"como funciona",
+        "text":"Nosotros llevamos la tienda, tu decides a donde. Su tiempo libre dedíquelo a lo mas importante, de la imagen nos ocupamos nosotros",
+        "linkText":"Como Funciona",
+        "url":"/como-funciona"
     },
     {
-        "image":"/images/home/slide2.jpg"
+        "image":"/images/home/slide2.jpg",
+        "title":"agende su cita",
+        "text":"Quremos conocerlo para proyectar su mejor imagen. Estamos a su disposición",
+        "linkText":"agende su cita",
+        "url":"/agende-su-cita"
+    },
+    {
+        "image":"/images/home/slide1.jpg",
+        "title":"tienda online",
+        "text":"La vida es una entrevista y hay que estar bien preparado",
+        "linkText":"Tienda Online",
+        "url":"/tienda"
     }
 ]
