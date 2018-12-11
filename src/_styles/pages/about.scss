@@ -154,13 +154,13 @@
             font-size: 12px;
 
             @include mq(sm) {
-                font-size: 1.1vw;
+                font-size: .8vw;
                 text-align: left;
             }
 
             span {
                 display: inline-block;
-                padding-bottom: 2%;
+                padding-bottom: 3%;
             }
 
             strong {
@@ -197,6 +197,11 @@
         &__image {
             @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%)
 
+            img {
+                @include mq(sm) {
+                    transform: translateX(-45%);
+                }
+            }
         }
     }
 
@@ -380,7 +385,7 @@
 
     &__app {
         display: flex;
-        background: $lightGray;
+        background: $lightestGray;
 
         &__container {
             width: 50%;

@@ -18,6 +18,13 @@ block content
         p.appoinment__comment El primer paso para disfrutar de los beneficios de PLACÈT, es agendar una cita con un Personal Shopper, en el horario y lugar que más le convenga
     
         section.appoinment__form
+            .appoinment__form__select
+                p.appoinment__form__shopper Opción de Personal Shopper
+                select.appoinment__form__selector.appoinment__form__selector--shopper
+                    option.appoinment__form__option(value='') Personal Shopper
+                    option.appoinment__form__option(value='0') Carlos
+                    option.appoinment__form__option(value='1') Cesar
+                    option.appoinment__form__option(value='2') Miguel
             .appoinment__form__container
 
                 .appoinment__form__col
@@ -60,6 +67,6 @@ block content
                         option.appoinment__form__option(value='0') Bogotá
                         option.appoinment__form__option(value='1') Medellín
                         option.appoinment__form__option(value='2') Barranquilla
-
+            button.appoinment__form__address.appoinment__form__address--submit deseo agendar mi cita
 block scripts
     script(src= baseUrl + 'scripts/monthly.js')

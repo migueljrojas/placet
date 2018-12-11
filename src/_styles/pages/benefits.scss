@@ -88,7 +88,7 @@
 
                     @include mq(sm) {
                         padding-top: 2.5vw;
-                        font-size: 2.5vw;
+                        font-size: 2.8vw;
                     }
 
                     &:after {
@@ -181,7 +181,7 @@
                 .content-block {
                     padding: 0 80px;
                     @include mq(sm) {
-                        padding: 1vw 10vw;
+                        padding: 1vw 8vw;
                     }
 
                     &__title {
@@ -194,7 +194,7 @@
                         padding-bottom: 30px;
 
                         @include mq(sm) {
-                            padding-bottom: 0;
+                            padding-bottom: 3vw;
                         }
                     }
                 }
@@ -218,38 +218,29 @@
             }
 
             &:nth-child(4) {
-                background-color: $vibrantGolden;
-                background-blend-mode: multiply;
+                background: url('../images/benefits/benefits-tienda.jpg') no-repeat center center / cover;
 
                 .content-block {
                     padding: 0 80px;
                     @include mq(sm) {
-                        padding: 1vw 10vw;
+                        padding: 1vw 8vw;
                     }
 
                     &__text {
                         padding-bottom: 30px;
 
                         @include mq(sm) {
-                            padding-bottom: 0;
+                            padding-bottom: 3vw;
                         }
                     }
                 }
-
-                // .play-button {
-                //     border-color: $white;
-
-                //     span {
-                //         border-color: $white;
-                //     }
-                // }
             }
 
             &:nth-child(5) {
                 background-color: $lightestGray;
 
                 .benefits__main__image {
-                    background: url('../images/home/bottom-left-up.jpg') center center;
+                    background: url('../images/benefits/benefits-custome-fit.jpg') no-repeat center center /cover;
                 }
 
                 .benefits__main__data {
@@ -292,14 +283,6 @@
                         padding: 2vw 6vw;
                     }
                 }
-
-                .content-block {
-                    &__title {
-                        &:after {
-                            display: none;
-                        }
-                    }
-                }
             }
 
             &:nth-child(8) {
@@ -329,7 +312,7 @@
                     padding: 0 80px;
 
                     @include mq(sm) {
-                        padding: 1vw 10vw;
+                        padding: 1vw 8vw;
                     }
 
                     &__title {
@@ -342,7 +325,7 @@
                         padding-bottom: 30px;
 
                         @include mq(sm) {
-                            padding-bottom: 0;
+                            padding-bottom: 3vw;
                         }
                     }
                 }

@@ -50,20 +50,6 @@
                 transform: translate(-50%);
                 z-index: 5;
             }
-
-            // .play-button {
-            //     position: absolute;
-            //     top: 60vw;
-            //     left: 50%;
-            //     transform: translate(-50%) scale3d(3,3,3);
-
-            //     @include mq(sm) {
-            //         position: relative;
-            //         transform: translate(0) scale3d(1.1,1.1,1.1);
-            //         top: auto;
-            //         left: auto;
-            //     }
-            // }
         }
 
         &__data {
@@ -108,15 +94,15 @@
             @include mq(sm) {
                 flex-direction: row;
                 height: auto;
+                height: 33.34vw;
             }
 
             &:nth-child(1) {
                 background-color: $lightGray;
 
                 .how-it-works__appoinment__image {
-                    background: url('../images/how-it-works/primera-cita.png') no-repeat;
-                    background-size: cover;
-
+                    background: url('../images/how-it-works/primera-cita.png') no-repeat center center / cover;
+                    background-size: 117%;
                 }
             }
 
@@ -124,7 +110,7 @@
                 background-color: $lightestGray;
 
                 .how-it-works__appoinment__image {
-                    background: url('../images/benefits/benefits-asesoria.jpg') no-repeat;
+                    background: url('../images/agende-su-cita/hero.jpg') no-repeat right center;
                     background-size: cover;
                     order: 2;
 
@@ -146,9 +132,7 @@
                 background-color: $lightGray;
 
                 .how-it-works__appoinment__image {
-                    background: url('../images/how-it-works/tercera-cita.png') no-repeat;
-                    background-size: cover;
-
+                    background: url('../images/how-it-works/tercera-cita.png') no-repeat center center / cover;
                 }
             }
 
@@ -169,8 +153,7 @@
                 }
 
                 .how-it-works__appoinment__image {
-                    background: url('../images/how-it-works/satisfaction.jpg') no-repeat;
-                    background-size: cover;
+                    background: url('../images/how-it-works/satisfaction.jpg') no-repeat center center / cover;
                     order: 2;
 
                     @include mq(sm) {

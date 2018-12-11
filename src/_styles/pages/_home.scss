@@ -71,9 +71,14 @@
                     padding: 0;
 
                     @include mq(sm) {
-                        font-size: 3.5vw;
+                        font-size: 3vw;
                         padding-bottom: 1vw;
                     }
+                }
+
+                &__subtitle {
+                    font-size: 1vw;
+                    padding-bottom: 2vw;
                 }
             }
 
@@ -82,10 +87,10 @@
                 padding: 0;
                 position: absolute;
                 z-index: 2;
-                width: 30vw;
+                width: 35vw;
                 top: 15vw;
                 text-align: center;
-                left: 10vw;
+                left: 5vw;
                 background: none;
             }
         }
@@ -272,7 +277,8 @@
         }
 
         &__appoinment {
-            background: url('/images/home/bottom-left-up.jpg') no-repeat right bottom / 140%;
+            background: url('/images/home/bottom-left-up.jpg') no-repeat;
+            background-size: 50%;
             display: flex;
             justify-content: flex-end;
 
@@ -347,7 +353,7 @@
         }
 
         &__referals {
-            background: url('/images/home/bottom-right-up1.jpg') no-repeat left top;
+            background: url('/images/home/bottom-right-up.jpg') no-repeat left top;
             display: flex;
             justify-content: flex-end;
 
