@@ -55,12 +55,11 @@ block content
                         img(src='../images/home/cta.png')
         section.about__cta
             .about__cta__container
-                .about__cta__image
-                    img(src='/images/home/cta.png')
-            .about__cta__container
                 +slider('about__cta__slider')
                     each item in site.data.aboutCtaSlider
                         .about__cta__slide
+                            .about__cta__image
+                                img(src='/images/about/portrait.jpg')
                             p.about__cta__title &quot;#{item.quote}&quot;
                             p.about__cta__text=item.quoter
                             p.about__cta__text Personal Shopper: #{item.shopper}

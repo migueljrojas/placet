@@ -5,11 +5,10 @@
         overflow: hidden;
 
         &__container {
-            background: url('../images/referidos/hero.jpg') no-repeat center center / cover;
+            background: url('../images/referidos/hero.jpg') no-repeat left center / cover;
             height: 100vw;
 
             @include mq(sm) {
-                background: url('../images/referidos/hero.jpg') no-repeat right center / 140%;
                 height: 40vw;
             }
         }
@@ -46,7 +45,7 @@
                 width: 40vw;
                 top: 16vw;
                 text-align: center;
-                left: 10vw;
+                left: 5vw;
                 background: none;
             }
 

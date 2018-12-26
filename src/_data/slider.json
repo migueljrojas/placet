@@ -1,21 +1,21 @@
 [
     {
         "image":"/images/home/slide1.jpg",
-        "title":"como funciona",
-        "text":"Nosotros llevamos la tienda, tu decides a donde. Su tiempo libre dedíquelo a lo mas importante, de la imagen nos ocupamos nosotros",
+        "title":"como funciona PLACET",
+        "text":"Conoce un servicio que transformara la manera de vestirte.",
         "linkText":"Como Funciona",
         "url":"/como-funciona"
     },
     {
         "image":"/images/home/slide2.jpg",
         "title":"agende su cita",
-        "text":"Quremos conocerlo para proyectar su mejor imagen. Estamos a su disposición",
+        "text":"Déjanos mostrarte en que consiste PLACET, un servicio que cambiara tu experiencia con la moda.",
         "linkText":"agende su cita",
         "url":"/agende-su-cita"
     },
     {
         "image":"/images/home/slide3.jpg",
-        "title":"tienda online",
+        "title":"Visita nuestra tienda online",
         "text":"La vida es una entrevista y hay que estar bien preparado",
         "linkText":"Tienda Online",
         "url":"/tienda"

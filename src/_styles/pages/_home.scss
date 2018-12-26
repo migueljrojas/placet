@@ -217,7 +217,6 @@
 
         @include mq(sm) {
             max-height: 33.34vw;
-            overflow: hidden;
             display: flex;
             position: relative;
             border: 3vw solid $white;
@@ -250,17 +249,25 @@
         &__image-container {
             width: 50%;
             height: 100%;
+            position: relative;
         }
 
         &__image {
             display: none;
 
             @include mq(sm) {
-                @include img($imgwidth: auto);
-
                 display: block;
                 position: absolute;
-                left: 60%;
+                left:0;
+                top:-1px;
+                bottom:0;
+                right: 0;
+                text-align: right;
+
+                img {
+                    height: 100%;
+                    width: auto;
+                }
             }
         }
     }
@@ -323,7 +330,7 @@
         }
 
         &__brands {
-            background: url('/images/home/bottom-left-down.jpg') no-repeat right bottom;
+            background: url('/images/home/bottom-left-down.jpg') no-repeat right bottom / cover;
 
             @include mq(sm) {
                 width: 100%;
@@ -335,7 +342,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: $lightGray;
                 width: 50%;
                 padding: 20px 10px;
 
@@ -353,7 +359,7 @@
         }
 
         &__referals {
-            background: url('/images/home/bottom-right-up.jpg') no-repeat left top;
+            background: url('/images/home/bottom-right-up.jpg') no-repeat left top / cover;
             display: flex;
             justify-content: flex-end;
 
@@ -364,7 +370,6 @@
 
             &__data {
                 width: 50%;
-                background: $lightGray;
                 display: flex;
                 justify-content: center;
                 align-items: center;

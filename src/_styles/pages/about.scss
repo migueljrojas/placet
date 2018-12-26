@@ -1,5 +1,6 @@
 .about {
     overflow: hidden;
+
     &__hero {
         overflow: hidden;
         position: relative;
@@ -195,7 +196,7 @@
         }
 
         &__image {
-            @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%)
+            @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%);
 
             img {
                 @include mq(sm) {
@@ -320,14 +321,18 @@
         }
 
         &__image {
-            @include img($ratio: 15%, $imgwidth: auto, $imgheight: 100%);
-            display: block;
-            border-radius: 50px;
-            left: 43%;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            margin: 0 auto 20px;
 
-            @include mq(sm) {
-                left: 48%;
-                @include img($ratio: 5%, $imgwidth: auto, $imgheight: 100%);
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
             }
         }
 
