@@ -17,7 +17,7 @@ block content
                         .about__hero__slide__image
                             img(src=item.image)
             .about__hero__data
-                +content-block('', '30 años de experiencia', 'en moda masculina', '', 'white')
+                +content-block('', 'descubre la experiencia placèt', '', '', 'white')
         
         section.about__main
             .about__main__column
@@ -49,17 +49,17 @@ block content
 
             .about__corporate__container
                 .about__corporate__wrapper
-                    +content-block('', 'agende su cita', 'Nuestro propósito es conocerte para ayudar a proyectar tu mejor estilo, en el momento y la comodidad del sitio que prefieras.', {'text':'agendar', 'url':'/agende-su-cita'})
-                .about__corporate__wrapper
                     .about__corporate__image
-                        img(src='../images/home/cta.png')
+                        img(src='../images/home/bottom-left-up.jpg')
+                .about__corporate__wrapper
+                    +content-block('', 'agende su cita', 'Nuestro propósito es conocerte para ayudar a proyectar tu mejor estilo, en el momento y la comodidad del sitio que prefieras.', {'text':'agendar', 'url':'/agende-su-cita'})
         section.about__cta
             .about__cta__container
                 +slider('about__cta__slider')
                     each item in site.data.aboutCtaSlider
                         .about__cta__slide
                             .about__cta__image
-                                img(src='/images/about/portrait.jpg')
+                                img(src=item.url)
                             p.about__cta__title &quot;#{item.quote}&quot;
                             p.about__cta__text=item.quoter
                             p.about__cta__text Personal Shopper: #{item.shopper}
@@ -68,4 +68,4 @@ block content
                 .about__app__image
                     img(src='../images/about/about-app.jpg')
             .about__app__container
-                    +content-block('', 'descargue nuestra app', 'Descarga nuetra app y accede a nuestro mundo de privilegios PLACET.', {'text':'app store', 'url':'#'}, '', '', {'text':'google play', 'url':'#'})
+                    +content-block('', 'descargue nuestra app', 'Placet se adapta a las necesidades de nuestros clientes, es por esto, que a través de la APP, podemos seguir innovando y ofreciendo una mejor experiencia.<br><br>Encuentrela  en App Store y en Google Play: PLACET APP', {'text':'app store', 'url':'#'}, '', '', {'text':'google play', 'url':'#'})

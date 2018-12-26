@@ -42,6 +42,10 @@
 
                 @include mq(sm) {
                     @include img($ratio: 40%);
+
+                    img {
+                        min-height: 100%;
+                    }
                 }
             }
         }
@@ -267,7 +271,7 @@
             width: 50%;
             position: relative;
 
-            &:first-of-type {
+            &:last-of-type {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -279,7 +283,7 @@
                     width: 50%;
                 }
 
-                &:last-of-type {
+                &:first-of-type {
                     width: 30%;
 
                     @include mq(sm) {

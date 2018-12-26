@@ -1,4 +1,4 @@
-mixin look-block(spec)
+mixin look-block(text)
     section.look-block
         .look-block__container
             .look-block__column.look-block__column--image
@@ -8,5 +8,5 @@ mixin look-block(spec)
                 .look-block__image
                     img(src='../images/producto/arma-tu-look-cta-2.png')
                 .look-block__data
-                    +content-block('', 'arme su propio look', 'PLACET tiene una herramienta novedosa, que te permite combinar diferentes prendas para poder visualizar como estas encajan con tu estilo personal.  Pruébala.', {'text':'probar ahora', 'url':'#'}, 'white')
+                    +content-block('', 'arme su propio look', text, {'text':'probar ahora', 'url':'#'}, 'white')
             .look-block__layer

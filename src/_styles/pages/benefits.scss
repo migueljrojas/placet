@@ -171,7 +171,7 @@
 
             }
 
-            &:nth-child(2) {
+            &:nth-child(3) {
                 background: url('../images/benefits/benefits-shopping.jpg') no-repeat;
                 background-size: cover;
                 background-color: $indigo + #555;
@@ -200,7 +200,7 @@
                 }
             }
 
-            &:nth-child(3) {
+            &:nth-child(5) {
                 background-color: $lightestGray;
 
                 .benefits__main__image {
@@ -217,7 +217,7 @@
                 }
             }
 
-            &:nth-child(4) {
+            &:nth-child(7) {
                 background: url('../images/benefits/benefits-tienda.jpg') no-repeat center center / cover;
 
                 .content-block {
@@ -236,7 +236,7 @@
                 }
             }
 
-            &:nth-child(5) {
+            &:nth-child(4) {
                 background-color: $lightestGray;
 
                 .benefits__main__image {
@@ -252,7 +252,7 @@
                 }
             }
 
-            &:nth-child(6) {
+            &:nth-child(2) {
             background-color: $lightGray;
             .benefits__main__image {
                 background: url('../images/benefits/benefits-asesoria.jpg');
@@ -268,7 +268,7 @@
             }
         }
 
-            &:nth-child(7) {
+            &:nth-child(9) {
                 background-color: $lightGray;
 
                 .benefits__main__image {
@@ -285,11 +285,11 @@
                 }
             }
 
-            &:nth-child(8) {
+            &:nth-child(6) {
                 background-color: $lightestGray;
 
                 .benefits__main__image {
-                    background: url('../images/benefits/match.jpg');
+                    background: url('../images/benefits/mix.png');
                     background-size: cover;
                 }
 
@@ -302,7 +302,7 @@
                 }
             }
 
-            &:nth-child(9) {
+            &:nth-child(8) {
                 background: url('../images/benefits/benefits-satisfaction.jpg') no-repeat;
                 background-size: cover;
                 background-color: $indigo + #555;

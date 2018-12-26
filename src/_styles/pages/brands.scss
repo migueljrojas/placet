@@ -68,7 +68,7 @@
                 position: absolute;
                 z-index: 2;
                 width: 35vw;
-                top: 16vw;
+                top: 12vw;
                 text-align: center;
                 left: 10vw;
                 background: none;
@@ -147,7 +147,7 @@
                     }
                 }
 
-                .brands__main__data {
+                .brands__main__wrapper {
                     order: 1;
 
                     @include mq(sm) {
@@ -207,6 +207,32 @@
             }
         }
 
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 50%;
+
+            @include mq(sm) {
+                width: 50%;
+                flex-basis: auto;
+            }
+        }
+
+        &__logo {
+            width: 50%;
+            height: 15vh;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4vw;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
         &__image {
             flex-basis: 50%;
 
@@ -218,16 +244,10 @@
         }
 
         &__data {
-            flex-basis: 50%;
-            padding: 8vw 10vw;
+            padding: 1vw 10vw 4vw 10vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            @include mq(sm) {
-                width: 50%;
-                flex-basis: auto;
-            }
         }
     }
 }

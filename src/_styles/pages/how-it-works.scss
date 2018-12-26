@@ -196,6 +196,21 @@
             }
         }
 
+        &__comment {
+            text-align: center;
+            color: $indigo;
+            font-weight: 300;
+            padding: 20px;
+            font-size: 16px;
+            margin: 0;
+            line-height: 1.7;
+
+            @include mq(sm) {
+                padding: 4vw 20vw;
+                font-size: 1.4vw;
+            }
+        }
+
         &__image {
             flex-basis: 50%;
 

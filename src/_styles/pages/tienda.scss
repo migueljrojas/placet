@@ -464,7 +464,7 @@
                 position: absolute;
                 left: -9999px;
 
-                &:checked {
+                    &:checked {
                     & + label {
                         border: 3px solid $golden;
                     }

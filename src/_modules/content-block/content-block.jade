@@ -3,23 +3,23 @@ mixin content-block(subtitle, title, text, link, mode, titleMode, linkAlt, modal
     
     .content-block(class="#{mode === 'white' ? 'content-block--white' : ''} #{titleMode === 'big' ? 'content-block--big' : ''}")
         if subtitle
-            span.content-block__subtitle=subtitle
+            span.content-block__subtitle!=subtitle
 
         if title
-            h2.content-block__title=title
+            h2.content-block__title!=title
 
         if text
-            p.content-block__text=text
+            p.content-block__text!=text
 
         .content-block__wrapper    
             if link
                 if modal
-                    a.content-block__link(data-modal="open", href=link.url)=link.text
+                    a.content-block__link(data-modal="open", href=link.url)!=link.text
                 else
-                    a.content-block__link(href=link.url target="_blank")=link.text
+                    a.content-block__link(href=link.url target="_blank")!=link.text
 
             if linkAlt
                 if modal
-                    a.content-block__link(data-modal="open", href=linkAlt.url)=linkAlt.text
+                    a.content-block__link(data-modal="open", href=linkAlt.url)!=linkAlt.text
                 else
-                    a.content-block__link(href=linkAlt.url target="_blank")=linkAlt.text
+                    a.content-block__link(href=linkAlt.url target="_blank")!=linkAlt.text

@@ -18,18 +18,27 @@ block content
                             img(src=item.image)
             
             .brands__hero__data
-                +content-block('', 'marcas placèt', 'Lorem ipsum dolor sit amet, consectetur adipiscing', '', 'white')
+                +content-block('', 'marcas', 'PLACET cuenta con tres marcas europeas de gran tradición como AUSTIN REED, CERRUTI 1881 y GUY LAROCHE.  Descúbrelas.', '', 'white')
         
         section.brands__main
             .brands__main__container
-                .brands__main__data
-                    +content-block('', 'austin reed', 'La marca Austin Reed Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', {'text':'ver prendas', 'url':'#'})
+                .brands__main__wrapper
+                    .brands__main__logo
+                        img(src="/images/brands/austin-logo.png")
+                    .brands__main__data
+                        +content-block('', '', 'Austin Reed es una de las marcas inglesas líderes en diseño y confección, con más de un siglo de tradición. La realeza británica otorga sellos a los proveedores de bienes o servicios que han prestado su trabajo durante más de cinco años a algún miembro de la Corte. Austin Reed tiene dos sellos reales, uno otorgado por la Reina de Inglaterra y otro por el Príncipe de Gales. La marca es distribuida en más de mil almacenes alrededor del mundo.')
                 .brands__main__image
             .brands__main__container
                 .brands__main__image
-                .brands__main__data
-                    +content-block('', 'cerruti', 'La marca Cerruti Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', {'text':'ver prendas', 'url':'#'})
+                .brands__main__wrapper
+                    .brands__main__logo
+                        img(src="/images/brands/cerruti-logo.png")
+                    .brands__main__data
+                        +content-block('', '', 'Cerruti es una de las firmas italianas de mayor prestigio y tradición en el mundo de la alta costura, marcando tendencia en la moda masculina.  Con más de 50 años en el mercado, Cerruti ha vestido a estrellas de Hollywood como Richard Gere, Jack Nicholson, entre otros; Su boutique principal esta en Paris, pero tiene tiendas en diferentes capitales cosmopolitas como Milan, London, Moscu, Tokyo y New York.')
             .brands__main__container
-                .brands__main__data
-                    +content-block('', 'Guy Laroche', 'La marca Guy Laroche Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', {'text':'ver prendas', 'url':'#'})
+                .brands__main__wrapper
+                    .brands__main__logo
+                        img(src="/images/brands/guy-laroche-logo.png")
+                    .brands__main__data
+                        +content-block('', '', 'Guy Laroche fue un diseñador de moda francés que da nombre a su firma homónima. Guy Laroche nace en 1921. En la actualidad Guy Laroche se encuentra a nivel mundial contando con el diseñador británico Adam Andrascik como director creativo de la firma.')
                 .brands__main__image
