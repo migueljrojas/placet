@@ -130,7 +130,7 @@
 
             @include mq(sm) {
                 width: 50%;
-                height: auto;
+                // height: auto;
             }
 
             &--look {
@@ -138,6 +138,7 @@
                 height: auto;
                 position: relative;
                 height: 80vh;
+
                 @include mq(sm) {
                     height: auto;
                 }
@@ -163,7 +164,7 @@
             height: 100%;
 
             @include mq(sm) {
-                height: 95vh;
+                // height: 95vh;
                 flex-direction: row;
             }
         }
@@ -210,8 +211,9 @@
                 padding: 20px;
 
                 @include mq(sm) {
-                    padding: 2vw 4vw 8vw 4vw;
+                    padding: 2vw 4vw 2vw 4vw;
                     z-index: 2;
+                    height: 100%;
                 }
             }
 

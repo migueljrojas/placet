@@ -235,8 +235,12 @@
         }
 
         &__show-more {
-            @include button;
+            @include button($fontSize: 14px, $btnBackground: transparent, $paddTopBottom: 10px, $paddLeftRight: 20px, $borderColor: $golden, $btnColor: $golden);
             letter-spacing: 1.4px;
+
+            @include mq(sm) {
+                @include button;
+            }
         }
     }
 

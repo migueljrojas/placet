@@ -139,6 +139,30 @@
                 align-items: center;
                 justify-content: center;
 
+                // .quantity-selector {
+                //     &__left-arrow {
+                //         display: inline-block;
+                //         width: 6px;
+                //         border: 1px solid $midGray;
+                //         height: 6px;
+                //         border-top: transparent;
+                //         border-right: transparent;
+                //         transform: rotate(45deg);
+                //         margin-right: 40px;
+                //     }
+                //
+                //     &__right-arrow {
+                //         display: inline-block;
+                //         width: 6px;
+                //         border: 1px solid $midGray;
+                //         height: 6px;
+                //         border-top: transparent;
+                //         border-left: transparent;
+                //         transform: rotate(-45deg);
+                //         margin-left: 40px;
+                //     }
+                // }
+
                 @include mq(sm) {
                     justify-content: flex-start;
                 }
@@ -175,26 +199,6 @@
             }
         }
 
-        &__arrow {
-            display: inline-block;
-            width: 6px;
-            border: 1px solid $midGray;
-            height: 6px;
-            border-top: transparent;
-
-            &--left {
-                border-right: transparent;
-                transform: rotate(45deg);
-                margin-right: 40px;
-            }
-
-            &--right {
-                border-left: transparent;
-                transform: rotate(-45deg);
-                margin-left: 40px;
-            }
-        }
-
         &__value {
             color: $black;
             font-size: 20px;
@@ -214,6 +218,7 @@
             color: $golden;
             padding: 10px 0;
             margin-bottom: 20px;
+            font-size: 14px;
 
             @include mq(sm) {
                 padding: .8vw 0;

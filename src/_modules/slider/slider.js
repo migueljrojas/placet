@@ -9,7 +9,7 @@ var Slider = function() {
             $(this).slick({
                 dots: true,
                 fade: true,
-                arrows: true,
+                arrows: false,
                 swipeToSlide: true,
                 autoplay: true
             });

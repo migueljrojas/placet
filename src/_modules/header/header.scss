@@ -118,13 +118,22 @@
             pointer-events: none;
             opacity: 0;
             transform: translatex(100%);
-            right: 140px;
+            // right: 140px;
+            top: 48px;
+
+            @include mq(sm) {
+                top: auto;
+            }
 
             &-open {
-                right: 140px;
                 pointer-events: all;
                 transform: translate(0);
                 opacity: 1;
+
+                @include mq(sm) {
+                    right: 140px;
+                    top: auto;
+                }
             }
         }
 

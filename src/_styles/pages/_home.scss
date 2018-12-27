@@ -1,8 +1,8 @@
 .home {
-    overflow: hidden;
 
     &__hero {
         position: relative;
+        overflow: hidden;
 
         @include mq(sm) {
 
@@ -30,7 +30,11 @@
 
             .slick-dots {
                 position: absolute;
-                bottom: 2vw;
+                bottom: 20px;
+
+                @include mq(sm) {
+                    bottom: 2vw;
+                }
             }
             .slick-arrow {
                 display: none !important;
@@ -64,11 +68,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 40vh;
+
+            @include mq(sm) {
+                height: auto;
+                display: block;
+                padding: 0;
+                position: absolute;
+                z-index: 2;
+                width: 35vw;
+                top: 15vw;
+                text-align: center;
+                left: 5vw;
+                background: none;
+            }
 
             .content-block {
                 &__title {
-                    margin-bottom: 0;
-                    padding: 0;
+                    // margin-bottom: 0;
+                    // padding: 0;
 
                     @include mq(sm) {
                         font-size: 3vw;
@@ -80,18 +98,6 @@
                     font-size: 1vw;
                     padding-bottom: 2vw;
                 }
-            }
-
-            @include mq(sm) {
-                display: block;
-                padding: 0;
-                position: absolute;
-                z-index: 2;
-                width: 35vw;
-                top: 15vw;
-                text-align: center;
-                left: 5vw;
-                background: none;
             }
         }
     }
@@ -285,7 +291,7 @@
 
         &__appoinment {
             background: url('/images/home/bottom-left-up.jpg') no-repeat;
-            background-size: 50%;
+            background-size: 60%;
             display: flex;
             justify-content: flex-end;
 

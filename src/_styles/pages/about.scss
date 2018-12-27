@@ -203,8 +203,8 @@
             @include img($ratio: 60%, $imgwidth: auto, $imgheight: 100%);
 
             img {
+                transform: translateX(-45%);
                 @include mq(sm) {
-                    transform: translateX(-45%);
                 }
             }
         }
@@ -349,6 +349,7 @@
 
             .slick-dots {
                 position: absolute;
+                display: flex;
                 bottom: -20px;
 
                 @include mq(sm) {
@@ -428,6 +429,7 @@
             }
 
             .content-block {
+                z-index: 2;
                 &__title {
                     font-weight: 100;
                 }

@@ -3,6 +3,7 @@
 
     &__hero {
         position: relative;
+
         @include mq(sm) {
             justify-content: center;
             align-items: center;
@@ -38,7 +39,6 @@
         }
 
         &__wrapper {
-
             @include mq(sm) {
                 display: flex;
                 flex-direction: column;
@@ -49,6 +49,18 @@
                 left: 50%;
                 transform: translate(-50%);
                 z-index: 5;
+            }
+
+            .play-button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%,0);
+
+                @include mq(sm) {
+                    transform: translate3d(0,0,0);
+                    position: static;
+                }
             }
         }
 
@@ -89,11 +101,19 @@
         &__container {
             display: flex;
             flex-direction: column;
-            height: 130vw;
+            // height: 130vw;
+            height: auto;
+
+            .how-it-works__appoinment__image {
+                height: 35vh;
+
+                @include mq(sm) {
+                    height: auto;
+                }
+            }
 
             @include mq(sm) {
                 flex-direction: row;
-                height: auto;
                 height: 33.34vw;
             }
 
