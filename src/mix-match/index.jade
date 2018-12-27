@@ -1,0 +1,136 @@
+extends ../_layouts/base
+
+include ../_modules/slider/slider
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.mix-match
+        section.mix-match__hero
+            .mix-match__hero__image
+                img(src='../images/arme-su-look/hero.jpg')
+            .mix-match__hero__data
+                +content-block('', 'arme su propio look', 'armar su propio look nunca ha sido tan fácil!<br>solo siga las siguientes instrucciones', '', 'white')
+        section.mix-match__instructions
+            .mix-match__instructions__container
+                ul.mix-match__instructions__list
+                    li <span>1.</span> Seleccione una de las categorías de ropa en el menu de la izquierda.
+                    li <span>2.</span> Inmediatamente a la derecha se despliegan las prendas correspondientes a esa categoría.
+                    li <span>3.</span> Elija la prenda que le interesa combinar, y arrastrela al área central grande. Puede redimensionarla, rotarla, enviar la prenda adelante o atrás.
+            .mix-match__instructions__container
+                ul.mix-match__instructions__list
+                    li <span>4.</span> Repita la operación para cada prenda que quiere utilizar en su look.
+                    li <span>5.</span> Automáticamente, en el área de abajo, se listan las prendas que usted ha elegido. Puede comprar todas las prendas del look haciendo click en el boton "añadir al carro de compras".
+                    
+    section.mix-match__look
+        .mix-match__look__col.col-half
+            //- .mix-match__look.mix-match__look--heading.mix-match__look--heading--mix
+            //-     h2.primera-cita--tienda__header.primera-cita--tienda__header--mix mix & match
+            //-     p.primera-cita--tienda__comment Armar su propio look nunca ha sido tan fácil!
+            
+            .mix-match__look__wrapper
+                .mix-match__look__container.mix-match__look__container--list.col-half
+                    h3.mix-match__look__title categorias
+                    ul.mix-match__look__list
+                        li
+                            a.mix-match__look__list-link(href="#") Vestidos
+                        li
+                            a.mix-match__look__list-link(href="#") Blazers
+                        li
+                            a.mix-match__look__list-link(href="#") Camisas
+                            ul.mix-match__look__sublist
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Camisas Formales
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Camisas Informales
+                        li
+                            a.mix-match__look__list-link(href="#") Pantalones
+                            ul.mix-match__look__sublist
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Pantalones Formales
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Pantalones Informales
+                        li
+                            a.mix-match__look__list-link(href="#") Chaquetas
+                        li
+                            a.mix-match__look__list-link(href="#") Sweaters
+                        li
+                            a.mix-match__look__list-link(href="#") Zapatos
+                            ul.mix-match__look__sublist
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Zapatos Formales
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Zapatos Informales
+                        li
+                            a.mix-match__look__list-link(href="#") Accesorios
+                            ul.mix-match__look__sublist
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Camisetas
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Corbatas
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Bufandas
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Cinturones
+                                li
+                                    a.mix-match__look__sublist-link(href="#") Medias
+                
+                .mix-match__look__container.mix-match__look__container--images.col-half
+                    .mix-match__look__close-button
+                        span
+                        span
+                    h3.mix-match__look__title.mix-match__look__title--images prendas
+                    +slider('mix-match__look__slider', 'all')
+                        each slide in site.data.mixMatch
+                            .mix-match__look__slide
+                                each shirt in slide
+                                    .mix-match__look__option
+                                        img(src=shirt)
+    
+        .mix-match__look__col.mix-match__look__col--look.col-half
+            .mix-match__look__row.mix-match__look__row--look
+                p.mix-match__look__title.mix-match__look__title--look combien aquí las prendas
+                .mix-match__look__group
+                    .mix-match__look__frame
+                        button.mix-match__look__button
+                            i.fa.fa-bars
+                    .mix-match__look__frame
+                        button.mix-match__look__button
+                            i.fa.fa-pencil
+                    .mix-match__look__frame
+                        button.mix-match__look__button
+                            i.fa.fa-question
+
+    section.mix-match__look-items
+        .mix-match__look-items__modal-wrapper
+            .mix-match__look-items__modal-header
+                h2 estos son los items de su look
+            .mix-match__look-items__modal-content
+                .mix-match__look-items__modal-group
+                    .mix-match__look-items__modal-checkbox
+                        input.uiform__input.uiform__input--checkbox.mix-match__look-items__modal-input(type='checkbox' id="checkbox1" checked)
+                        label.uiform__label.uiform__label--checkbox.mix-match__look-items__modal-label(for="checkbox1") Camisa Austin Reed cuadros
+                    .mix-match__look-items__modal-item-price
+                        span $ 944.000
+                .mix-match__look-items__modal-group
+                    .mix-match__look-items__modal-checkbox
+                        input.uiform__input.uiform__input--checkbox.mix-match__look-items__modal-input(type='checkbox' id="checkbox2" checked)
+                        label.uiform__label.uiform__label--checkbox.mix-match__look-items__modal-label(for="checkbox2") Pantalon informal Guy Laroche Azul Oscuro
+                    .mix-match__look-items__modal-item-price
+                        span $ 944.000
+                .mix-match__look-items__modal-group
+                    .mix-match__look-items__modal-checkbox
+                        input.uiform__input.uiform__input--checkbox.mix-match__look-items__modal-input(type='checkbox' id="checkbox3" checked)
+                        label.uiform__label.uiform__label--checkbox.mix-match__look-items__modal-label(for="checkbox3") Saco Cerruti Gris Claro
+                    .mix-match__look-items__modal-item-price
+                        span $ 944.000
+                .mix-match__look-items__modal-group
+                    .mix-match__look-items__modal-checkbox
+                        input.uiform__input.uiform__input--checkbox.mix-match__look-items__modal-input(type='checkbox' id="checkbox4" checked)
+                        label.uiform__label.uiform__label--checkbox.mix-match__look-items__modal-label(for="checkbox4") Zapatos Austin Reed Gamuza negro
+                    .mix-match__look-items__modal-item-price
+                        span $ 944.000
+            .mix-match__look-items__modal-button
+                button agregar al carro de compras

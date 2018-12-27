@@ -1,0 +1,72 @@
+mixin uiform(config, buttonText, mode, innerForm, dataTarget)
+    if innerForm == true
+        .uiform(class="#{mode === 'light' ? 'uiform--light' : ''}")
+            .uiform__wrapper
+                each input in config
+                    .uiform__group(class="uiform__group--#{input.type}")
+                        if input.type == 'text' || input.type == 'email' || input.type == 'number' || input.type == 'password' || input.type == 'tel'
+                            input.uiform__input(placeholder=input.placeholder, type=input.type, id=input.id, name=input.id class='uiform__input--#{input.type}' value="#{input.value ? input.value : ''}")
+                            
+                        if input.type == 'radio' || input.type == 'checkbox'
+                            input.uiform__input(placeholder=input.placeholder, type=input.type, class='uiform__input--#{input.type}', id=input.id, name=input.id)
+                            label.uiform__label(for=input.id, class="uiform__label--#{input.type}")=input.label
+
+                        if input.type == 'select' 
+                            select.uiform__input(class='uiform__input--#{input.type}', id=input.id, name=input.id)
+                                each option, index in input.options
+                                    if index == 0
+                                        option(disabled, selected, hidden)=option
+                                    else 
+                                        option=option
+                        if input.type == 'textarea'
+                            textarea.uiform__input(placeholder= input.placeholder, class='uiform__input--#{input.type}', id=input.id, name=input.id)
+                        
+                        if input.type == 'paragraph' 
+                            p.uiform__text=input.text
+
+                        if input.type == 'anchor' 
+                            a.uiform__anchor(href="#")=input.text
+
+                        if input.label && input.type != 'radio' && input.type != 'checkbox' && input.type != 'paragraph' && input.type != 'anchor'
+                            label.uiform__label(for=input.id, class="uiform__label--#{input.type}")=input.label
+
+            if dataTarget
+                a.uiform__button(data-target=dataTarget)=buttonText
+            else
+                button.uiform__button=buttonText
+    else 
+        form.uiform(class="#{mode === 'light' ? 'uiform--light' : ''}")
+            .uiform__wrapper
+                each input in config
+                    .uiform__group(class="uiform__group--#{input.type}")
+                        if input.type == 'text' || input.type == 'email' || input.type == 'number' || input.type == 'password' || input.type == 'tel'
+                            input.uiform__input(placeholder=input.placeholder, type=input.type, id=input.id, name=input.id class='uiform__input--#{input.type}' value="#{input.value ? input.value : ''}")
+                            
+                        if input.type == 'radio' || input.type == 'checkbox'
+                            input.uiform__input(placeholder=input.placeholder, type=input.type, class='uiform__input--#{input.type}', id=input.id, name=input.id)
+                            label.uiform__label(for=input.id, class="uiform__label--#{input.type}")=input.label
+
+                        if input.type == 'select' 
+                            select.uiform__input(class='uiform__input--#{input.type}', id=input.id, name=input.id)
+                                each option, index in input.options
+                                    if index == 0
+                                        option(disabled, selected, hidden)=option
+                                    else 
+                                        option=option
+
+                        if input.type == 'textarea'
+                            textarea.uiform__input(placeholder= input.placeholder, class='uiform__input--#{input.type}', id=input.id, name=input.id)
+                        
+                        if input.type == 'paragraph' 
+                            p.uiform__text=input.text
+
+                        if input.type == 'anchor' 
+                            a.uiform__anchor(href="#")=input.text
+
+                        if input.label && input.type != 'radio' && input.type != 'checkbox' && input.type != 'paragraph' && input.type != 'anchor'
+                            label.uiform__label(for=input.id, class="uiform__label--#{input.type}")=input.label
+
+            if dataTarget
+                a.uiform__button(data-target=dataTarget)=buttonText
+            else
+                button.uiform__button=buttonText

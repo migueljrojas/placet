@@ -9,7 +9,8 @@ var Slider = function() {
             $(this).slick({
                 dots: true,
                 fade: true,
-                arrows:  false,
+                arrows: true,
+                swipeToSlide: true,
                 autoplay: true
             });
         });
@@ -18,17 +19,18 @@ var Slider = function() {
         sliderMulti.each(function(){
             $(this).slick({
                 dots: true,
+                arrows: true,
                 infinite: true,
                 speed: 300,
-                slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 autoplay: true,
                 responsive: [
                     {
                         breakpoint: 900,
                         settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3
+                            slidesToShow: 2,
+                            slidesToScroll: 2
                         }
                     },
                     {

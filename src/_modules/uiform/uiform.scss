@@ -1,0 +1,177 @@
+.uiform {
+
+    $uiform : &;
+
+    width: 100%;
+    text-align: center;
+
+    &__wrapper {
+        width: 100%;
+    }
+    &__group {
+        position: relative;
+        margin-bottom: 4vw;
+    }
+
+    &__label {
+        @include trans;
+
+        position: absolute;
+        top: -1vh;
+        left: 0;
+        color: $white;
+        opacity: 0;
+        font-size: 1.2vw;
+        text-transform: uppercase;
+        display: block;
+
+        &--select {
+            opacity: 1;
+            color: $white;
+            top: -1.1vw;
+        }
+
+        &--checkbox {
+            position: relative;
+            top: 0;
+            opacity: 1;
+            color: $midGray;
+            text-transform: none;
+            text-align: left;
+            padding-left: 30px;
+
+            &:before{
+                content: '';
+                width: 15px;
+                height: 15px;
+                border: 1px solid;
+                position: absolute;
+                left:0;
+                top:0;
+            }
+
+            &:after {
+                @include trans;
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 10px;
+                border-right: 2px solid;
+                border-bottom: 2px solid;
+                left:5px;
+                top:2px;
+                transform: rotate(45deg);
+                opacity: 0;
+            }
+        }
+    }
+
+    &__input {
+        background: transparent;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $white;
+        height: 7vh;
+        color: $white;
+        font-size: 1.6vw;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        padding-left: 0;
+        text-transform: uppercase;
+
+        &::placeholder {
+            @include trans;
+            opacity: 1;
+            font-weight: 300;
+            color: $white;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        &:focus {
+            color: $vibrantGolden;
+            outline: none;
+            border-bottom: 1px solid $vibrantGolden;
+
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+
+        &:focus + label {
+            color: $vibrantGolden;
+            opacity: 1;
+        }
+
+        &--checkbox {
+            position: absolute;
+            left: -9999px;
+
+            &:checked {
+                & + #{$uiform}__label {
+                    color: $golden;
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    &__anchor {
+        display: block;
+        margin-bottom: 2vw;
+        color: $vibrantGolden;
+        font-size: 1.4vw;
+        text-decoration: none;
+    }
+
+    &__button {
+        @include button(
+            $fontSize: 1.6vw, $btnBackground: transparent,
+            $paddTopBottom: 1.5vw,
+            $paddLeftRight: 6vw, $borderColor: $vibrantGolden,
+            $btnColor: $vibrantGolden, $btnSize: auto);
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        letter-spacing: 1.2px;
+        font-weight: 300;
+    }
+
+    &--light {
+
+        #{$uiform}__label {
+
+            color: $lightGray;
+
+            &--select {
+                color: $lightGray;
+            }
+        }
+
+        #{$uiform}__input {
+            border-bottom: 1px solid $lightGray;
+            color: $lightGray;
+
+            &::placeholder {
+                color: $lightGray;
+            }
+
+            &:focus {
+                color: $vibrantGolden;
+                border-bottom: 1px solid $vibrantGolden;
+            }
+
+            &:focus + label {
+                color: $vibrantGolden;
+            }
+        }
+
+        #{$uiform}__anchor {
+            color: $vibrantGolden;
+        }
+    }
+}
