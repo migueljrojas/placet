@@ -128,11 +128,7 @@
     }
 
     &__button {
-        @include button(
-            $fontSize: 1.6vw, $btnBackground: transparent,
-            $paddTopBottom: 1.5vw,
-            $paddLeftRight: 6vw, $borderColor: $vibrantGolden,
-            $btnColor: $vibrantGolden, $btnSize: auto);
+        @include button();
 
         display: block;
         margin-left: auto;

@@ -183,9 +183,8 @@
     }
 }
 
-@mixin button ($fontSize: 1.6vw, $btnBackground: transparent, $paddTopBottom: 1.5vw, $paddLeftRight: 1.5vw, $borderColor: $golden, $btnColor: $golden, $btnSize: auto) {
-    @include trans;
-
+@mixin button ($fontSize: 1vw, $btnBackground: transparent, $paddTopBottom: .7vw, $paddLeftRight: 1.5vw, $borderColor: $golden, $btnColor: $golden) {
+    display: inline-block;
     background: $btnBackground;
     border: 1px solid $borderColor;
     text-transform: uppercase;
@@ -197,11 +196,8 @@
     font-size: $fontSize;
     cursor: pointer;
     text-align: center;
-    width: $btnSize;
-    letter-spacing: 1.2px;
 
-    &:hover,
-    &:focus {
+    &:hover {
         transform: scale3d(1.1,1.1,1.1);
         box-shadow: 0 10px 20px rgba(0,0,0,.15);
     }
