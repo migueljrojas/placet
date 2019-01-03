@@ -1,14 +1,14 @@
 .product {
     $p:&;
     @include trans;
-    background: $white;
+    // background: $white;
 
     @include mq(sm) {
         background: transparent;
     }
 
     &:hover {
-        background: $white;
+        // background: $white;
         box-shadow: 0 10px 20px $lightGray;
         transform: translateY(-1%) scale3d(1.1,1.1,1.1);
 
@@ -23,6 +23,13 @@
 
     &__image {
         @include img($ratio: 130%);
+
+        img {
+            left: 50%;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+
+        }
     }
 
     &__description {
@@ -32,6 +39,7 @@
         justify-content: center;
         flex-direction: column;
         padding: 20px;
+        background: $white;
 
         @include mq(sm) {
             padding: 1.5vw;

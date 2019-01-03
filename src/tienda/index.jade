@@ -165,14 +165,32 @@ block content
                             option Nombre
                             option Color
                     .tienda__list__items
-                        - for (var i = 0; i < 3; ++i) {
-                            .tienda__list__item
-                                +product('../images/tienda/product-1.jpg', 'Vestido Cerruti Gris', '$944.000')
-                            .tienda__list__item
-                                +product('../images/tienda/product-2.jpg', 'Vestido Austin Azul', '$1.144.500')
-                            .tienda__list__item
-                                +product('../images/tienda/product-3.jpg', 'Vestido Cerruti Reed', '$944.000')
-                        - }
+                        //- - for (var i = 0; i < 3; ++i) {
+                        .tienda__list__item
+                            +product('../images/tienda/product-1.jpg', 'Vestido Cerruti Gris', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/product-2.jpg', 'Vestido Austin Azul', '$1.144.500')
+                        .tienda__list__item
+                            +product('../images/tienda/product-3.jpg', 'Vestido Cerruti Reed', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/cinturon-formal-1.jpg', 'Cinturon Formal', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/cinturon-formal-2.jpg', 'Cinturon Formal', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/cinturon-formal-3.jpg', 'Cinturon Formal', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/cinturon-sport-1.jpg', 'Cinturon Sport', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/cinturon-sport-2.jpg', 'Cinturon Sport', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/cinturon-sport-3.jpg', 'Cinturon Sport', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/bufanda-1.jpg', 'Bufanda', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/bufanda-2.jpg', 'Bufanda', '$944.000')
+                        .tienda__list__item
+                            +product('../images/tienda/bufanda-3.jpg', 'Bufanda', '$944.000')
+                        //- - }
                     .tienda__list__footer
                         button.tienda__list__show-more Cargar más Productos
 
