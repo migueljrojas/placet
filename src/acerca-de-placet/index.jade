@@ -24,13 +24,13 @@ block content
                 +content-block('', 'Somos el modelo mas innovador de moda masculina de latinoamerica.','', '', 'white')
             .about__main__column
                 p.about__main__text
-                    span PLACET nace de esa necesidad que tenemos todos: Tiempo. Entendemos que el tiempo de nuestros clientes es muy importante y por eso mejorar su calidad de vida es nuestro gran objetivo.
+                    span PLACÈT nace de esa necesidad que tenemos todos: Tiempo. Entendemos que el tiempo de nuestros clientes es muy importante y por eso mejorar su calidad de vida es nuestro gran objetivo.
                     br
                     span Llevarle un One-Stop Shopping Experience, con productos y servicios de la mejor calidad, a donde usted necesite, con innovación en servicio de lujo y tecnología.
                     br
                     strong El tiempo es un lujo, y eso es lo que ofrecemos.
                     br
-                    span Con PLACET, estamos disponibles para usted en el lugar que prefiera, para ayudarle a construir un vestuario completo.
+                    span Con PLACÈT, estamos disponibles para usted en el lugar que prefiera, para ayudarle a construir un vestuario completo.
                     
         section.about__referals
             .about__referals__container
@@ -58,8 +58,8 @@ block content
                 +slider('about__cta__slider')
                     each item in site.data.aboutCtaSlider
                         .about__cta__slide
-                            .about__cta__image
-                                img(src=item.url)
+                            //- .about__cta__image
+                            //-     img(src=item.url)
                             p.about__cta__title &quot;#{item.quote}&quot;
                             p.about__cta__text=item.quoter
                             p.about__cta__text Personal Stylist: #{item.shopper}
@@ -68,4 +68,4 @@ block content
                 .about__app__image
                     img(src='../images/about/about-app.jpg')
             .about__app__container
-                    +content-block('', 'descargue nuestra app', 'Placet se adapta a las necesidades de nuestros clientes, es por esto, que a través de la APP, podemos seguir innovando y ofreciendo una mejor experiencia.<br><br>Encuentrela  en App Store y en Google Play: PLACET APP', {'text':'app store', 'url':'#'}, '', '', {'text':'google play', 'url':'#'})
+                    +content-block('', 'descargue nuestra app', 'Placet se adapta a las necesidades de nuestros clientes, es por esto, que a través de la APP, podemos seguir innovando y ofreciendo una mejor experiencia.<br><br>Encuentrela  en App Store y en Google Play: PLACÈT APP', {'text':'app store', 'url':'#'}, '', '', {'text':'google play', 'url':'#'})

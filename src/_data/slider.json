@@ -1,7 +1,7 @@
 [
     {
         "image":"/images/home/slide1.jpg",
-        "title":"como funciona PLACET",
+        "title":"como funciona PLACÈT",
         "text":"Le presentamos un servicio que transformará su manera de vestirte.",
         "linkText":"Como Funciona",
         "url":"/como-funciona"
@@ -9,7 +9,7 @@
     {
         "image":"/images/home/slide2.jpg",
         "title":"agende su cita",
-        "text":"Permítanos mostrarle en que consiste PLACET, un servicio que cambiara su experiencia con la moda.",
+        "text":"Permítanos mostrarle en que consiste PLACÈT. Un servicio que cambiara su experiencia con la moda.",
         "linkText":"agende su cita",
         "url":"/agende-su-cita"
     },
