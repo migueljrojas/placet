@@ -1,5 +1,5 @@
-mixin product(imageSrc, name, amount)
-    a(href="/vista-producto")
+mixin product(imageSrc, name, amount, type)
+    a(href="/#{type}")
         .product
             .product__image
                 img(src=imageSrc)
