@@ -1,0 +1,406 @@
+.informacion-personal {
+    &__informacion,
+    &__container  {
+        background: $lightestGray;
+        padding: 60px 20px;
+
+        @include mq(sm) {
+            padding: 60px 7vw;
+        }
+
+        &--white {
+            background: $white;
+        }
+    }
+
+    &__group {
+        border-bottom: 1px solid $lightGray;
+        margin-bottom: 20px;
+
+        @include mq(sm) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        color: $indigo;
+        font-family: $titleFont;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 26px;
+
+        @include mq(sm) {
+            font-size: 30px;
+        }
+    }
+
+    &__wrapper {
+        @include mq(sm) {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    &__button {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: $golden;
+        text-transform: uppercase;
+        padding: 0;
+        margin-bottom: 20px;
+
+        @include mq(sm) {
+            margin-bottom: 0;
+        }
+
+        &:first-child {
+            @include mq(sm) {
+                border-right: 1px solid $lightGray;
+                margin-right: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &__info-group {
+        margin-bottom: 20px;
+
+        @include mq(sm) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__label {
+        margin: 0;
+        font-size: 16px;
+        color: $indigo;
+        width: 25%;
+        margin-bottom: 10px;
+
+        @include mq(sm) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 16px;
+        color: $midGray;
+    }
+
+    &__look-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include mq(sm) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__look-group {
+        margin-bottom: 20px;
+        width: 40%;
+
+        @include mq(sm) {
+            width: 10%;
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+
+    &__date {
+        text-align: center;
+        color: $indigo;
+    }
+
+    &__image {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &__heading {
+            display: none;
+
+            @include mq(sm) {
+                display: flex;
+                width: 100%;
+                border-top: 1px solid $lightGray;
+                border-bottom: 1px solid $lightGray;
+                padding: 1vw 0;
+            }
+        }
+
+        &__cell {
+            padding-right: 5px;
+
+            @include mq(sm) {
+                padding-right: 3vw;
+            }
+
+            &:nth-child(2) {
+                width: 30%;
+
+                @include mq(sm) {
+                    width: 18%;
+                }
+            }
+
+            &:nth-child(3) {
+                width: 70%;
+                padding-left: 10px;
+                margin-bottom: 30px;
+
+                @include mq(sm) {
+                    width: 23%;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            &:nth-child(4) {
+                width: 33.33%;
+                text-align: center;
+
+                @include mq(sm) {
+                    text-align: none;
+                    width: 16%;
+                }
+
+                label {
+                    text-transform: uppercase;
+                    color: $lightGray;
+                    font-weight: 100;
+
+                    @include mq(sm) {
+                        display: none;
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                width: 33.33%;
+
+                @include mq(sm) {
+                    width: 16%;
+                }
+
+                label {
+                    text-transform: uppercase;
+                    color: $lightGray;
+                    font-weight: 100;
+
+                    @include mq(sm) {
+                        display: none;
+                    }
+                }
+            }
+
+            &:nth-child(6) {
+                width: 33.33%;
+                text-align: center;
+
+                @include mq(sm) {
+                    text-align: none;
+                    width: 14%;
+                }
+
+                label {
+                    text-transform: uppercase;
+                    color: $lightGray;
+                    font-weight: 100;
+
+                    @include mq(sm) {
+                        display: none;
+                    }
+                }
+            }
+
+            &:nth-child(1) {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 20px;
+
+                @include mq(sm) {
+                    width: 12%;
+                    text-align: left;
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                font-size: 12px;
+                color: $lightGray;
+                text-transform: uppercase;
+                margin: 0;
+
+                @include mq(sm) {
+                    font-size: 1.2vw;
+                }
+            }
+        }
+    }
+
+    &__item {
+        flex-wrap: wrap;
+        padding: 10px 0;
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid $lightGray;
+        position: relative;
+        margin-bottom: 10px;
+
+        @include mq(sm) {
+            padding: 1vw 0;
+            border-top: none;
+            margin-bottom: 0;
+        }
+
+        &__image {
+            @include img(140%, $imgwidth: Auto, $imgheight: 100%);
+
+            @include mq(sm) {
+                @include img($ratio: 120%);
+            }
+        }
+
+        &__description {
+            padding-right: 15px;
+
+            h3 {
+                font-size: 18px;
+                margin-top: 0;
+                line-height: 1.3;
+
+                @include mq(sm) {
+                    font-size: 1.4vw;
+                }
+            }
+
+            p {
+                font-size: 14px;
+
+                @include mq(sm) {
+                    font-size: 1.2vw;
+                }
+            }
+        }
+
+        &__price {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.3;
+
+            @include mq(sm) {
+                font-size: 1.4vw;
+            }
+        }
+
+        &__quantity {
+            text-align: center;
+
+            @include mq(sm) {
+                text-align: none;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__amount {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.3;
+
+            @include mq(sm) {
+                font-size: 1.4vw;
+            }
+        }
+    }
+
+    &__table-heading {
+        display: none;
+
+        @include mq(sm) {
+            display: flex;
+            width: 100%;
+            border-top: 1px solid $lightGray;
+            border-bottom: 1px solid $lightGray;
+            padding: 1vw 0;
+        }
+    }
+
+    &__table-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        label {
+            color: $lightGray;
+
+            @include mq(sm) {
+                display: none;
+            }
+        }
+
+        p {
+            color:$midGray;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        &:nth-child(1) {
+            width: 100%;
+
+            @include mq(sm) {
+                width: 30%;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 50%;
+
+            @include mq(sm) {
+                width: 15%;
+            }
+        }
+
+        &:nth-child(3) {
+            width: 50%;
+
+            @include mq(sm) {
+                width: 15%;
+            }
+        }
+
+        &:nth-child(4) {
+            width: 100%;
+
+            @include mq(sm) {
+                width: 40%;
+            }
+        }
+    }
+
+    &__item-description {
+        color: $indigo;
+    }
+}

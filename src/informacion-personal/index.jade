@@ -1,0 +1,228 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.informacion-personal
+        section.informacion-personal__informacion
+            .informacion-personal__group
+                h2.informacion-personal__title información personal
+                .informacion-personal__wrapper
+                    button.informacion-personal__button editar información personal
+                    button.informacion-personal__button cambiar contraseña
+            .informacion-personal__info-group
+                h3.informacion-personal__label Nombre
+                p.informacion-personal__text George
+            .informacion-personal__info-group
+                h3.informacion-personal__label Apellido
+                p.informacion-personal__text Stewart
+            .informacion-personal__info-group
+                h3.informacion-personal__label Email
+                p.informacion-personal__text george.stewart@gmail.com
+            .informacion-personal__info-group
+                h3.informacion-personal__label Teléfono
+                p.informacion-personal__text (+571) 5551234
+            .informacion-personal__info-group
+                h3.informacion-personal__label Dirección
+                p.informacion-personal__text Calle 88 #9, Bogotá
+            .informacion-personal__info-group
+                h3.informacion-personal__label Fecha de Nacimiento
+                p.informacion-personal__text 09 MAY 1980
+            .informacion-personal__info-group
+                h3.informacion-personal__label Profesión
+                p.informacion-personal__text Novelista
+            .informacion-personal__info-group
+                h3.informacion-personal__label Fecha de Aniversario
+                p.informacion-personal__text -
+        section.informacion-personal__looks
+            .informacion-personal__container.informacion-personal__container--white
+                .informacion-personal__group
+                    h2.informacion-personal__title looks guardados
+                .informacion-personal__look-wrapper
+                    .informacion-personal__look-group
+                        p.informacion-personal__date 14 DIC 2018
+                        .informacion-personal__image
+                            img(src="/images/tienda/product-2.jpg")
+                    .informacion-personal__look-group
+                        p.informacion-personal__date 18 DIC 2018
+                        .informacion-personal__image
+                            img(src="/images/tienda/product-2.jpg")
+                    .informacion-personal__look-group
+                        p.informacion-personal__date 26 DIC 2018
+                        .informacion-personal__image
+                            img(src="/images/tienda/product-2.jpg")
+                    .informacion-personal__look-group
+                        p.informacion-personal__date 2 ENE 2019
+                        .informacion-personal__image
+                            img(src="/images/tienda/product-2.jpg")
+        section.informacion-personal__historial
+            .informacion-personal__container
+                h2.informacion-personal__title historial de compras
+                .informacion-personal__table
+                    .informacion-personal__table__heading
+                        .informacion-personal__table__cell
+                            p fecha
+                        .informacion-personal__table__cell
+                            p item
+                        .informacion-personal__table__cell
+                            p decripción
+                        .informacion-personal__table__cell
+                            p precio 
+                        .informacion-personal__table__cell
+                            p cantidad
+                        .informacion-personal__table__cell
+                            p total
+                    .informacion-personal__item
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__description 14 DIC 2018
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__image
+                                img(src='../images/tienda/checkout-item.png')
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__description
+                                h3 Vestido Cerruti Azul
+                                p 
+                                    | SKU: VE03887-13 
+                                    br
+                                    | Color: Azul Oscuro
+                                    br
+                                    | Talla: L
+                                    br
+                                    | Drop 4 
+                        .informacion-personal__table__cell
+                            label Precio
+                            span.informacion-personal__item__price $944.000
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__quantity
+                                label Cantidad
+                                br
+                                span 1
+                        .informacion-personal__table__cell
+                            label Total
+                            span.informacion-personal__item__amount $944.000
+                    .informacion-personal__item
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__description 14 DIC 2018
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__image
+                                img(src='../images/tienda/checkout-item.png')
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__description
+                                h3 Vestido Cerruti Azul
+                                p 
+                                    | SKU: VE03887-13 
+                                    br
+                                    | Color: Azul Oscuro
+                                    br
+                                    | Talla: L
+                                    br
+                                    | Drop 4 
+                        .informacion-personal__table__cell
+                            label Precio
+                            span.informacion-personal__item__price $944.000
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__quantity
+                                label Cantidad
+                                br
+                                span 1
+                        .informacion-personal__table__cell
+                            label Total
+                            span.informacion-personal__item__amount $944.000
+                    .informacion-personal__item
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__description 14 DIC 2018
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__image
+                                img(src='../images/tienda/checkout-item.png')
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__description
+                                h3 Vestido Cerruti Azul
+                                p 
+                                    | SKU: VE03887-13 
+                                    br
+                                    | Color: Azul Oscuro
+                                    br
+                                    | Talla: L
+                                    br
+                                    | Drop 4 
+                        .informacion-personal__table__cell
+                            label Precio
+                            span.informacion-personal__item__price $944.000
+                        .informacion-personal__table__cell
+                            .informacion-personal__item__quantity
+                                label Cantidad
+                                br
+                                span 1
+                        .informacion-personal__table__cell
+                            label Total
+                            span.informacion-personal__item__amount $944.000
+                            
+        section.informacion-personal__citas
+            .informacion-personal__container.informacion-personal__container--white
+                h2.informacion-personal__title citas agendadas
+                .informacion-personal__table
+                    .informacion-personal__table-heading
+                        .informacion-personal__table-group
+                            p personal Styler
+                        .informacion-personal__table-group
+                            p fecha
+                        .informacion-personal__table-group
+                            p Hora
+                        .informacion-personal__table-group
+                            p lugar 
+                    .informacion-personal__item
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Personal Styler
+                            span.informacion-personal__item-description María Fernanda parra
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Fecha
+                            span.informacion-personal__item-description 14 DIC 2018
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Hora
+                            span.informacion-personal__item-description 11.00 AM
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Lugar
+                            span.informacion-personal__item-description Calle 88 #9, Bogotá
+                    .informacion-personal__item
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Personal Styler
+                            span.informacion-personal__item-description María Fernanda parra
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Fecha
+                            span.informacion-personal__item-description 8 DIC 2018
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Hora
+                            span.informacion-personal__item-description 11.00 AM
+                        .informacion-personal__table-group
+                            label.informacion-personal__item__label Lugar
+                            span.informacion-personal__item-description Calle 88 #9, Bogotá
+        section.informacion-personal__medidas
+            .informacion-personal__container
+                .informacion-personal__group
+                    h2.informacion-personal__title medidas registradas
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Estatura
+                    p.informacion-personal__text 180 cm
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Lorem
+                    p.informacion-personal__text 82 cm
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Pecho
+                    p.informacion-personal__text 43 cm
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Brazo
+                    p.informacion-personal__text 65 cm
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Cintura
+                    p.informacion-personal__text 40 cm
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Espalda
+                    p.informacion-personal__text 55 cm
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Peso
+                    p.informacion-personal__text 76 kg
+                .informacion-personal__info-group
+                    h3.informacion-personal__label Calzado
+                    p.informacion-personal__text 43
