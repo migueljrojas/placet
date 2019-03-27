@@ -1,6 +1,7 @@
 .product {
     $p:&;
     @include trans;
+    box-shadow: 0 2px 5px $lightGray;
     // background: $white;
 
     @include mq(sm) {
@@ -28,7 +29,6 @@
             left: 50%;
             top: 50%;
             transform: translate3d(-50%, -50%, 0);
-
         }
     }
 

@@ -406,6 +406,11 @@
             display: flex !important;
             flex-wrap: wrap;
             justify-content: space-around;
+
+            &::after {
+                content: "";
+                flex: auto;
+            }
         }
 
         &__option {
